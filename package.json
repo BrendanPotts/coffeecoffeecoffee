@@ -1,8 +1,26 @@
 {
-  "name" : "blog",
-  "version" : "0.0.1",
-  "description" : "My minimalistic blog",
-  "dependencies" : {
-    "mime" : "~1.2.7"
-  }
+  "name": "coffeecoffeecoffee",
+  "version": "0.0.1",
+  "description": "My minimalistic blog",
+  "dependencies": {
+    "mime": "~1.2.7"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": "create-server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yarrumk/coffeecoffeecoffee.git"
+  },
+  "keywords": [
+    "coffee"
+  ],
+  "author": "keith omuiri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yarrumk/coffeecoffeecoffee/issues"
+  },
+  "homepage": "https://github.com/yarrumk/coffeecoffeecoffee#readme"
 }
