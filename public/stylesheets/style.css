@@ -17,13 +17,13 @@ body {
 
 
 #content {
-	width: 702px;
+	width: 800px;
 	margin: auto;
 }
 
-.str0 {stroke:#2B2A29;stroke-width:11.8095}
-    .str2 {stroke:#2B2A29;stroke-width:11.8095}
-    .str1 {stroke:#2B2A29;stroke-width:2.3619}
+.str0 {stroke:#2B2A29;stroke-width:12}
+    .str2 {stroke:#2B2A29;stroke-width:12}
+    .str1 {stroke:#2B2A29;stroke-width:2.5}
     .fil5 {fill:none}
     .fil0 {fill:#FEFEFE}
     .fil4 {fill:#D9DADA}
@@ -65,22 +65,11 @@ body {
     from {fill: rgba(77,38,0,0);}
     to {fill: rgba(77,38,0,50);}
 }
+
 #menu > li{
 	display: inline-block;
 	padding-right: 14px;
 	font-size: 0.8em;
-}
-
-h2 {
-	color: #333;
-	text-decoration: none;
-}
-a {
-	text-decoration: none;
-	color: #333;
-}
-a.article {
-	color: #156cff;
 }
 
 #content p {
