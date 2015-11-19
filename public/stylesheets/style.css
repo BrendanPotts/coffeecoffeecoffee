@@ -206,6 +206,7 @@ body {
     background-color:red;
     opacity: .90;
     -webkit-transition: 0.25s all ease-out;
+    -moz-transition: 0.25s all ease-out;
     margin-left:0px;
     margin-right:0px;
     margin-top:0px;
@@ -221,9 +222,12 @@ body {
     cursor: pointer;
     -webkit-filter:contrast(100%);
     -webkit-transition: 0.25s all ease-out;
+    -moz-filter:contrast(100%);
+    -moz-transition: 0.25s all ease-out;
 }
 .container li:active {
     -webkit-filter:greyscale(100%);
+    -moz-filter:greyscale(100%);
     opacity:1;
     cursor: pointer;
 }
@@ -242,11 +246,13 @@ body {
     border-radius:50%;
     z-index:70;
     -webkit-transition: 0.25s all ease-out;
+    -moz-transition: 0.25s all ease-out;
 }
 .xbutton div.show {
     background-color:white;
     left:40px;
     -webkit-transition: 0.25s all ease-out;
+    -moz-transition: 0.25s all ease-out;
     opacity:1;
 }
 
