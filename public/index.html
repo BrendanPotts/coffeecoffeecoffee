@@ -7,9 +7,9 @@
 </head>
 
 <body>
-<div id="map" class="map"></div>
 
-    <div id="header">
+<div id="map" class="map"></div>
+<div id="header">
         <span>My coffee map</span>
         <ul id="menu">
             <li>FIND</li>
@@ -51,6 +51,7 @@
             </svg>
         </div>
 </div>
+
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoieWFycnVtayIsImEiOiJVNVVkT2JvIn0.xja5Bz1L0dmNYUfNG3mlBw';
 var map = L.mapbox.map('map', 'yarrumk.jg24a6oj')
@@ -63,40 +64,45 @@ var geoJson =
 
 {
     "type": "Feature",
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-6.2195671,53.3509354]
-    },
-    "properties": {
+    "geometry":
+        {
+            "type": "Point",
+            "coordinates": [-6.2195671,53.3509354]
+        },
+    "properties": 
+        {
         "title": "<a href='http://www.squaremile.co.uk' target='_blank'><img src='http://openapp.ie/images/con-hennessey' width='75' height='75'><br>Squaremile Coffee</a><br>1 Coffee Roaster Court<br>Main Street<br>London<br>",
-        "icon": {
-            "iconUrl": "http://www.dt249.com/map/images/sq_Mile_pin.png" ,
-            "iconSize": [35, 50], // size of the icon
-            "iconAnchor": [17, 50], // point of the icon which will correspond to marker's location
-            "popupAnchor": [0, -5], // point from which the popup should open relative to the iconAnchor
-            "className": "dot"
+        "icon": 
+            {
+                "iconUrl": "http://www.dt249.com/map/images/sq_Mile_pin.png",
+                "iconSize": [35, 50], // size of the icon
+                "iconAnchor": [17, 50], // point of the icon which will correspond to marker's location
+                "popupAnchor": [0, -5], // point from which the popup should open relative to the iconAnchor
+                "className": "dot"
+            }
         }
-    }
 }, 
 
 
- {
+{
     "type": "Feature",
-    "geometry": {
+    "geometry": 
+        {
         "type": "Point",
         "coordinates": [-6.18053, 53.302217]
-    },
-    "properties": {
-        "title": "<a href='www.clodaghmckenna.com/home/restaurants/' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0298/0353/clodaghs_kitchen_blackrock_large.JPG?picture=2980353' width='100' height='75'><br>Clodagh's Kitchen
-</a><br>Rock Road<br>Blackrock<br>Co.Dublin<br>",
-        "icon": {
-            "iconUrl": "http://www.dt249.com/map/images/clodaghskitchenmarker.png",
-            "iconSize": [35, 50],
-            "iconAnchor": [17, 50],
-            "popupAnchor": [0, -5],
-            "className": "dot"
+        },
+    "properties":
+        {
+        "title": "<a href='www.clodaghmckenna.com/home/restaurants/' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0298/0353/clodaghs_kitchen_blackrock_large.JPG?picture=2980353' width='100' height='75'><br>Clodagh's Kitchen</a><br>Rock Road<br>Blackrock<br>Co.Dublin<br>",
+        "icon": 
+            {
+                "iconUrl": "http://www.dt249.com/map/images/clodaghskitchenmarker.png",
+                "iconSize": [35, 50],
+                "iconAnchor": [17, 50],
+                "popupAnchor": [0, -5],
+                "className": "dot"
+            }
         }
-    }
 }    
 
 ];
@@ -112,7 +118,6 @@ myLayer.on('layeradd', function(e) {
 // Add features to the map.
 myLayer.setGeoJSON(geoJson);
 </script>
-
 
 
 </body>
