@@ -16,13 +16,23 @@ coffee | coffee | coffee
 <body>
 <div id="header">
         <span>Coffee|Coffee|Coffee</span>
+       <div class="container">
         <ul id="menu">
-            <li>FIND</li>
-            <li>ABOUT</li>
+            <li data-target="tomo">FIND</li>
+            <li data-target="ruth">ABOUT</li>
             <li>COFFEE</li>
             <li>SHOP</li>
         </ul>
-</div>
+        </div>
+    </div>
+
+<!-- **XBUTTON*********************************************************************-->
+<div class="xbutton">
+        <div><centre>
+          <img src="http://www.omuiri.com/kriskringle/images/x.png">
+        </div>
+      </div>
+      
 
 <!-- **MAPS*********************************************************************-->
 
@@ -58,7 +68,49 @@ coffee | coffee | coffee
 <div id="map" class="map"></div>
 <!-- script to generate the map window********************************************-->
 
+    <div class="content">
+        
+        <p id="tomo"><b>Tomo's list</b><br>
 
+            <br>a &#128;130 Donation to St.Francis Hospice in Blanchardstown
+            <br>.
+            <br>.
+            <br>.</p>
+        <p id="paul">Paul's List<br>
+        <br><b>Surprise</b><br>
+
+        <br><b>A Voucher for Dinghy Supplies</b><br>
+            <font size="4">
+            Available online <a href="http://www.dinghysupplies.ie/" target="new">here</a>.<br>
+            </font>
+        <br><br><b>Supported white ankle socks for gym<br>
+        <br><br>Gym Shorts / T-shirts</b>
+        </p>
+        <p id="ruth">Ruth's List<br>
+        <br><b>A Surprise.
+        <br><br>Dr Martins 1460</b>
+        <font size="4">
+            <br>8 Eye Portland Rose, White, Size 5,
+            <br> available from <a href="chinablueshoes.com" target="NEW">chinablueshoes.com</a> or <a href="www.amazon.com" target="new">amazon </a> &#128;130 roughly
+       </font>
+        <br><br><b>A pair of Solamon X Ultra GTX Asphalt</b>
+        <font size="4">
+            <br>size 6 from <a href="http://www.greatoutdoors.ie" target="new">greatoutdoors.ie</a> &#128;144.99
+            <br>(will put the rest to them or I am willing to wait until the sales to get them
+            <br> NO voucher though)
+        </font>
+        <b><br><br>A pair of headphones</b>
+        <font size="4">
+            <br>for getting back into walking and also for running
+            <br>Sennheiser PMX 685i &#128;50-&#128;60,
+            <br>(Harvey Norman or Apple store??)
+            <br>Keep receipt in case they are not suitable.
+        </font>
+        <br>
+        </p>
+    
+           <div class="title"><span class="line-5">looking for ideas? can't remember last years? click <a href="http://www.omuiri.com/kriskringle/old/indexold.htm">here</a></span><br></div>
+        </div>
 
 
 <!-- ************************************************************************************-->
@@ -261,6 +313,9 @@ myLayer.on('layeradd', function(e) {
 // Add features to the map.
 myLayer.setGeoJSON(geoJson);
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jsstuff.js"></script>
 
 
 </body>
