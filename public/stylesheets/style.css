@@ -87,3 +87,12 @@ a.article {
 	border-bottom: 2px dotted #167cff;
 	padding-bottom: 10px;
 }
+
+
+/*MAPS*******/
+
+.map {
+ 	height: 85%;
+    width: 100%;
+}
+
