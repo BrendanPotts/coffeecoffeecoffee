@@ -1,17 +1,67 @@
-<!DOCTYPE html>
-<html>
 
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-    <title>coffeecoffeecoffee</title>
-    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.1/mapbox.css' rel='stylesheet' />
 <script src="http://openlayers.org/en/v3.0.0/build/ol.js" type="text/javascript"></script>
 <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.1/mapbox.js'></script>
 
+<title>
+coffee | coffee | coffee
+</title>
 
 </head>
 
 <body>
+<div id="header">
+        <span>Coffee|Coffee|Coffee</span>
+        <ul id="menu">
+            <li>FIND</li>
+            <li>ABOUT</li>
+            <li>COFFEE</li>
+            <li>SHOP</li>
+        </ul>
+</div>
 
+<!-- **MAPS*********************************************************************-->
+
+ <div id="timer" class="spinner">
+            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="248px" height="351px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 2480 3507" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <polygon class="fill1" points="2013,1739 2277,1891 2277,2632 2075,2748 1636,2494 1108,2799 203,2276 203,1231 1108,709 2013,1231 " />
+                <polygon class="fill2" points="1108,1754 229,1246 229,2261 1108,2769 " />
+                <polygon class="fill3" points="1987,1754 1987,1246 1108,1754 1108,2769 1636,2464 1460,2363 1460,1652 1636,1551 " />
+                <polygon class="fill3" points="2251,1906 2075,2008 2075,2718 2251,2617 " />
+                <polygon class="fill3" points="1812,2058 1636,1957 1636,2261 1812,2160 " />
+                <polygon class="fill3" points="555,1246 656,1304 1108,1043 1108,927 " />
+                <polygon class="fill2" points="1661,1246 1561,1304 1108,1043 1108,927 " />
+                <path class="fill2" d="M1460 1652l0 711 615 355 0 -710 -615 -356zm440 457l-264 -152 0 304 264 153 0 -305z" />
+                <path class="fill4" d="M229 1246l879 508 879 -508 -879 -508 -879 508zm879 -319l-553 319 553 320 553 -320 -553 -319z" />
+                <polygon class="fill4" points="1636,1551 1460,1652 2075,2008 2251,1906 " />
+                <polygon class="fill4" points="1812,2160 1636,2261 1900,2414 1900,2211 " />
+                <polygon class="fill3" points="1812,2058 1812,2160 1900,2211 1900,2109 " />
+                <polyline class="fill5 str0" points="555,1246 1108,1566 1661,1246 " />
+                <line class="fill5 str0" x1="1636" y1="1551" x2="2251" y2="1906" />
+                <polyline class="fill5 str0" points="1636,1957 1900,2109 1900,2414 " />
+                <line class="fil5 str0" x1="1460" y1="2363" x2="2075" y2="2718" />
+                <polyline class="fill5 str1" points="1900,2211 1812,2160 1812,2058 " />
+                <path class="fill0 str2" d="M368 1502l120 70 0 121 120 70 0 -121 121 71 0 120 120 70 0 -120 120 70 0 421c0,166 -135,222 -301,126l0 0c-165,-97 -300,-311 -300,-477l0 -421z" />
+                <path class="fill5 str2" d="M368 1502l120 70 0 121 120 70 0 -121 121 71 0 120 120 70 0 -120 120 70 0 421c0,166 -135,222 -301,126l0 0c-165,-97 -300,-311 -300,-477l0 -421z" />
+                <polygon class="fill3" points="555,1246 882,1435 1108,1304 1108,927 " />
+                <polygon class="fill2" points="1661,1246 1334,1435 1108,1304 1108,927 " />
+                <polygon class="timer" id="level4" points="656,1304 1108,1043 1561,1304 1108,1566 " />
+                <polygon class="timer" id="level3" points="765,1367 1108,1164 1453,1367 1108,1566 " />
+                <polygon class="timer" id="level2" points="865,1425 1108,1285 1349,1426 1108,1566 " />
+                <polygon class="timer" id="level1" points="970,1486 1108,1406 1246,1486 1108,1566 " />
+            </svg>
+        </div>
+<div id="map" class="map"></div>
+<!-- script to generate the map window********************************************-->
+
+
+
+
+<!-- ************************************************************************************-->
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoieWFycnVtayIsImEiOiJVNVVkT2JvIn0.xja5Bz1L0dmNYUfNG3mlBw';
 var map = L.mapbox.map('map', 'yarrumk.jg24a6oj')
@@ -19,7 +69,150 @@ var map = L.mapbox.map('map', 'yarrumk.jg24a6oj')
 
 var myLayer = L.mapbox.featureLayer().addTo(map);
 
-var geoJson = [
+
+
+
+var geoJson = [{
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-6.2195671,53.3509354]
+    },
+    "properties": {
+        "title": "<a href='http://www.squaremile.co.uk' target='_blank'><img src='http://openapp.ie/images/con-hennessey' width='75' height='75'><br>Squaremile Coffee</a><br>1 Coffee Roaster Court making the popo up box appear even arger than its meant<br>Main Street<br>London<br>",
+        "icon": {
+            "iconUrl": "http://www.dt249.com/map/images/sq_Mile_pin.png" ,
+            "iconSize": [35, 50], // size of the icon
+            "iconAnchor": [17, 50], // point of the icon which will correspond to marker's location
+            "popupAnchor": [0, -5], // point from which the popup should open relative to the iconAnchor
+            "className": "dot"
+        }
+    }
+}, {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-6.2656338,53.3507325]
+    },
+    "properties": {
+        "title": "<a href='http://www.openapp.ie' target='_blank'><img src='https://openapp.ie/images/dave-180x180' width='75' height='75'><br>OpenApp</a><br>10 Marlborough Court<br>Marlborough Street<br>Dublin 1<br>",
+        "icon": {
+            "iconUrl": "http://www.dt249.com/map/images/pointer1.png",
+            "iconSize": [35, 50],
+            "iconAnchor": [17, 50],
+            "popupAnchor": [0, -5],
+            "className": "dot"
+        }
+    }
+},
+
+ {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-6.2931506,53.3448722]
+    },
+    "properties": {
+        "title": "<a href='https://healthatlasireland.ie' target='_blank'><img src='http://www2.openapp.ie/wp-content/uploads/2015/03/3987cbe6-ea29-4e01-abb8-fdbe6931d446.jpeg' width='75' height='75'><br>Health Intelligence</a><br><br>Dr.Steevens Hosp<br>Dublin<br>",
+        "icon": {
+            "iconUrl": "http://www.dt249.com/map/images/pointer2.png",
+            "iconSize": [35, 50],
+            "iconAnchor": [17, 50],
+            "popupAnchor": [0, -5],
+            "className": "dot"
+        }
+    }
+},
+
+ {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-6.2420058,53.3399024]
+    },
+    "properties": {
+        "title": "<a href='http://www.3fe.ie' target='_blank'><img src='http://cdn2.independent.ie/incoming/article30437135.ece/e4a16/ALTERNATES/h342/3fe.jpg' width='100' height='75'><br>3fe Coffee</a><br>32/34 Lwr Grand Canal Street<br>Dublin 2<br>",
+        "icon": {
+            "iconUrl": "http://www.dt249.com/map/images/3femarker.png",
+            "iconSize": [35, 50],
+            "iconAnchor": [17, 50],
+            "popupAnchor": [0, -5],
+            "className": "dot"
+        }
+    }
+},
+
+ {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-6.254042,53.3419562]
+    },
+    "properties": {
+        "title": "<a href='http://www.cupcafe.ie' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0295/0101/cup_nassau_street_dublin_2_large.JPG' width='100' height='75'><br>Cup Cafe</a><br>15 Leinster Street Sth<br>Dublin 2<br>",
+        "icon": {
+            "iconUrl": "http://www.dt249.com/map/images/cupdublinmarker.png",
+            "iconSize": [35, 50],
+            "iconAnchor": [17, 50],
+            "popupAnchor": [0, -5],
+            "className": "dot"
+        }
+    }
+},
+
+ {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-6.268429,53.3471011]
+    },
+    "properties": {
+        "title": "<a href='http://www.brotherhubbard.ie' target='_blank'><img src='http://darkroom.sundayworld.com/800/0/7e62fbfebde2cdf9ea5653071a088103:9fd552ad9d6c98f8fd090fab78d6d629/brother-hubbard-a-top-class-cafe' width='100' height='75'><br>Brother Hubbard</a><br>153 Capel Street<br>Dublin 1<br>",
+        "icon": {
+            "iconUrl": "http://www.dt249.com/map/images/brotherhubbardmarker.png",
+            "iconSize": [35, 50],
+            "iconAnchor": [17, 50],
+            "popupAnchor": [0, -5],
+            "className": "dot"
+        }
+    }
+},
+
+ {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-6.2628473,53.3415844]
+    },
+    "properties": {
+        "title": "<a href='http://www.clementandpekoe.com' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0297/5313/clement_pekoe_dublin_large.JPG?picture=2975313' width='100' height='75'><br>Clement and Pekoe</a><br>50 South William Street<br>Dublin 2<br>",
+        "icon": {
+            "iconUrl": "http://www.dt249.com/map/images/clementandpekoemarker.png",
+            "iconSize": [35, 50],
+            "iconAnchor": [17, 50],
+            "popupAnchor": [0, -5],
+            "className": "dot"
+        }
+    }
+},
+
+ {
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [-6.26233, 53.34797]
+    },
+    "properties": {
+        "title": "<a href='http://www.vicecoffeeinc.com/' target='_blank'><img src='http://www.brian-coffee-spot.com/wp-content/uploads/wow-slider-plugin/345/images/_bar.jpg' width='100' height='75'><br>Vice Coffee Inc.</a><br>54 Abbey Street Middle<br>Dublin 1<br>",
+        "icon": {
+            "iconUrl": "http://www.dt249.com/map/images/vicecoffeemarker.png",
+            "iconSize": [35, 50],
+            "iconAnchor": [17, 50],
+            "popupAnchor": [0, -5],
+            "className": "dot"
+        }
+    }
+},
 
  {
     "type": "Feature",
@@ -69,54 +262,9 @@ myLayer.on('layeradd', function(e) {
 myLayer.setGeoJSON(geoJson);
 </script>
 
-<div id="map" class="map"></div>
-
-<div id="header">
-        <span>Coffee|Coffee|Coffee</span>
-        <ul id="menu">
-            <li>FIND</li>
-            <li>ABOUT</li>
-            <li>COFFEE</li>
-            <li>SHOP</li>
-        </ul>
-</div>
-
-<div id="content">
-
-        <div id="spinner">
-            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="248px" height="351px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 2480 3507" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <rect class="fil0" x="78" y="672" width="2324" height="2163" />
-                <polygon class="fil1" points="2013,1739 2277,1891 2277,2632 2075,2748 1636,2494 1108,2799 203,2276 203,1231 1108,709 2013,1231 " />
-                <polygon class="fil2" points="1108,1754 229,1246 229,2261 1108,2769 " />
-                <polygon class="fil3" points="1987,1754 1987,1246 1108,1754 1108,2769 1636,2464 1460,2363 1460,1652 1636,1551 " />
-                <polygon class="fil3" points="2251,1906 2075,2008 2075,2718 2251,2617 " />
-                <polygon class="fil3" points="1812,2058 1636,1957 1636,2261 1812,2160 " />
-                <polygon class="fil3" points="555,1246 656,1304 1108,1043 1108,927 " />
-                <polygon class="fil2" points="1661,1246 1561,1304 1108,1043 1108,927 " />
-                <path class="fil2" d="M1460 1652l0 711 615 355 0 -710 -615 -356zm440 457l-264 -152 0 304 264 153 0 -305z" />
-                <path class="fil4" d="M229 1246l879 508 879 -508 -879 -508 -879 508zm879 -319l-553 319 553 320 553 -320 -553 -319z" />
-                <polygon class="fil4" points="1636,1551 1460,1652 2075,2008 2251,1906 " />
-                <polygon class="fil4" points="1812,2160 1636,2261 1900,2414 1900,2211 " />
-                <polygon class="fil3" points="1812,2058 1812,2160 1900,2211 1900,2109 " />
-                <polyline class="fil5 str0" points="555,1246 1108,1566 1661,1246 " />
-                <line class="fil5 str0" x1="1636" y1="1551" x2="2251" y2="1906" />
-                <polyline class="fil5 str0" points="1636,1957 1900,2109 1900,2414 " />
-                <line class="fil5 str0" x1="1460" y1="2363" x2="2075" y2="2718" />
-                <polyline class="fil5 str1" points="1900,2211 1812,2160 1812,2058 " />
-                <path class="fil0 str2" d="M368 1502l120 70 0 121 120 70 0 -121 121 71 0 120 120 70 0 -120 120 70 0 421c0,166 -135,222 -301,126l0 0c-165,-97 -300,-311 -300,-477l0 -421z" />
-                <path class="fil5 str2" d="M368 1502l120 70 0 121 120 70 0 -121 121 71 0 120 120 70 0 -120 120 70 0 421c0,166 -135,222 -301,126l0 0c-165,-97 -300,-311 -300,-477l0 -421z" />
-                <polygon class="fil3" points="555,1246 882,1435 1108,1304 1108,927 " />
-                <polygon class="fil2" points="1661,1246 1334,1435 1108,1304 1108,927 " />
-                <polygon class="timer" id="level4" points="656,1304 1108,1043 1561,1304 1108,1566 " />
-                <polygon class="timer" id="level3" points="765,1367 1108,1164 1453,1367 1108,1566 " />
-                <polygon class="timer" id="level2" points="865,1425 1108,1285 1349,1426 1108,1566 " />
-                <polygon class="timer" id="level1" points="970,1486 1108,1406 1246,1486 1108,1566 " />
-            </svg>
-        </div>
-</div>
-
-
 
 </body>
 
 </html>
+
+
