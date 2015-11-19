@@ -14,11 +14,57 @@ body {
     border-radius: 5px
 }
 
+
+
 #content {
 	width: 702px;
 	margin: auto;
 }
 
+.str0 {stroke:#2B2A29;stroke-width:11.8095}
+    .str2 {stroke:#2B2A29;stroke-width:11.8095}
+    .str1 {stroke:#2B2A29;stroke-width:2.3619}
+    .fil5 {fill:none}
+    .fil0 {fill:#FEFEFE}
+    .fil4 {fill:#D9DADA}
+    .fil2 {fill:#B2B3B3}
+    .fil3 {fill:#898989}
+    .fil1 {fill:#2B2A29}
+    .fil6 {fill:#70591C}
+
+.timer{
+  
+  width: 20px;
+	font-size: 20px;
+	border-radius: 5px;
+	-webkit-animation-name: fillcup;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: linear, ease;
+	-webkit-animation-delay: 0s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+}
+
+#level1{
+	-webkit-animation-delay: 0.5s;
+}
+#level2{
+	-webkit-animation-delay: 1s;
+}
+
+#level3{
+	-webkit-animation-delay: 1.5s;
+}
+
+#level4{
+	-webkit-animation-delay: 2s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fillcup {
+    from {fill: rgba(77,38,0,0);}
+    to {fill: rgba(77,38,0,50);}
+}
 #menu > li{
 	display: inline-block;
 	padding-right: 14px;
