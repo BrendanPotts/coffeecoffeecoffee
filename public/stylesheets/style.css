@@ -26,6 +26,17 @@ body, html {
     margin: auto;
 }
 
+#about {
+    width: 100%;
+    margin: auto;
+    
+}
+#about.p {
+    width: 50%;
+    margin: auto;
+    
+}
+
 p {
     color:#FFFFFF;
 }
@@ -87,12 +98,16 @@ p {
     background-color: rgba(100,100,100,1);   
     }
 
-#logosimple {
-    position:fixed;
-    padding: 10px;
-    right:10px;
-    z-index:500;
-}
+
+.logo {
+    position:absolute;
+    right:5%;
+    top:5%;
+    width:15%;
+    height:auto;
+    z-index:501;
+    }
+
 
 .spinner {
     z-index: 700;
