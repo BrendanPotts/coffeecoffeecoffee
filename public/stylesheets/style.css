@@ -31,17 +31,10 @@ body, html {
     margin: auto;
     
 }
-#about.p {
+#about p {
     width: 50%;
     margin: auto;
     
-}
-
-
-#content p {
-    border-bottom: 2px dotted #167cff;
-    padding-bottom: 10px;
-    color:#330000;
 }
 
 .content p {
@@ -51,7 +44,10 @@ body, html {
     -webkit-transition: 0.25s all ease-out;
     -moz-transition: 0.25s all ease-out;
     z-index: 60;
+    color:yellow;
 }
+
+
 .content p.show {
     font-family: 'Changa One', sans-serif;
     font-size: 15px;
@@ -107,6 +103,7 @@ body, html {
     top:5%;
     width:15%;
     height:auto;
+    max-width:150px;
     z-index:501;
     }
 
