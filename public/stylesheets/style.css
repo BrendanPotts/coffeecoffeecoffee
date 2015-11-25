@@ -162,20 +162,15 @@ p {
 
 
 .container li:hover {
-    opacity:0.9;
+    opacity:0.5;
     cursor: pointer;
-    -webkit-filter:contrast(100%);
     -webkit-transition: 0.25s all ease-out;
-    -moz-filter:contrast(100%);
     -moz-transition: 0.25s all ease-out;
 }
 .container li:active {
-    -webkit-filter:greyscale(100%);
-    -moz-filter:greyscale(100%);
     opacity:1;
     cursor: pointer;
 }
-
 
 .xbutton div {
     left:-100px; 
