@@ -44,7 +44,7 @@ body, html {
     -webkit-transition: 0.25s all ease-out;
     -moz-transition: 0.25s all ease-out;
     z-index: 60;
-    color:yellow;
+    color:white;
 }
 
 
@@ -105,6 +105,16 @@ body, html {
     height:auto;
     max-width:150px;
     z-index:501;
+    }
+
+.location {
+    position:absolute;
+    left:5%;
+    top:5%;
+    width:20%;
+    height:auto;
+    max-width:150px;
+    z-index:502;
     }
 
 
