@@ -3,7 +3,7 @@ body, html {
     background-color:#FFFFFF;
     width:100%;
     overflow-x: hidden; 
-    overflow-y: hidden;
+    
     padding: 0px;
     margin: 0px;
     border: 0px;
@@ -29,12 +29,6 @@ body, html {
 #about {
     width: 100%;
     margin: auto;
-    
-}
-#about p {
-    width: 50%;
-    margin: auto;
-    
 }
 
 .content p {
@@ -44,6 +38,9 @@ body, html {
     -webkit-transition: 0.25s all ease-out;
     -moz-transition: 0.25s all ease-out;
     z-index: 60;
+    color:white;
+}
+.contact {
     color:white;
 }
 
@@ -60,18 +57,17 @@ body, html {
     opacity: .90;
     -webkit-transition: 0.25s all ease-out;
     -moz-transition: 0.25s all ease-out;
-    text-align: left;
-    padding-top:15%;
-    z-index: 60;
+    text-align: justify;
+    padding:8%;
+    padding-left:4%;
+    }
 
-}
 
+#about {
+    color:white;
+    width:88%;
+    word-break: keep-all;
 
-.about p{
-    color:#FFFFFF;
-    width:50%;
-    padding-left: 10%;
-    padding-right: 10%;
 }
 
 /*MAPS*******/
