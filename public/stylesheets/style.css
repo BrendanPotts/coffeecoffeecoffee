@@ -3,7 +3,6 @@ body, html {
     background-color:#FFFFFF;
     width:100%;
     overflow-x: hidden; 
-    
     padding: 0px;
     margin: 0px;
     border: 0px;
@@ -70,6 +69,25 @@ body, html {
 
 }
 
+#coffeepicker {
+    color:white;
+    width:88%;
+    word-break: keep-all;
+
+}
+
+
+input[type="checkbox"] {
+ }
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    
+    cursor:pointer;
+}
 /*MAPS*******/
 
 .map {
