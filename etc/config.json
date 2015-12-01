@@ -1,0 +1,19 @@
+{
+    "server": {
+        "port": "3000",
+        "hostname": "0.0.0.0",
+        "devmode": true,
+        "version": "0.0.1",
+        "version_str": "Coffee App Version 0.0.1",
+        "disable_log": false
+    },
+    "cookies": {
+        "secret": "ixha7)!cux+!0djs!u*j0n=+z@_e2kn-)n7*(na&#2+p#+m-kb"
+    },
+    "settings": {
+        "db": {
+            "production-dsn": "tcp://nigel:nigel@localhost:5432/hai",
+            "development-dsn": "tcp://nigel:nigel@localhost:5432/hai"
+        }
+    }
+}
