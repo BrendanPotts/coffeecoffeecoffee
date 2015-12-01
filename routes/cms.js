@@ -28,7 +28,7 @@ router.post('/authenticate', function(req, res) {
         req.session.name = 'devuser';
         req.session.email = 'devuser@home.com';
         req.session.shopID = '1';
-        return res.redirect( '/');
+        return res.redirect( '/cms/admin');
     }
 });
 
