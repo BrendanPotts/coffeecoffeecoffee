@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+
+    <!-- Bootstrap -->
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/cms/login.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class='col-md-3'></div>
+            <div class="col-md-6">
+                <div class="login-box well">
+                        <form action="/cms/authenticate" method="POST">
+                            <legend>Login</legend>
+                            <div class="form-group">
+                                <label for="username-email">E-mail</label>
+                                <input value='' name='username' id="username" placeholder="E-mail" type="text" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password" placeholder="Password" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-default btn-login-submit btn-block m-t-md" value="Login" />
+                            </div>
+                            <span class='text-center'><a href="/cms/resetpassword" class="text-sm">Forgot Password?</a></span>
+                        </form>
+
+                </div>
+            </div>
+            <div class='col-md-3'></div>
+        </div>
+    </div>
+</body>
+</html>

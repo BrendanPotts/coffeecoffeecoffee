@@ -3,14 +3,21 @@ var router      = express.Router();
 var config      = require(__dirname + '/../etc/config.json');
 
 
+//======================================================================//
+//======================== LOGIN FUNCTIONS =============================//
+//======================================================================//
+
 router.get('/login', function(req, res, next) {
     return res.render('login.html', {});
 });
 
+router.get('/authenticate', function(req, res) {
+    return res.redirect('/');
+});
+
 router.post('/authenticate', function(req, res) {
-    console.log(req);
     if( req.body.username === undefined || req.body.password === undefined){
-        return res.redirect('/login?reason=failed');
+        return res.redirect('/cms/login?reason=failed');
     }
     else{
 
@@ -32,9 +39,15 @@ router.get('/logout', function(req, res, next) {
     return res.redirect('/');
 });
 
+router.get('/resetpassword', function(req, res, next) {
+    return res.type('txt').send('Not implemented yet.');
+});
+//======================================================================//
+
+
 router.get('/admin', function(req, res, next) {
     if( req.session.name === undefined ){
-        return res.redirect('/login');
+        return res.redirect('/cms/login');
     }
     return res.render('admin.html', {});
 });
