@@ -1,0 +1,127 @@
+{{> admin-header}}
+<div class="container-fluid main-container">
+    <div class="col-md-2 sidebar">
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="/cms/admin">Home</a></li>
+            <li class="active"><a href="/cms/shops">Shops</a></li>
+            <li><a href="/cms/users">Users</a></li>
+        </ul>
+    </div>
+    <div class="col-md-10 content">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Shop
+            </div>
+            <div class="panel-body">
+
+            <form class="form-horizontal">
+            <fieldset>
+
+            <!-- Form Name -->
+            <legend>Add Shop</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="name">Shop name</label>
+              <div class="col-md-5">
+              <input id="name" name="name" type="text" placeholder="Coffee Inc" class="form-control input-md" required="">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="address">Shop address</label>
+              <div class="col-md-6">
+              <input id="address" name="address" type="text" placeholder="21 main street.." class="form-control input-md" required="">
+
+              </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="about">About</label>
+              <div class="col-md-4">
+                <textarea class="form-control" id="about" name="about">A brief introduction or blurp.</textarea>
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="owner">Owner</label>
+              <div class="col-md-5">
+              <input id="owner" name="owner" type="text" placeholder="Owner" class="form-control input-md" required="">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="href">Website</label>
+              <div class="col-md-5">
+              <input id="href" name="href" type="text" placeholder="http://www.coffee.ie" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="phone">Phone</label>
+              <div class="col-md-5">
+              <input id="phone" name="phone" type="text" placeholder="011234567" class="form-control input-md" required="">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="email">Email</label>
+              <div class="col-md-5">
+              <input id="email" name="email" type="text" placeholder="info@coffee.ie" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="facebook">Facebook</label>
+              <div class="col-md-5">
+              <input id="facebook" name="facebook" type="text" placeholder="https://www.facebook.com/coffee" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="twitter">Twitter</label>
+              <div class="col-md-5">
+              <input id="twitter" name="twitter" type="text" placeholder="https://www.twitter.com/coffee" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="instagram">Instagram</label>
+              <div class="col-md-5">
+              <input id="instagram" name="instagram" type="text" placeholder="https://instagram.com/coffee" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="pinterest">Pinterest</label>
+              <div class="col-md-5">
+              <input id="pinterest" name="pinterest" type="text" placeholder="https://www.pinterest.com/coffee" class="form-control input-md">
+
+              </div>
+            </div>
+
+            </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="/js/cms/shop-admin.js"></script>
+{{> admin-footer}}
