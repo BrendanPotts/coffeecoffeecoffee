@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "My minimalistic blog",
   "dependencies": {
-    "mime": "~1.2.7"
+    "mime": "~1.2.7",
+    "pg": "4.4.3"
   },
   "scripts": {
     "start": "node server.js"
