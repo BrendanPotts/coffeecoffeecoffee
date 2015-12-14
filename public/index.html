@@ -1,28 +1,22 @@
-
-
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
 <head>
-<link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen">
-<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.1/mapbox.css' rel='stylesheet'>
-<script src="http://openlayers.org/en/v3.0.0/build/ol.js" type="text/javascript"></script>
-<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.1/mapbox.js'></script>
-<link href='https://fonts.googleapis.com/css?family=Advent+Pro' rel='stylesheet' type='text/css'>
-<link rel="shortcut icon" href="images/favicon.ico">
-
-<title>
-coffee | coffee | coffee
-</title>
-
+    <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen">
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.1/mapbox.css' rel='stylesheet'>
+    <script src="http://openlayers.org/en/v3.0.0/build/ol.js" type="text/javascript"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.1/mapbox.js'></script>
+    <link href='https://fonts.googleapis.com/css?family=Advent+Pro' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <title>
+        coffee | coffee | coffee
+    </title>
 </head>
 
 <body>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <img class="logo" src="images/logosimple.png" alt="simple logo">
-
-
-<div id="header"><br>
+    <div id="header">
+        <br>
         <span>Coffee | Coffee | Coffee</span>
         <div class="container">
             <ul id="menu">
@@ -34,129 +28,129 @@ coffee | coffee | coffee
                 <li data-target="shop">SHOPS</li>
             </ul>
         </div>
-</div>
-<!-- **LOCATION*********************************************************************-->
-<!-- **XBUTTON*********************************************************************-->
-<div class="xbutton">
-        <div><centre>
-          <img src="images/x.png">
+    </div>
+    <!-- **LOCATION*********************************************************************-->
+    <!-- **XBUTTON*********************************************************************-->
+    <div class="xbutton">
+        <div>
+            <centre>
+                <img src="images/x.png">
         </div>
-      </div>
-
-<!-- **MAPS*********************************************************************-->
-
-<div id="map" class="map">
-    
-</div>
-
-<!-- shop details********************************************-->
-
-
-<!-- menu contents*******************************************-->
+    </div>
+    <!-- **MAPS*********************************************************************-->
+    <div id="map" class="map">
+    </div>
+    <!-- shop details********************************************-->
+    <!-- menu contents*******************************************-->
     <div class="content">
-        <p id="shops"><style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;border-width:1px;border-style:solid;margin:0px auto;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
-.tg .tg-s6z2{text-align:center}
-.tg .tg-07dj{font-weight:bold;font-size:14px}
-.tg .tg-h0x1{text-align:center}
-th.tg-sort-header::-moz-selection { background:transparent; }th.tg-sort-header::selection      { background:transparent; }th.tg-sort-header { cursor:pointer; }table th.tg-sort-header:after {  content:'';  float:right;  margin-top:7px;  border-width:0 4px 4px;  border-style:solid;  border-color:#404040 transparent;  visibility:hidden;  }table th.tg-sort-header:hover:after {  visibility:visible;  }table th.tg-sort-desc:after,table th.tg-sort-asc:after,table th.tg-sort-asc:hover:after {  visibility:visible;  opacity:0.4;  }table th.tg-sort-desc:after {  border-bottom:none;  border-width:4px 4px 0;  }@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}</style>
-<div class="tg-wrap"><table id="tg-3FnBU" class="tg">
-  <tr>
-    <th class="tg-07dj" colspan="10">name</th>
-    <th class="tg-031e" colspan="2" rowspan="3">map link</th>
-  </tr>
-  <tr>
-    <td class="tg-6wtj" colspan="10">address line 1, 2, 3, 4</td>
-  </tr>
-  <tr>
-    <td class="tg-031e" colspan="10">url</td>
-  </tr>
-  <tr>
-    <td class="tg-6wtj" colspan="3">about</td>
-    <td class="tg-6wtj" colspan="9">internal picture</td>
-  </tr>
-  <tr>
-    <td class="tg-031e" colspan="3" rowspan="5">paragraph</td>
-    <td class="tg-031e" colspan="2">pastry</td>
-    <td class="tg-031e" colspan="2">breakfast</td>
-    <td class="tg-031e" colspan="2">lunch</td>
-    <td class="tg-031e" colspan="3">hot food</td>
-  </tr>
-  <tr>
-    <td class="tg-6wtj" colspan="2">wifi</td>
-    <td class="tg-6wtj" colspan="2">seating</td>
-    <td class="tg-6wtj" colspan="2">service</td>
-    <td class="tg-6wtj" colspan="3">plugs</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">blank</td>
-    <td class="tg-s6z2">m</td>
-    <td class="tg-s6z2">t</td>
-    <td class="tg-s6z2">w</td>
-    <td class="tg-s6z2">t</td>
-    <td class="tg-s6z2">f</td>
-    <td class="tg-s6z2">s</td>
-    <td class="tg-s6z2">s</td>
-    <td class="tg-s6z2">bh</td>
-  </tr>
-  <tr>
-    <td class="tg-6wtj">open</td>
-    <td class="tg-h0x1">9</td>
-    <td class="tg-h0x1">9</td>
-    <td class="tg-h0x1">9</td>
-    <td class="tg-h0x1">9</td>
-    <td class="tg-h0x1">9</td>
-    <td class="tg-h0x1">9</td>
-    <td class="tg-h0x1">11</td>
-    <td class="tg-h0x1">11</td>
-  </tr>
-  <tr>
-    <td class="tg-031e">close</td>
-    <td class="tg-s6z2">6</td>
-    <td class="tg-s6z2">6</td>
-    <td class="tg-s6z2">6</td>
-    <td class="tg-s6z2">7</td>
-    <td class="tg-s6z2">7</td>
-    <td class="tg-s6z2">6</td>
-    <td class="tg-s6z2">4</td>
-    <td class="tg-s6z2">4</td>
-  </tr>
-  <tr>
-    <td class="tg-6wtj" colspan="3">coffee</td>
-    <td class="tg-6wtj" colspan="3">methods</td>
-    <td class="tg-6wtj" colspan="3">machine</td>
-    <td class="tg-6wtj" colspan="3">grinder</td>
-  </tr>
-</table></div><img width="85%" src="images/shopdetails.png"></p>
-        <p id="find"><b>Find coffee shop</b><br>
-
+        <p id="shops">
+            <div class="tg-wrap">
+                <table id="tg-3FnBU" class="tg">
+                    <tr>
+                        <th class="tg-07dj" colspan="10">name</th>
+                        <th class="tg-031e" colspan="2" rowspan="3">map link</th>
+                    </tr>
+                    <tr>
+                        <td class="tg-6wtj" colspan="10">address line 1, 2, 3, 4</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-031e" colspan="10">url</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-6wtj" colspan="3">about</td>
+                        <td class="tg-6wtj" colspan="9">internal picture</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-031e" colspan="3" rowspan="5">paragraph</td>
+                        <td class="tg-031e" colspan="2">pastry</td>
+                        <td class="tg-031e" colspan="2">breakfast</td>
+                        <td class="tg-031e" colspan="2">lunch</td>
+                        <td class="tg-031e" colspan="3">hot food</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-6wtj" colspan="2">wifi</td>
+                        <td class="tg-6wtj" colspan="2">seating</td>
+                        <td class="tg-6wtj" colspan="2">service</td>
+                        <td class="tg-6wtj" colspan="3">plugs</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-031e">blank</td>
+                        <td class="tg-s6z2">m</td>
+                        <td class="tg-s6z2">t</td>
+                        <td class="tg-s6z2">w</td>
+                        <td class="tg-s6z2">t</td>
+                        <td class="tg-s6z2">f</td>
+                        <td class="tg-s6z2">s</td>
+                        <td class="tg-s6z2">s</td>
+                        <td class="tg-s6z2">bh</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-6wtj">open</td>
+                        <td class="tg-h0x1">9</td>
+                        <td class="tg-h0x1">9</td>
+                        <td class="tg-h0x1">9</td>
+                        <td class="tg-h0x1">9</td>
+                        <td class="tg-h0x1">9</td>
+                        <td class="tg-h0x1">9</td>
+                        <td class="tg-h0x1">11</td>
+                        <td class="tg-h0x1">11</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-031e">close</td>
+                        <td class="tg-s6z2">6</td>
+                        <td class="tg-s6z2">6</td>
+                        <td class="tg-s6z2">6</td>
+                        <td class="tg-s6z2">7</td>
+                        <td class="tg-s6z2">7</td>
+                        <td class="tg-s6z2">6</td>
+                        <td class="tg-s6z2">4</td>
+                        <td class="tg-s6z2">4</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-6wtj" colspan="3">coffee</td>
+                        <td class="tg-6wtj" colspan="3">methods</td>
+                        <td class="tg-6wtj" colspan="3">machine</td>
+                        <td class="tg-6wtj" colspan="3">grinder</td>
+                    </tr>
+                </table>
+            </div><img width="85%" src="images/shopdetails.png">
+        </p>
+        <p id="find"><b>Find coffee shop</b>
+            <br>
             <br>Pull down list
             <br>.
             <br>.
             <br>.
         </p>
-
-
-        <p id="about">about<br>
-        Fap cray leggings wes anderson, freegan shoreditch bespoke locavore echo park.  Pinterest post-ironic sustainable letterpress, leggings echo park gentrify kale chips VHS cosby sweater flexitarian chillwave aesthetic.  Master cleanse small batch sustainable, 3 wolf moon butcher readymade locavore quinoa.  Hella sartorial mcsweeney's, squid banh mi locavore vice four loko brooklyn next level stumptown.  Fap stumptown fingerstache mustache.  Forage 3 wolf moon iphone, williamsburg bushwick mcsweeney's yr pour-over photo booth sustainable swag chillwave terry richardson.  Lo-fi direct trade  yr banh mi butcher, fingerstache odd future flexitarian thundercats mumblecore selvage retro.<br>Twee jean shorts whatever fixie.  Carles wolf portland whatever beard mustache authentic lo-fi, cosby sweater squid raw denim leggings gluten-free.  Wayfarers ethical tumblr, fingerstache whatever messenger bag hella letterpress polaroid.  Forage pitchfork pop-up, four loko letterpress whatever pickled mlkshk polaroid gluten-free occupy mcsweeney's narwhal master cleanse typewriter.  American apparel chambray wayfarers, selvage raw denim pork belly fixie Austin hoodie pickled skateboard fap messenger bag four loko cred.  Skateboard terry richardson thundercats, high life polaroid american apparel four loko pitchfork.  Cred street art art party vegan.<br>8-bit flexitarian wes anderson seitan, pinterest skateboard salvia you probably haven't heard of them squid pitchfork.  Umami jean shorts gluten-free williamsburg, gentrify put a bird on it vice vegan street art fap VHS narwhal wes anderson authentic.  Tofu shoreditch you probably haven't heard of them helvetica odd future hella.  Mustache pickled ennui, banksy pinterest terry richardson godard art party sustainable ethnic flexitarian four loko umami aesthetic.  Lomo wolf hoodie wes anderson cliche, biodiesel organic american apparel freegan mumblecore.  Brunch thundercats freegan iphone, pop-up readymade bushwick street art tattooed PBR stumptown.  Hoodie Austin food truck cosby sweater, shoreditch lomo you probably haven't heard of them chambray leggings irony.<br>Photo booth keffiyeh iphone occupy.  Vice messenger bag occupy pitchfork butcher.  Hoodie truffaut carles swag, before they sold out umami pop-up typewriter beard iphone sustainable.  Blog Austin mcsweeney's pork belly, carles keffiyeh put a bird on it keytar gastropub seitan bespoke fanny pack 8-bit narwhal.  Mlkshk echo park lomo, quinoa trust fund keytar chillwave cosby sweater mixtape pour-over master cleanse iphone food truck mcsweeney's kogi.  Mumblecore lomo keffiyeh, raw denim swag leggings ennui authentic mixtape vice banh mi marfa street art.  Umami vice fixie put a bird on it polaroid artisan, godard bushwick.<br>Aesthetic wolf wayfarers before they sold out sustainable semiotics next level, readymade pinterest seitan fixie.  Portland retro mustache photo booth kale chips brunch thundercats synth.  Truffaut tumblr blog flexitarian artisan, tofu brunch umami lo-fi pickled put a bird on it odd future 3 wolf moon salvia.  Leggings fingerstache pinterest, skateboard tumblr four loko sriracha PBR.  Mumblecore fanny pack polaroid vinyl, swag twee odd future.  Mixtape sustainable scenester before they sold out semiotics lomo quinoa, butcher odd future PBR put a bird on it.  High life vegan chillwave, next level american apparel dreamcatcher fingerstache.<br>Tattooed viral fixie odd future, craft beer jean shorts cliche single-origin coffee.  Pork belly art party lo-fi iphone mumblecore.  Skateboard american apparel bushwick tattooed, salvia retro fixie carles pop-up leggings.  Odd future readymade cliche keytar, next level pinterest street art polaroid sartorial banksy small batch.  Truffaut food truck salvia cray farm-to-table.  Terry richardson occupy sartorial post-ironic bushwick pinterest, fixie american apparel master cleanse marfa cred.  Farm-to-table marfa fingerstache scenester wes anderson.<br>Seitan freegan hella fap bushwick, keffiyeh four loko leggings chillwave typewriter high life.  Keytar marfa VHS craft beer lo-fi PBR.  Bushwick kogi readymade, pour-over biodiesel bicycle rights beard blog locavore photo booth aesthetic.  Cray sriracha +1, butcher dreamcatcher salvia mlkshk wayfarers umami.  Ethnic fap sustainable, master cleanse wes anderson pitchfork vinyl polaroid gentrify umami.  Stumptown farm-to-table wes anderson, VHS flexitarian fixie sartorial dreamcatcher chambray banh mi wayfarers.  Typewriter +1 semiotics jean shorts echo park mcsweeney's.<br>Hoodie direct trade  bushwick ennui truffaut, authentic wolf mlkshk put a bird on it typewriter.  Raw denim whatever gluten-free, sustainable twee narwhal hella polaroid mixtape flexitarian cosby sweater readymade hoodie etsy.  Food truck twee polaroid, jean shorts readymade retro wolf raw denim 3 wolf moon pinterest godard sriracha blog cray.  Cosby sweater PBR hoodie pitchfork.  Iphone raw denim seitan trust fund, bespoke swag biodiesel wolf single-origin coffee bushwick quinoa semiotics.  Trust fund craft beer occupy, wes anderson tattooed pinterest tumblr.  Mcsweeney's american apparel blog mustache.</p>
-        <p id="coffee"><b>select coffee</b><br>
-        <br>
-
-        <table id"coffeepick" width="70%"><center>
-        <tr>
-            <td><center>3fe coffee</td>
-            <td><center>squaremile</td>
-        </tr>
-        <tr>
-            <td><center>roasted brown</td>
-            <td><center>cloudpicker</td>
-        </tr>
-        </table></center>
-
-
-<!--<div id="timer" class="spinner">
+        <p id="about">about
+            <br> Fap cray leggings wes anderson, freegan shoreditch bespoke locavore echo park. Pinterest post-ironic sustainable letterpress, leggings echo park gentrify kale chips VHS cosby sweater flexitarian chillwave aesthetic. Master cleanse small batch sustainable, 3 wolf moon butcher readymade locavore quinoa. Hella sartorial mcsweeney's, squid banh mi locavore vice four loko brooklyn next level stumptown. Fap stumptown fingerstache mustache. Forage 3 wolf moon iphone, williamsburg bushwick mcsweeney's yr pour-over photo booth sustainable swag chillwave terry richardson. Lo-fi direct trade yr banh mi butcher, fingerstache odd future flexitarian thundercats mumblecore selvage retro.
+            <br>Twee jean shorts whatever fixie. Carles wolf portland whatever beard mustache authentic lo-fi, cosby sweater squid raw denim leggings gluten-free. Wayfarers ethical tumblr, fingerstache whatever messenger bag hella letterpress polaroid. Forage pitchfork pop-up, four loko letterpress whatever pickled mlkshk polaroid gluten-free occupy mcsweeney's narwhal master cleanse typewriter. American apparel chambray wayfarers, selvage raw denim pork belly fixie Austin hoodie pickled skateboard fap messenger bag four loko cred. Skateboard terry richardson thundercats, high life polaroid american apparel four loko pitchfork. Cred street art art party vegan.
+            <br>8-bit flexitarian wes anderson seitan, pinterest skateboard salvia you probably haven't heard of them squid pitchfork. Umami jean shorts gluten-free williamsburg, gentrify put a bird on it vice vegan street art fap VHS narwhal wes anderson authentic. Tofu shoreditch you probably haven't heard of them helvetica odd future hella. Mustache pickled ennui, banksy pinterest terry richardson godard art party sustainable ethnic flexitarian four loko umami aesthetic. Lomo wolf hoodie wes anderson cliche, biodiesel organic american apparel freegan mumblecore. Brunch thundercats freegan iphone, pop-up readymade bushwick street art tattooed PBR stumptown. Hoodie Austin food truck cosby sweater, shoreditch lomo you probably haven't heard of them chambray leggings irony.
+            <br>Photo booth keffiyeh iphone occupy. Vice messenger bag occupy pitchfork butcher. Hoodie truffaut carles swag, before they sold out umami pop-up typewriter beard iphone sustainable. Blog Austin mcsweeney's pork belly, carles keffiyeh put a bird on it keytar gastropub seitan bespoke fanny pack 8-bit narwhal. Mlkshk echo park lomo, quinoa trust fund keytar chillwave cosby sweater mixtape pour-over master cleanse iphone food truck mcsweeney's kogi. Mumblecore lomo keffiyeh, raw denim swag leggings ennui authentic mixtape vice banh mi marfa street art. Umami vice fixie put a bird on it polaroid artisan, godard bushwick.
+            <br>Aesthetic wolf wayfarers before they sold out sustainable semiotics next level, readymade pinterest seitan fixie. Portland retro mustache photo booth kale chips brunch thundercats synth. Truffaut tumblr blog flexitarian artisan, tofu brunch umami lo-fi pickled put a bird on it odd future 3 wolf moon salvia. Leggings fingerstache pinterest, skateboard tumblr four loko sriracha PBR. Mumblecore fanny pack polaroid vinyl, swag twee odd future. Mixtape sustainable scenester before they sold out semiotics lomo quinoa, butcher odd future PBR put a bird on it. High life vegan chillwave, next level american apparel dreamcatcher fingerstache.
+            <br>Tattooed viral fixie odd future, craft beer jean shorts cliche single-origin coffee. Pork belly art party lo-fi iphone mumblecore. Skateboard american apparel bushwick tattooed, salvia retro fixie carles pop-up leggings. Odd future readymade cliche keytar, next level pinterest street art polaroid sartorial banksy small batch. Truffaut food truck salvia cray farm-to-table. Terry richardson occupy sartorial post-ironic bushwick pinterest, fixie american apparel master cleanse marfa cred. Farm-to-table marfa fingerstache scenester wes anderson.
+            <br>Seitan freegan hella fap bushwick, keffiyeh four loko leggings chillwave typewriter high life. Keytar marfa VHS craft beer lo-fi PBR. Bushwick kogi readymade, pour-over biodiesel bicycle rights beard blog locavore photo booth aesthetic. Cray sriracha +1, butcher dreamcatcher salvia mlkshk wayfarers umami. Ethnic fap sustainable, master cleanse wes anderson pitchfork vinyl polaroid gentrify umami. Stumptown farm-to-table wes anderson, VHS flexitarian fixie sartorial dreamcatcher chambray banh mi wayfarers. Typewriter +1 semiotics jean shorts echo park mcsweeney's.
+            <br>Hoodie direct trade bushwick ennui truffaut, authentic wolf mlkshk put a bird on it typewriter. Raw denim whatever gluten-free, sustainable twee narwhal hella polaroid mixtape flexitarian cosby sweater readymade hoodie etsy. Food truck twee polaroid, jean shorts readymade retro wolf raw denim 3 wolf moon pinterest godard sriracha blog cray. Cosby sweater PBR hoodie pitchfork. Iphone raw denim seitan trust fund, bespoke swag biodiesel wolf single-origin coffee bushwick quinoa semiotics. Trust fund craft beer occupy, wes anderson tattooed pinterest tumblr. Mcsweeney's american apparel blog mustache.</p>
+        <p id="coffee"><b>select coffee</b>
+            <br>
+            <br>
+            <table id "coffeepick" width="70%">
+                <center>
+                    <tr>
+                        <td>
+                            <center>3fe coffee</td>
+                        <td>
+                            <center>squaremile</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <center>roasted brown</td>
+                        <td>
+                            <center>cloudpicker</td>
+                    </tr>
+            </table>
+            </center>
+            <!--<div id="timer" class="spinner">
         <svg xml:space="preserve" width="100%" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 2480 3507">
                 <polygon class="fill1" points="2013,1739 2277,1891 2277,2632 2075,2748 1636,2494 1108,2799 203,2276 203,1231 1108,709 2013,1231 " />
                 <polygon class="fill2" points="1108,1754 229,1246 229,2261 1108,2769 " />
@@ -186,237 +180,231 @@ th.tg-sort-header::-moz-selection { background:transparent; }th.tg-sort-header::
             </svg>
         </div>
 -->
-
-
-
         </p>
-        <p id="food">Food<br>
+        <p id="food">Food
+            <br>
             <input type="checkbox" id="c1" name="cc" />
-            <label for="c1">Pastries</label><br>
+            <label for="c1">Pastries</label>
+            <br>
             <input type="checkbox" id="c2" name="c2" />
-            <label for="c2">Cold Lunch Food</label><br>
+            <label for="c2">Cold Lunch Food</label>
+            <br>
             <input type="checkbox" id="c2" name="c3" />
-            <label for="c3">Hot Lunch Food</label><br>
+            <label for="c3">Hot Lunch Food</label>
+            <br>
             <input type="checkbox" id="c2" name="c4" />
-            <label for="c4">Kitchen</label><br>
-            </p>
+            <label for="c4">Kitchen</label>
+            <br>
+        </p>
+        <p class="contact"><b>contact us</b>
+            <br> If you would like to have your coffee shop added to the site, please mail us at <a href="mailto:coffeecoffeeadd@gmail.com"> coffeecoffeeadd@gmail.com</a> We will send you a survey to fill out and may add your premises after we visit.
+            <br>
+        </p>
+    </div>
+    <!-- ************************************************************************************-->
+    <script>
+    L.mapbox.accessToken = 'pk.eyJ1IjoieWFycnVtayIsImEiOiJVNVVkT2JvIn0.xja5Bz1L0dmNYUfNG3mlBw';
+    var map = L.mapbox.map('map', 'yarrumk.jg24a6oj')
+        .setView([53.3528823, -6.2349633], 12);
 
-
-        <p class="contact"><b>contact us</b><br>
-        If you would like to have your coffee shop added to the site, please mail us at <a href="mailto:coffeecoffeeadd@gmail.com"> coffeecoffeeadd@gmail.com</a> We will send you a survey to fill out and may add your premises after we visit.
-        <br></p>
-
-    
-        </div>
-
-
-<!-- ************************************************************************************-->
-<script>
-L.mapbox.accessToken = 'pk.eyJ1IjoieWFycnVtayIsImEiOiJVNVVkT2JvIn0.xja5Bz1L0dmNYUfNG3mlBw';
-var map = L.mapbox.map('map', 'yarrumk.jg24a6oj')
-    .setView([53.3528823,-6.2349633],12);
-
-var myLayer = L.mapbox.featureLayer().addTo(map);
+    var myLayer = L.mapbox.featureLayer().addTo(map);
 
 
 
 
-var geoJson = [{
-    "type": "Feature",
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-6.2195671,53.3509354]
-    },
-    "properties": {
-        "title": "<a href='http://www.squaremile.co.uk' target='_blank'><img src='http://openapp.ie/images/con-hennessey' width='75' height='75'><br>Squaremile Coffee</a><br>1 Coffee Roaster Court making the popo up box appear even arger than its meant<br>Main Street<br>London<br>",
-        "icon": {
-            "iconUrl": "images/sq_Mile_pin.png" ,
-            "iconSize": [35, 50], // size of the icon
-            "iconAnchor": [17, 50], // point of the icon which will correspond to marker's location
-            "popupAnchor": [0, -5], // point from which the popup should open relative to the iconAnchor
-            "className": "dot"
+    var geoJson = [{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-6.2195671, 53.3509354]
+            },
+            "properties": {
+                "title": "<a href='http://www.squaremile.co.uk' target='_blank'><img src='http://openapp.ie/images/con-hennessey' width='75' height='75'><br>Squaremile Coffee</a><br>1 Coffee Roaster Court making the popo up box appear even arger than its meant<br>Main Street<br>London<br>",
+                "icon": {
+                    "iconUrl": "images/sq_Mile_pin.png",
+                    "iconSize": [35, 50], // size of the icon
+                    "iconAnchor": [17, 50], // point of the icon which will correspond to marker's location
+                    "popupAnchor": [0, -5], // point from which the popup should open relative to the iconAnchor
+                    "className": "dot"
+                }
+            }
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-6.2656338, 53.3507325]
+            },
+            "properties": {
+                "title": "<a href='http://www.openapp.ie' target='_blank'><img src='https://openapp.ie/images/dave-180x180' width='75' height='75'><br>OpenApp</a><br>10 Marlborough Court<br>Marlborough Street<br>Dublin 1<br>",
+                "icon": {
+                    "iconUrl": "images/pointer1.png",
+                    "iconSize": [35, 50],
+                    "iconAnchor": [17, 50],
+                    "popupAnchor": [0, -5],
+                    "className": "dot"
+                }
+            }
+        },
+
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-6.2931506, 53.3448722]
+            },
+            "properties": {
+                "title": "<a href='https://healthatlasireland.ie' target='_blank'><img src='http://www2.openapp.ie/wp-content/uploads/2015/03/3987cbe6-ea29-4e01-abb8-fdbe6931d446.jpeg' width='75' height='75'><br>Health Intelligence</a><br><br>Dr.Steevens Hosp<br>Dublin<br>",
+                "icon": {
+                    "iconUrl": "images/pointer2.png",
+                    "iconSize": [35, 50],
+                    "iconAnchor": [17, 50],
+                    "popupAnchor": [0, -5],
+                    "className": "dot"
+                }
+            }
+        },
+
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-6.2420058, 53.3399024]
+            },
+            "properties": {
+                "title": "<a href='http://www.3fe.ie' target='_blank'><img src='http://cdn2.independent.ie/incoming/article30437135.ece/e4a16/ALTERNATES/h342/3fe.jpg' width='100' height='75'><br>3fe Coffee</a><br>32/34 Lwr Grand Canal Street<br>Dublin 2<br>",
+                "icon": {
+                    "iconUrl": "images/3femarker.png",
+                    "iconSize": [35, 50],
+                    "iconAnchor": [17, 50],
+                    "popupAnchor": [0, -5],
+                    "className": "dot"
+                }
+            }
+        },
+
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-6.254042, 53.3419562]
+            },
+            "properties": {
+                "title": "<a href='http://www.cupcafe.ie' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0295/0101/cup_nassau_street_dublin_2_large.JPG' width='100' height='75'><br>Cup Cafe</a><br>15 Leinster Street Sth<br>Dublin 2<br>",
+                "icon": {
+                    "iconUrl": "images/cupdublinmarker.png",
+                    "iconSize": [35, 50],
+                    "iconAnchor": [17, 50],
+                    "popupAnchor": [0, -5],
+                    "className": "dot"
+                }
+            }
+        },
+
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-6.268429, 53.3471011]
+            },
+            "properties": {
+                "title": "<a href='http://www.brotherhubbard.ie' target='_blank'><img src='http://darkroom.sundayworld.com/800/0/7e62fbfebde2cdf9ea5653071a088103:9fd552ad9d6c98f8fd090fab78d6d629/brother-hubbard-a-top-class-cafe' width='100' height='75'><br>Brother Hubbard</a><br>153 Capel Street<br>Dublin 1<br>",
+                "icon": {
+                    "iconUrl": "images/brotherhubbardmarker.png",
+                    "iconSize": [35, 50],
+                    "iconAnchor": [17, 50],
+                    "popupAnchor": [0, -5],
+                    "className": "dot"
+                }
+            }
+        },
+
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-6.2628473, 53.3415844]
+            },
+            "properties": {
+                "title": "<a href='http://www.clementandpekoe.com' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0297/5313/clement_pekoe_dublin_large.JPG?picture=2975313' width='100' height='75'><br>Clement and Pekoe</a><br>50 South William Street<br>Dublin 2<br>",
+                "icon": {
+                    "iconUrl": "images/clementandpekoemarker.png",
+                    "iconSize": [35, 50],
+                    "iconAnchor": [17, 50],
+                    "popupAnchor": [0, -5],
+                    "className": "dot"
+                }
+            }
+        },
+
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-6.26233, 53.34797]
+            },
+            "properties": {
+                "title": "<a href='http://www.vicecoffeeinc.com/' target='_blank'><img src='http://www.brian-coffee-spot.com/wp-content/uploads/wow-slider-plugin/345/images/_bar.jpg' width='100' height='75'><br>Vice Coffee Inc.</a><br>54 Abbey Street Middle<br>Dublin 1<br>",
+                "icon": {
+                    "iconUrl": "images/vicecoffeemarker.png",
+                    "iconSize": [35, 50],
+                    "iconAnchor": [17, 50],
+                    "popupAnchor": [0, -5],
+                    "className": "dot"
+                }
+            }
+        },
+
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-6.230122, 53.328967]
+            },
+            "properties": {
+                "title": "<a href='http://www.basewfp.com/' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0295/2536/base_pizza.JPG?picture=2952536' width='100' height='75'><br>Base Wood Fired Pizza</a><br>180 Merrion road<br>Ballsbridge<br>Dublin 4<br>",
+                "icon": {
+                    "iconUrl": "images/basewfpmarker.png",
+                    "iconSize": [35, 50],
+                    "iconAnchor": [17, 50],
+                    "popupAnchor": [0, -5],
+                    "className": "dot"
+                }
+            }
+        },
+
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-6.282893, 53.310151]
+            },
+            "properties": {
+                "title": "<a href='http://www.basewfp.com/' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0079/2855/photo__7__large.jpg?picture=792855' width='100' height='75'><br>Base Wood Fired Pizza</a><br>92 Terenure Rd E<br>Terenure<br>Dublin 6<br>",
+                "icon": {
+                    "iconUrl": "images/basewfpmarker.png",
+                    "iconSize": [35, 50],
+                    "iconAnchor": [17, 50],
+                    "popupAnchor": [0, -5],
+                    "className": "dot"
+                }
+            }
         }
-    }
-}, {
-    "type": "Feature",
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-6.2656338,53.3507325]
-    },
-    "properties": {
-        "title": "<a href='http://www.openapp.ie' target='_blank'><img src='https://openapp.ie/images/dave-180x180' width='75' height='75'><br>OpenApp</a><br>10 Marlborough Court<br>Marlborough Street<br>Dublin 1<br>",
-        "icon": {
-            "iconUrl": "images/pointer1.png",
-            "iconSize": [35, 50],
-            "iconAnchor": [17, 50],
-            "popupAnchor": [0, -5],
-            "className": "dot"
-        }
-    }
-},
+    ];
 
- {
-    "type": "Feature",
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-6.2931506,53.3448722]
-    },
-    "properties": {
-        "title": "<a href='https://healthatlasireland.ie' target='_blank'><img src='http://www2.openapp.ie/wp-content/uploads/2015/03/3987cbe6-ea29-4e01-abb8-fdbe6931d446.jpeg' width='75' height='75'><br>Health Intelligence</a><br><br>Dr.Steevens Hosp<br>Dublin<br>",
-        "icon": {
-            "iconUrl": "images/pointer2.png",
-            "iconSize": [35, 50],
-            "iconAnchor": [17, 50],
-            "popupAnchor": [0, -5],
-            "className": "dot"
-        }
-    }
-},
+    // Set a custom icon on each marker based on feature properties.
+    myLayer.on('layeradd', function(e) {
+        var marker = e.layer,
+            feature = marker.feature;
 
- {
-    "type": "Feature",
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-6.2420058,53.3399024]
-    },
-    "properties": {
-        "title": "<a href='http://www.3fe.ie' target='_blank'><img src='http://cdn2.independent.ie/incoming/article30437135.ece/e4a16/ALTERNATES/h342/3fe.jpg' width='100' height='75'><br>3fe Coffee</a><br>32/34 Lwr Grand Canal Street<br>Dublin 2<br>",
-        "icon": {
-            "iconUrl": "images/3femarker.png",
-            "iconSize": [35, 50],
-            "iconAnchor": [17, 50],
-            "popupAnchor": [0, -5],
-            "className": "dot"
-        }
-    }
-},
+        marker.setIcon(L.icon(feature.properties.icon));
+    });
 
- {
-    "type": "Feature",
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-6.254042,53.3419562]
-    },
-    "properties": {
-        "title": "<a href='http://www.cupcafe.ie' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0295/0101/cup_nassau_street_dublin_2_large.JPG' width='100' height='75'><br>Cup Cafe</a><br>15 Leinster Street Sth<br>Dublin 2<br>",
-        "icon": {
-            "iconUrl": "images/cupdublinmarker.png",
-            "iconSize": [35, 50],
-            "iconAnchor": [17, 50],
-            "popupAnchor": [0, -5],
-            "className": "dot"
-        }
-    }
-},
-
- {
-    "type": "Feature",
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-6.268429,53.3471011]
-    },
-    "properties": {
-        "title": "<a href='http://www.brotherhubbard.ie' target='_blank'><img src='http://darkroom.sundayworld.com/800/0/7e62fbfebde2cdf9ea5653071a088103:9fd552ad9d6c98f8fd090fab78d6d629/brother-hubbard-a-top-class-cafe' width='100' height='75'><br>Brother Hubbard</a><br>153 Capel Street<br>Dublin 1<br>",
-        "icon": {
-            "iconUrl": "images/brotherhubbardmarker.png",
-            "iconSize": [35, 50],
-            "iconAnchor": [17, 50],
-            "popupAnchor": [0, -5],
-            "className": "dot"
-        }
-    }
-},
-
- {
-    "type": "Feature",
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-6.2628473,53.3415844]
-    },
-    "properties": {
-        "title": "<a href='http://www.clementandpekoe.com' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0297/5313/clement_pekoe_dublin_large.JPG?picture=2975313' width='100' height='75'><br>Clement and Pekoe</a><br>50 South William Street<br>Dublin 2<br>",
-        "icon": {
-            "iconUrl": "images/clementandpekoemarker.png",
-            "iconSize": [35, 50],
-            "iconAnchor": [17, 50],
-            "popupAnchor": [0, -5],
-            "className": "dot"
-        }
-    }
-},
-
- {
-    "type": "Feature",
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-6.26233, 53.34797]
-    },
-    "properties": {
-        "title": "<a href='http://www.vicecoffeeinc.com/' target='_blank'><img src='http://www.brian-coffee-spot.com/wp-content/uploads/wow-slider-plugin/345/images/_bar.jpg' width='100' height='75'><br>Vice Coffee Inc.</a><br>54 Abbey Street Middle<br>Dublin 1<br>",
-        "icon": {
-            "iconUrl": "images/vicecoffeemarker.png",
-            "iconSize": [35, 50],
-            "iconAnchor": [17, 50],
-            "popupAnchor": [0, -5],
-            "className": "dot"
-        }
-    }
-},
-
- {
-    "type": "Feature",
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-6.230122, 53.328967]
-    },
-    "properties": {
-        "title": "<a href='http://www.basewfp.com/' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0295/2536/base_pizza.JPG?picture=2952536' width='100' height='75'><br>Base Wood Fired Pizza</a><br>180 Merrion road<br>Ballsbridge<br>Dublin 4<br>",
-        "icon": {
-            "iconUrl": "images/basewfpmarker.png",
-            "iconSize": [35, 50],
-            "iconAnchor": [17, 50],
-            "popupAnchor": [0, -5],
-            "className": "dot"
-        }
-    }
-},
-
- {
-    "type": "Feature",
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-6.282893, 53.310151]
-    },
-    "properties": {
-        "title": "<a href='http://www.basewfp.com/' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0079/2855/photo__7__large.jpg?picture=792855' width='100' height='75'><br>Base Wood Fired Pizza</a><br>92 Terenure Rd E<br>Terenure<br>Dublin 6<br>",
-        "icon": {
-            "iconUrl": "images/basewfpmarker.png",
-            "iconSize": [35, 50],
-            "iconAnchor": [17, 50],
-            "popupAnchor": [0, -5],
-            "className": "dot"
-        }
-    }
-}];
-
-// Set a custom icon on each marker based on feature properties.
-myLayer.on('layeradd', function(e) {
-    var marker = e.layer,
-        feature = marker.feature;
-
-    marker.setIcon(L.icon(feature.properties.icon));
-});
-
-// Add features to the map.
-myLayer.setGeoJSON(geoJson);
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-<script type="text/javascript" src="js/jsstuff.js"></script>
-
-
+    // Add features to the map.
+    myLayer.setGeoJSON(geoJson);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/jsstuff.js"></script>
 </body>
 
 </html>
-
-    
