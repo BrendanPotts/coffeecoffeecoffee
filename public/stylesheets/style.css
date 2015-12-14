@@ -107,7 +107,7 @@ input[type="checkbox"] + label span {
     background-color: rgba(100, 100, 100, 1);
 }
 
-.shop {
+/*.shop {
     color: white;
     position: absolute;
     width: 100%;
@@ -118,7 +118,7 @@ input[type="checkbox"] + label span {
     text-align: left;
     z-index: 700;
 }
-
+*/
 .logo {
     position: absolute;
     right: 5%;
