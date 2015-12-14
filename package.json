@@ -4,9 +4,6 @@
   "description": "My minimalistic blog",
   "dependencies": {
     "mime": "~1.2.7",
-<<<<<<< HEAD
-    "pg": "4.4.3"
-=======
     "body-parser": "^1.14.1",
     "compression": "^1.6.0",
     "cookie-parser": "^1.4.0",
@@ -17,7 +14,6 @@
     "mustache-express": "^1.2.1",
     "pg": "^4.4.3",
     "session": "^0.1.0"
->>>>>>> 0082a163e5cba378fae48ee985d3817550183a46
   },
   "scripts": {
     "start": "node server.js"
