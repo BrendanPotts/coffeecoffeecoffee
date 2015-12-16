@@ -12,8 +12,9 @@
     },
     "settings": {
         "db": {
-            "production-dsn": "tcp://nigel:nigel@localhost:5432/hai",
-            "development-dsn": "tcp://nigel:nigel@localhost:5432/hai"
+            "production-dsn": "tcp://coffeeapp:coffeeapp@localhost:5432/coffeedb",
+            "development-dsn": "tcp://nigel:nigel@localhost:5433/nigel",
+            "debug": true
         }
     }
 }

@@ -1,7 +1,15 @@
 var express     = require('express');
 var router      = express.Router();
 var config      = require(__dirname + '/../etc/config.json');
+var Database    = require(__dirname + '/../lib/database');
+var db          = new Database();
 
+db.connect(config.settings.db, function(err){
+    if(err)
+    {
+        throw err;
+    }
+});
 
 //======================================================================//
 //======================== LOGIN FUNCTIONS =============================//
@@ -94,27 +102,12 @@ router.get('/get_shop_list.json', function(req, res, next) {
     if( req.session.name === undefined ){
         return next(new Error("Unauthenticated access"));
     }
-    var data = {
-      "data": [
-            [
-              "Coffee Inc",
-              "21 Main Street",
-              "011234567",
-              "coffee@coffee.com",
-              "Yes",
-              new Date()
-          ],
-          [
-            "Coffee 2",
-            "10 Top Street",
-            "011234567",
-            "coffee@home.com",
-            "Yes",
-            new Date()
-        ]
-      ]
-    };
-    return res.json(data);
+    var sql = "SELECT name, address, phone, email, published, last_update from coffee.shops";
+    db.selectQuery(sql, [], function(err, result){
+        if(err) return next(err);
+
+        return res.json({ "data": result.rows  });
+    });
 });
 
 
@@ -122,25 +115,44 @@ router.get('/get_user_list.json', function(req, res, next) {
     if( req.session.name === undefined ){
         return next(new Error("Unauthenticated access"));
     }
-    var data = {
-      "data": [
-            [
-              "Billy Bob",
-              "bob@gmail.com",
-              "Yes",
-              "No",
-              "Coffee Inc",
-          ],
-          [
-            "Cuppa Joe",
-            "joe@gmail.com",
-            "Yes",
-            "Yes",
-            "Coffee 2",
-        ]
-      ]
-    };
-    return res.json(data);
+
+    var sql = "SELECT name, email, enabled, is_admin, shop_id from coffee.users";
+    db.selectQuery(sql, [], function(err, result){
+        if(err) return next(err);
+
+        return res.json({ "data": result.rows  });
+    });
+});
+
+router.post('/shop_edit', function(req, res, next) {
+    if( req.session.name === undefined ){
+        return next(new Error("Unauthenticated access"));
+    }
+    console.log(req.body);
+
+    // { name: 'Nigel Hanlon',
+    //   address: '21 Ardleigh Park',
+    //   about: 'A brief introduction or blurp.',
+    //   owner: 'me',
+    //   href: '',
+    //   phone: '+353871394045',
+    //   email: 'nigel.f.hanlon@gmail.com',
+    //   facebook: '',
+    //   twitter: '',
+    //   instagram: '',
+    //   pinterest: '',
+    //   coffee1: '',
+    //   coffee2: '',
+    //   coffee3: '',
+    //   coffee4: '',
+    //   grinder1: '',
+    //   grinder2: '',
+    //   machine1: '',
+    //   machine2: '',
+    //   amenities: [ 'seating', 'wifi', 'child_friendly', 'lunch', 'credit_card' ] }
+    //
+    
+    return res.redirect('/cms/shops');
 });
 
 module.exports = router;

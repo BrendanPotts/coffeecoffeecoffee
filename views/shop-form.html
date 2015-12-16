@@ -14,11 +14,11 @@
             </div>
             <div class="panel-body">
 
-            <form class="form-horizontal">
+            <form class="form-horizontal" method="post" action="/cms/shop_edit">
             <fieldset>
 
             <!-- Form Name -->
-            <legend>Add Shop</legend>
+            <legend>Add/Edit Shop</legend>
 
             <!-- Text input-->
             <div class="form-group">
@@ -50,7 +50,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="owner">Owner</label>
               <div class="col-md-5">
-              <input id="owner" name="owner" type="text" placeholder="Owner" class="form-control input-md" required="">
+              <input id="owner" name="owner" type="text" placeholder="Owner" class="form-control input-md">
 
               </div>
             </div>
@@ -118,7 +118,159 @@
               </div>
             </div>
 
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="coffee1">Coffee 1</label>
+              <div class="col-md-6">
+              <input id="coffee1" name="coffee1" type="text" placeholder="" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="coffee2">Coffee 2</label>
+              <div class="col-md-6">
+              <input id="coffee2" name="coffee2" type="text" placeholder="" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="coffee3">Coffee 3</label>
+              <div class="col-md-6">
+              <input id="coffee3" name="coffee3" type="text" placeholder="" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="coffee4">Coffee 4</label>
+              <div class="col-md-6">
+              <input id="coffee4" name="coffee4" type="text" placeholder="" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="grinder1">Grinder 1</label>
+              <div class="col-md-6">
+              <input id="grinder1" name="grinder1" type="text" placeholder="" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="grinder2">Grinder 2</label>
+              <div class="col-md-6">
+              <input id="grinder2" name="grinder2" type="text" placeholder="" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="machine1">Machine 1</label>
+              <div class="col-md-6">
+              <input id="machine1" name="machine1" type="text" placeholder="" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="machine2">Machine 2</label>
+              <div class="col-md-6">
+              <input id="machine2" name="machine2" type="text" placeholder="" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Multiple Checkboxes -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="amenities">Amenities</label>
+              <div class="col-md-4">
+              <div class="checkbox">
+                <label for="amenities-0">
+                  <input type="checkbox" name="amenities" id="amenities-0" value="seating">
+                  Seating
+                </label>
+            	</div>
+              <div class="checkbox">
+                <label for="amenities-1">
+                  <input type="checkbox" name="amenities" id="amenities-1" value="dedicated">
+                  Dedicated
+                </label>
+            	</div>
+              <div class="checkbox">
+                <label for="amenities-2">
+                  <input type="checkbox" name="amenities" id="amenities-2" value="wifi">
+                  WiFi
+                </label>
+            	</div>
+              <div class="checkbox">
+                <label for="amenities-3">
+                  <input type="checkbox" name="amenities" id="amenities-3" value="service">
+                  Service
+                </label>
+            	</div>
+              <div class="checkbox">
+                <label for="amenities-4">
+                  <input type="checkbox" name="amenities" id="amenities-4" value="loyality">
+                  Loyality
+                </label>
+            	</div>
+              <div class="checkbox">
+                <label for="amenities-5">
+                  <input type="checkbox" name="amenities" id="amenities-5" value="child_friendly">
+                  Child friendly
+                </label>
+            	</div>
+              <div class="checkbox">
+                <label for="amenities-6">
+                  <input type="checkbox" name="amenities" id="amenities-6" value="work_friendly">
+                  Work friendly
+                </label>
+            	</div>
+              <div class="checkbox">
+                <label for="amenities-7">
+                  <input type="checkbox" name="amenities" id="amenities-7" value="hot_food">
+                  Hot food
+                </label>
+            	</div>
+              <div class="checkbox">
+                <label for="amenities-8">
+                  <input type="checkbox" name="amenities" id="amenities-8" value="lunch">
+                  Lunch
+                </label>
+            	</div>
+              <div class="checkbox">
+                <label for="amenities-9">
+                  <input type="checkbox" name="amenities" id="amenities-9" value="breakfast">
+                  Breakfast
+                </label>
+            	</div>
+              <div class="checkbox">
+                <label for="amenities-10">
+                  <input type="checkbox" name="amenities" id="amenities-10" value="kitchen">
+                  Kitchen
+                </label>
+            	</div>
+              <div class="checkbox">
+                <label for="amenities-11">
+                  <input type="checkbox" name="amenities" id="amenities-11" value="credit_card">
+                  Credit card
+                </label>
+            	</div>
+              </div>
+            </div>
+
             </fieldset>
+            <button type="submit" class="btn btn-primary">Save</button>
             </form>
         </div>
     </div>

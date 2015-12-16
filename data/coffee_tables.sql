@@ -26,7 +26,7 @@ CREATE TABLE coffee.shops(
 
 CREATE INDEX coffee_shop_name ON coffee.shops(name);
 CREATE INDEX coffee_shop_location ON coffee.shops(location);
-CREATE INDEX coffee_shop_published coffee.shops(published);
+CREATE INDEX coffee_shop_published ON coffee.shops(published);
 
 ---
 --- Coffee Shop Services
@@ -41,7 +41,7 @@ CREATE TABLE coffee.shop_info(
     grinder1 text,
     grinder2 text,
     machine1 text,
-    machine2 text
+    machine2 text,
     seating boolean DEFAULT false,
     dedicated boolean DEFAULT false,
     wifi boolean DEFAULT false,
@@ -55,7 +55,7 @@ CREATE TABLE coffee.shop_info(
     kitchen boolean DEFAULT false,
     credit_card boolean DEFAULT false
 );
-CREATE INDEX coffee_shop_services_id ON coffee.shop_services(shop_id);
+CREATE INDEX coffee_shop_services_id ON coffee.shop_info(shop_id);
 
 ---
 --- Shop Photos
