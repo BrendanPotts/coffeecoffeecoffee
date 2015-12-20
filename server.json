@@ -1,0 +1,15 @@
+[
+    {
+        "name": "coffeeapp",
+        "cwd": "/home/coffeeapp/coffeecoffeecoffee",
+        "script": "server.js",
+        "instances": "4",
+        "error_file": "log/coffee-err.log",
+        "out_file": "log/coffee-out.log",
+        "pid_file": "pid/coffeeapp.pid",
+        "exec_mode": "cluster_mode",
+        "port": 3000,
+        "run_as_user": "coffeeapp",
+        "run_as_group": "coffeeapp"
+    }
+]
