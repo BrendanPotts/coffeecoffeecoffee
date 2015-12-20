@@ -11,6 +11,7 @@ var mustache        = require('mustache');
 var mustacheExpress = require('mustache-express');
 var app             = express();
 var cms             = require('./routes/cms');
+var featureserver   = require('./routes/featureserver');
 
 // Enable or disable logging of http requests.
 app.use(morgan('combined', {
@@ -43,7 +44,7 @@ app.use(compression({
 // Our request routers.
 //
 app.use('/cms', cms);
-
+app.use('/fs', featureserver);
 
 // Setup our error handlers
 app.use(logErrors);
