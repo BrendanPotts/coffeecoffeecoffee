@@ -18,19 +18,18 @@
             <div class="col-md-6">
                 <div class="login-box well">
                         <form action="/cms/authenticate" method="POST">
-                            <legend>Login</legend>
+                            <legend>CMS Login</legend>
                             <div class="form-group">
-                                <label for="username-email">E-mail</label>
-                                <input value='' name='username' id="username" placeholder="E-mail" type="text" class="form-control" />
+                                <label for="username">Username</label>
+                                <input value='' name='username' id="username" placeholder="Username" type="text" class="form-control" required=""/>
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" id="password" name="password" placeholder="Password" class="form-control" />
+                                <input type="password" id="password" name="password" placeholder="Password" class="form-control" required="" />
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-default btn-login-submit btn-block m-t-md" value="Login" />
                             </div>
-                            <span class='text-center'><a href="/cms/resetpassword" class="text-sm">Forgot Password?</a></span>
                         </form>
 
                 </div>

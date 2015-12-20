@@ -14,14 +14,13 @@ CREATE EXTENSION pgcrypto;
 ---
 --- Create a new user in the coffee.users table
 ---
-INSERT into coffee.users (name, email, password, enabled, is_admin, shop_id)
+INSERT into coffee.users (name, email, password, enabled, is_admin)
 VALUES (
-    'bob',
-    'bob@home.com',
-    crypt('password', gen_salt('bf'),
+    'coffeeadmin',
+    'admin@coffeecoffee.me',
+    crypt('', gen_salt('bf')),
     true,
-    false,
-    1
+    true
 );
 
 ---

@@ -20,22 +20,36 @@ router.post('/authenticate', function(req, res) {
         return res.redirect('/cms/login?reason=failed&t=' + Date.now());
     }
     else{
+        var db = new Database();
 
-        /***************************
-            Our Select Query goes here
-            to auth users.
-        ****************************/
-        req.session.name = 'devuser';
-        req.session.email = 'devuser@home.com';
-        req.session.shopID = '1';
-        return res.redirect( '/cms/admin?t=' + Date.now());
+        db.connect(config.settings.db, function(err){
+            if(err) return next(err);
+        });
+
+        var sql = [
+            "SELECT name, email FROM coffee.users WHERE ",
+            "name = $1 AND password = crypt($2,password)"
+        ].join(" ");
+
+        db.selectQuery(sql, [req.body.username, req.body.password], function(err, result){
+            if(err) return next(err);
+
+            console.log(result);
+            if(result.rowCount === 1) {
+                req.session.name = result.rows[0].name;
+                req.session.email = result.rows[0].email;
+                return res.redirect( '/cms/admin?t=' + Date.now());
+            }
+            else{
+                return res.redirect('/cms/login?reason=failed&t=' + Date.now());
+            }
+        });
     }
 });
 
 router.get('/logout', function(req, res, next) {
     delete req.session.name;
     delete req.session.email;
-    delete req.session.shopID;
     return res.redirect('/?t=' + Date.now());
 });
 
