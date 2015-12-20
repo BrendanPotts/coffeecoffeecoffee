@@ -22,6 +22,7 @@
                                 <th>Phone</th>
                                 <th>Email</th>
                                 <th>Last Update</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -32,6 +33,7 @@
                                     <td>{{phone}}</td>
                                     <td>{{email}}</td>
                                     <td>{{last_update}}</td>
+                                    <td><a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this shop?')" href="/cms/deleteshop?id={{shop_id}}">Delete</a></td>
                                 </tr>
                             {{/data}}
                         </tbody>

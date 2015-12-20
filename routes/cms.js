@@ -2,14 +2,6 @@ var express     = require('express');
 var router      = express.Router();
 var config      = require(__dirname + '/../etc/config.json');
 var Database    = require(__dirname + '/../lib/database');
-var db          = new Database();
-
-db.connect(config.settings.db, function(err){
-    if(err)
-    {
-        throw err;
-    }
-});
 
 //======================================================================//
 //======================== LOGIN FUNCTIONS =============================//
@@ -20,12 +12,12 @@ router.get('/login', function(req, res, next) {
 });
 
 router.get('/authenticate', function(req, res) {
-    return res.redirect('/');
+    return res.redirect('/?t=' + Date.now());
 });
 
 router.post('/authenticate', function(req, res) {
     if( req.body.username === undefined || req.body.password === undefined){
-        return res.redirect('/cms/login?reason=failed');
+        return res.redirect('/cms/login?reason=failed&t=' + Date.now());
     }
     else{
 
@@ -36,7 +28,7 @@ router.post('/authenticate', function(req, res) {
         req.session.name = 'devuser';
         req.session.email = 'devuser@home.com';
         req.session.shopID = '1';
-        return res.redirect( '/cms/admin');
+        return res.redirect( '/cms/admin?t=' + Date.now());
     }
 });
 
@@ -44,7 +36,7 @@ router.get('/logout', function(req, res, next) {
     delete req.session.name;
     delete req.session.email;
     delete req.session.shopID;
-    return res.redirect('/');
+    return res.redirect('/?t=' + Date.now());
 });
 
 router.get('/resetpassword', function(req, res, next) {
@@ -59,28 +51,36 @@ router.get('/resetpassword', function(req, res, next) {
 
 router.get('/admin', function(req, res, next) {
     if( req.session.name === undefined ){
-        return res.redirect('/cms/login');
+        return res.redirect('/cms/login?t=' + Date.now());
     }
     return res.render('admin.html', {});
 });
 
 router.get('/users', function(req, res, next) {
     if( req.session.name === undefined ){
-        return res.redirect('/cms/login');
+        return res.redirect('/cms/login?t=' + Date.now());
     }
     return res.render('users.html', {});
 });
 
 router.get('/userform', function(req, res, next) {
     if( req.session.name === undefined ){
-        return res.redirect('/cms/login');
+        return res.redirect('/cms/login?t=' + Date.now());
     }
     return res.render('user-form.html', {});
 });
 
 router.get('/shopform', function(req, res, next) {
+    var db = new Database();
+
+    db.connect(config.settings.db, function(err){
+        if(err) {
+            throw err;
+        }
+    });
+
     if( req.session.name === undefined ){
-        return res.redirect('/cms/login');
+        return res.redirect('/cms/login?t=' + Date.now());
     }
 
     if(req.query.id !== undefined){
@@ -105,8 +105,16 @@ router.get('/shopform', function(req, res, next) {
 });
 
 router.get('/shops', function(req, res, next) {
+    var db = new Database();
+
+    db.connect(config.settings.db, function(err){
+        if(err) {
+            throw err;
+        }
+    });
+
     if( req.session.name === undefined ){
-        return res.redirect('/cms/login');
+        return res.redirect('/cms/login?t=' + Date.now());
     }
 
     var sql = "SELECT shop_id, name, address, phone, email, last_update from coffee.shops";
@@ -124,6 +132,14 @@ router.get('/shops', function(req, res, next) {
 //======================================================================//
 
 router.get('/get_user_list.json', function(req, res, next) {
+    var db = new Database();
+
+    db.connect(config.settings.db, function(err){
+        if(err) {
+            throw err;
+        }
+    });
+
     if( req.session.name === undefined ){
         return next(new Error("Unauthenticated access"));
     }
@@ -136,7 +152,41 @@ router.get('/get_user_list.json', function(req, res, next) {
     });
 });
 
+router.get('/deleteshop', function(req, res, next) {
+    var db = new Database();
+
+    db.connect(config.settings.db, function(err){
+        if(err) {
+            throw err;
+        }
+    });
+
+    if( req.session.name === undefined ){
+        return next(new Error("Unauthenticated access"));
+    }
+
+    if(req.query.id && !isNaN(req.query.id)){
+        var sql = "DELETE FROM coffee.shops where shop_id = $1";
+        db.commitQuery(sql, [req.query.id], function(err, result){
+            if(err) return next(err);
+
+            return res.redirect('/cms/shops?t=' + Date.now());
+        });
+    }
+    else{
+        return next(new Error("Invalid shop id."));
+    }
+});
+
 router.post('/shop_edit', function(req, res, next) {
+    var db = new Database();
+
+    db.connect(config.settings.db, function(err){
+        if(err) {
+            throw err;
+        }
+    });
+
     if( req.session.name === undefined ){
         return next(new Error("Unauthenticated access"));
     }
@@ -194,7 +244,6 @@ router.post('/shop_edit', function(req, res, next) {
         req.body.amenities.indexOf('credit_card') > -1      || false
     ];
 
-    console.log(req.body.shop_id);
     if(req.body.shop_id && !isNaN(req.body.shop_id)){
         sql = [
             "UPDATE coffee.shops SET name = $1, ",
@@ -242,8 +291,7 @@ router.post('/shop_edit', function(req, res, next) {
         if(err) throw err;
 
         console.log(err);
-        console.log(result);
-        return res.redirect('/cms/shops');
+        return res.redirect('/cms/shops?t=' + Date.now());
     });
 });
 
