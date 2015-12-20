@@ -139,3 +139,50 @@ input[type=checkbox]:checked ~ #menu {
         display: block;
     }
 }
+.wide1{
+    width:100%;
+    height:100%;
+    background-color: red;
+}
+
+.wide2{
+    width:100%;
+    height:100%;
+    background-image: "images/testwide.jpg";
+    background-color: yellow;
+}
+
+body,
+html {
+    font: 22px Helvetica, Sans-Serif;
+    background-color: #FFFFFF;
+    width: 100%;
+    overflow-x: hidden;
+
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+#main {
+    font: 10px Helvetica, San-Serif #330000;
+    text-decoration: none;
+}
+
+/*MAPS*******/
+
+.map {
+    height: 85%;
+    width: 100%;
+    z-index: 1;
+    top: 15%;
+}
+
+
+/**********************/
+
+.menubox{
+    width:"100%";
+    height:"10%";
+    background-color: green;
+}
