@@ -74,9 +74,7 @@ router.get('/shopform', function(req, res, next) {
     var db = new Database();
 
     db.connect(config.settings.db, function(err){
-        if(err) {
-            throw err;
-        }
+        if(err) return next(err);
     });
 
     if( req.session.name === undefined ){
@@ -108,9 +106,7 @@ router.get('/shops', function(req, res, next) {
     var db = new Database();
 
     db.connect(config.settings.db, function(err){
-        if(err) {
-            throw err;
-        }
+        if(err) return next(err);
     });
 
     if( req.session.name === undefined ){
@@ -135,9 +131,7 @@ router.get('/get_user_list.json', function(req, res, next) {
     var db = new Database();
 
     db.connect(config.settings.db, function(err){
-        if(err) {
-            throw err;
-        }
+        if(err) return next(err);
     });
 
     if( req.session.name === undefined ){
@@ -156,9 +150,7 @@ router.get('/deleteshop', function(req, res, next) {
     var db = new Database();
 
     db.connect(config.settings.db, function(err){
-        if(err) {
-            throw err;
-        }
+        if(err) return next(err);
     });
 
     if( req.session.name === undefined ){
@@ -183,7 +175,7 @@ router.post('/shop_edit', function(req, res, next) {
 
     db.connect(config.settings.db, function(err){
         if(err) {
-            throw err;
+            return next(err);
         }
     });
 
@@ -200,10 +192,10 @@ router.post('/shop_edit', function(req, res, next) {
         "twitter, instagram, pinterest, coffee1, coffee2, coffee3, ",
         "coffee4, grinder1, grinder2, machine1, machine2, seating, ",
         "dedicated, wifi, service, loyality, child_friendly, ",
-        "work_friendly, hot_food, lunch, breakfast, kitchen, credit_card)",
+        "work_friendly, hot_food, lunch, breakfast, kitchen, credit_card, location)",
         "VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, ",
         "$14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26,",
-        "$27, $28, $29, $30, $31, $32, $33, $34, $35) "
+        "$27, $28, $29, $30, $31, $32, $33, $34, $35, ST_SetSRID(ST_MakePoint($36, $37),4326) ) "
     ].join(" ");
 
     var data = [
@@ -241,7 +233,9 @@ router.post('/shop_edit', function(req, res, next) {
         req.body.amenities.indexOf('lunch') > -1            || false,
         req.body.amenities.indexOf('breakfast') > -1        || false,
         req.body.amenities.indexOf('kitchen') > -1          || false,
-        req.body.amenities.indexOf('credit_card') > -1      || false
+        req.body.amenities.indexOf('credit_card') > -1      || false,
+        req.body.xcoord 	|| 0,
+        req.body.ycoord  	|| 0
     ];
 
     if(req.body.shop_id && !isNaN(req.body.shop_id)){
@@ -280,17 +274,17 @@ router.post('/shop_edit', function(req, res, next) {
             "lunch = $32,",
             "breakfast = $33,",
             "kitchen = $34,",
-            "credit_card = $35",
-            "WHERE shop_id = $36"
+            "credit_card = $35, ",
+            "location = ST_SetSRID(ST_MakePoint($36, $37),4326)",
+            "WHERE shop_id = $38"
         ].join(" ");
 
         data.push(req.body.shop_id);
     }
 
     db.commitQuery(sql, data, function(err, result){
-        if(err) throw err;
+        if(err) return next(err);
 
-        console.log(err);
         return res.redirect('/cms/shops?t=' + Date.now());
     });
 });
