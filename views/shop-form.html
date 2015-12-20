@@ -19,13 +19,13 @@
 
             <!-- Form Name -->
             <legend>Add/Edit Shop</legend>
+            <input type="hidden" name="shop_id" value="{{data.shop_id}}">
 
             <!-- Text input-->
             <div class="form-group">
               <label class="col-md-4 control-label" for="name">Shop name</label>
               <div class="col-md-5">
-              <input id="name" name="name" type="text" placeholder="Coffee Inc" class="form-control input-md" required="">
-
+              <input id="name" value="{{data.name}}" name="name" type="text" placeholder="Coffee Inc" class="form-control input-md" required="">
               </div>
             </div>
 
@@ -33,7 +33,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="address">Shop address</label>
               <div class="col-md-6">
-              <input id="address" name="address" type="text" placeholder="21 main street.." class="form-control input-md" required="">
+              <input id="address" value="{{data.address}}" name="address" type="text" placeholder="21 main street.." class="form-control input-md" required="">
 
               </div>
             </div>
@@ -42,7 +42,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="about">About</label>
               <div class="col-md-4">
-                <textarea class="form-control" id="about" name="about">A brief introduction or blurp.</textarea>
+                <textarea class="form-control" id="about" value="{{data.about}}" name="about">A brief introduction or blurp.</textarea>
               </div>
             </div>
 
@@ -50,7 +50,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="owner">Owner</label>
               <div class="col-md-5">
-              <input id="owner" name="owner" type="text" placeholder="Owner" class="form-control input-md">
+              <input id="owner" value="{{data.owner}}" name="owner" type="text" placeholder="Owner" class="form-control input-md">
 
               </div>
             </div>
@@ -59,7 +59,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="href">Website</label>
               <div class="col-md-5">
-              <input id="href" name="href" type="text" placeholder="http://www.coffee.ie" class="form-control input-md">
+              <input id="href" value="{{data.href}}" name="href" type="text" placeholder="http://www.coffee.ie" class="form-control input-md">
 
               </div>
             </div>
@@ -68,7 +68,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="phone">Phone</label>
               <div class="col-md-5">
-              <input id="phone" name="phone" type="text" placeholder="011234567" class="form-control input-md" required="">
+              <input id="phone" value="{{data.phone}}" name="phone" type="text" placeholder="011234567" class="form-control input-md">
 
               </div>
             </div>
@@ -77,8 +77,43 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="email">Email</label>
               <div class="col-md-5">
-              <input id="email" name="email" type="text" placeholder="info@coffee.ie" class="form-control input-md">
+              <input id="email" value="{{data.email}}" name="email" type="text" placeholder="info@coffee.ie" class="form-control input-md">
 
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="xcoord">X Coordinate</label>
+              <div class="col-md-5">
+              <input id="xcoord" value="{{data.xcoord}}" name="xcoord" type="text" placeholder="53.123" class="form-control input-md" required="">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="ycoord">Y Coordinate</label>
+              <div class="col-md-5">
+              <input id="ycoord" value="{{data.ycoord}}" name="ycoord" type="text" placeholder="-7.123" class="form-control input-md" required="">
+
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="icon_path">Icon Path</label>
+              <div class="col-md-5">
+              <input id="icon_path" value="{{data.icon_path}}" name="icon_path" type="text" placeholder="/icons/coffee.png" class="form-control input-md">
+
+              </div>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="opening_hours">Opening Hours</label>
+              <div class="col-md-4">
+                <textarea value="{{data.opening_hours}}" class="form-control" id="opening_hours" name="opening_hours">Mon-Fri 8:00am - 06:00pm</textarea>
               </div>
             </div>
 
@@ -86,7 +121,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="facebook">Facebook</label>
               <div class="col-md-5">
-              <input id="facebook" name="facebook" type="text" placeholder="https://www.facebook.com/coffee" class="form-control input-md">
+              <input id="facebook" value="{{data.facebook}}" name="facebook" type="text" placeholder="https://www.facebook.com/coffee" class="form-control input-md">
 
               </div>
             </div>
@@ -95,7 +130,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="twitter">Twitter</label>
               <div class="col-md-5">
-              <input id="twitter" name="twitter" type="text" placeholder="https://www.twitter.com/coffee" class="form-control input-md">
+              <input id="twitter" value="{{data.twitter}}" name="twitter" type="text" placeholder="https://www.twitter.com/coffee" class="form-control input-md">
 
               </div>
             </div>
@@ -104,7 +139,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="instagram">Instagram</label>
               <div class="col-md-5">
-              <input id="instagram" name="instagram" type="text" placeholder="https://instagram.com/coffee" class="form-control input-md">
+              <input id="instagram" value="{{data.instagram}}" name="instagram" type="text" placeholder="https://instagram.com/coffee" class="form-control input-md">
 
               </div>
             </div>
@@ -113,7 +148,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="pinterest">Pinterest</label>
               <div class="col-md-5">
-              <input id="pinterest" name="pinterest" type="text" placeholder="https://www.pinterest.com/coffee" class="form-control input-md">
+              <input id="pinterest" value="{{data.pinterest}}" name="pinterest" type="text" placeholder="https://www.pinterest.com/coffee" class="form-control input-md">
 
               </div>
             </div>
@@ -122,7 +157,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="coffee1">Coffee 1</label>
               <div class="col-md-6">
-              <input id="coffee1" name="coffee1" type="text" placeholder="" class="form-control input-md">
+              <input id="coffee1" value="{{data.coffee1}}" name="coffee1" type="text" placeholder="" class="form-control input-md">
 
               </div>
             </div>
@@ -131,7 +166,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="coffee2">Coffee 2</label>
               <div class="col-md-6">
-              <input id="coffee2" name="coffee2" type="text" placeholder="" class="form-control input-md">
+              <input id="coffee2" value="{{data.coffee2}}" name="coffee2" type="text" placeholder="" class="form-control input-md">
 
               </div>
             </div>
@@ -140,7 +175,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="coffee3">Coffee 3</label>
               <div class="col-md-6">
-              <input id="coffee3" name="coffee3" type="text" placeholder="" class="form-control input-md">
+              <input id="coffee3" value="{{data.coffee3}}" name="coffee3" type="text" placeholder="" class="form-control input-md">
 
               </div>
             </div>
@@ -149,7 +184,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="coffee4">Coffee 4</label>
               <div class="col-md-6">
-              <input id="coffee4" name="coffee4" type="text" placeholder="" class="form-control input-md">
+              <input id="coffee4" value="{{data.coffee4}}" name="coffee4" type="text" placeholder="" class="form-control input-md">
 
               </div>
             </div>
@@ -158,7 +193,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="grinder1">Grinder 1</label>
               <div class="col-md-6">
-              <input id="grinder1" name="grinder1" type="text" placeholder="" class="form-control input-md">
+              <input id="grinder1" value="{{data.grinder1}}" name="grinder1" type="text" placeholder="" class="form-control input-md">
 
               </div>
             </div>
@@ -167,7 +202,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="grinder2">Grinder 2</label>
               <div class="col-md-6">
-              <input id="grinder2" name="grinder2" type="text" placeholder="" class="form-control input-md">
+              <input id="grinder2" value="{{data.grinder2}}" name="grinder2" type="text" placeholder="" class="form-control input-md">
 
               </div>
             </div>
@@ -176,7 +211,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="machine1">Machine 1</label>
               <div class="col-md-6">
-              <input id="machine1" name="machine1" type="text" placeholder="" class="form-control input-md">
+              <input id="machine1" value="{{data.machine1}}" name="machine1" type="text" placeholder="" class="form-control input-md">
 
               </div>
             </div>
@@ -185,7 +220,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="machine2">Machine 2</label>
               <div class="col-md-6">
-              <input id="machine2" name="machine2" type="text" placeholder="" class="form-control input-md">
+              <input id="machine2" value="{{data.machine2}}" name="machine2" type="text" placeholder="" class="form-control input-md">
 
               </div>
             </div>
@@ -196,73 +231,73 @@
               <div class="col-md-4">
               <div class="checkbox">
                 <label for="amenities-0">
-                  <input type="checkbox" name="amenities" id="amenities-0" value="seating">
+                  <input type="checkbox" {{#data.seating}}checked{{/data.seating}} name="amenities" id="amenities-0" value="seating">
                   Seating
                 </label>
             	</div>
               <div class="checkbox">
                 <label for="amenities-1">
-                  <input type="checkbox" name="amenities" id="amenities-1" value="dedicated">
+                  <input type="checkbox" {{#data.dedicated}}checked{{/data.dedicated}} name="amenities" id="amenities-1" value="dedicated">
                   Dedicated
                 </label>
             	</div>
               <div class="checkbox">
                 <label for="amenities-2">
-                  <input type="checkbox" name="amenities" id="amenities-2" value="wifi">
+                  <input type="checkbox" {{#data.wifi}}checked{{/data.wifi}} name="amenities" id="amenities-2" value="wifi">
                   WiFi
                 </label>
             	</div>
               <div class="checkbox">
                 <label for="amenities-3">
-                  <input type="checkbox" name="amenities" id="amenities-3" value="service">
+                  <input type="checkbox" {{#data.service}}checked{{/data.service}} name="amenities" id="amenities-3" value="service">
                   Service
                 </label>
             	</div>
               <div class="checkbox">
                 <label for="amenities-4">
-                  <input type="checkbox" name="amenities" id="amenities-4" value="loyality">
+                  <input type="checkbox" {{#data.loyality}}checked{{/data.loyality}} name="amenities" id="amenities-4" value="loyality">
                   Loyality
                 </label>
             	</div>
               <div class="checkbox">
                 <label for="amenities-5">
-                  <input type="checkbox" name="amenities" id="amenities-5" value="child_friendly">
+                  <input type="checkbox" {{#data.child_friendly}}checked{{/data.child_friendly}} name="amenities" id="amenities-5" value="child_friendly">
                   Child friendly
                 </label>
             	</div>
               <div class="checkbox">
                 <label for="amenities-6">
-                  <input type="checkbox" name="amenities" id="amenities-6" value="work_friendly">
+                  <input type="checkbox" {{#data.work_friendly}}checked{{/data.work_friendly}} name="amenities" id="amenities-6" value="work_friendly">
                   Work friendly
                 </label>
             	</div>
               <div class="checkbox">
                 <label for="amenities-7">
-                  <input type="checkbox" name="amenities" id="amenities-7" value="hot_food">
+                  <input type="checkbox" {{#data.hot_food}}checked{{/data.hot_food}} name="amenities" id="amenities-7" value="hot_food">
                   Hot food
                 </label>
             	</div>
               <div class="checkbox">
                 <label for="amenities-8">
-                  <input type="checkbox" name="amenities" id="amenities-8" value="lunch">
+                  <input type="checkbox" {{#data.lunch}}checked{{/data.lunch}} name="amenities" id="amenities-8" value="lunch">
                   Lunch
                 </label>
             	</div>
               <div class="checkbox">
                 <label for="amenities-9">
-                  <input type="checkbox" name="amenities" id="amenities-9" value="breakfast">
+                  <input type="checkbox" {{#data.breakfast}}checked{{/data.breakfast}} name="amenities" id="amenities-9" value="breakfast">
                   Breakfast
                 </label>
             	</div>
               <div class="checkbox">
                 <label for="amenities-10">
-                  <input type="checkbox" name="amenities" id="amenities-10" value="kitchen">
+                  <input type="checkbox" {{#data.kitchen}}checked{{/data.kitchen}} name="amenities" id="amenities-10" value="kitchen">
                   Kitchen
                 </label>
             	</div>
               <div class="checkbox">
                 <label for="amenities-11">
-                  <input type="checkbox" name="amenities" id="amenities-11" value="credit_card">
+                  <input type="checkbox" {{#data.credit_card}}checked{{/data.credit_card}} name="amenities" id="amenities-11" value="credit_card">
                   Credit card
                 </label>
             	</div>

@@ -21,10 +21,20 @@
                                 <th>Address</th>
                                 <th>Phone</th>
                                 <th>Email</th>
-                                <th>Published</th>
                                 <th>Last Update</th>
                             </tr>
                         </thead>
+                        <tbody>
+                            {{#data}}
+                                <tr>
+                                    <td><a href="/cms/shopform?id={{shop_id}}">{{name}}</a></td>
+                                    <td>{{address}}</td>
+                                    <td>{{phone}}</td>
+                                    <td>{{email}}</td>
+                                    <td>{{last_update}}</td>
+                                </tr>
+                            {{/data}}
+                        </tbody>
                 </table>
             </div>
         </div>

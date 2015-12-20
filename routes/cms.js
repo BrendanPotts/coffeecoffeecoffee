@@ -82,34 +82,46 @@ router.get('/shopform', function(req, res, next) {
     if( req.session.name === undefined ){
         return res.redirect('/cms/login');
     }
-    return res.render('shop-form.html', {});
+
+    if(req.query.id !== undefined){
+        if(isNaN(req.query.id)) {
+            return next( new Error("Invalid shop id.") );
+        }
+
+        var sql = "SELECT * FROM coffee.shops where shop_id = $1";
+        db.selectQuery(sql, [req.query.id], function(err, result){
+            if(err) return next(err);
+
+            if(result.rows.length === 0) {
+                return next( new Error("Invalid shop id.") );
+            }
+            console.log(result.rows[0]);
+            return res.render('shop-form.html', {data:result.rows[0]} );
+        });
+    }
+    else{
+        return res.render('shop-form.html', {});
+    }
 });
 
 router.get('/shops', function(req, res, next) {
     if( req.session.name === undefined ){
         return res.redirect('/cms/login');
     }
-    return res.render('shops.html', {});
+
+    var sql = "SELECT shop_id, name, address, phone, email, last_update from coffee.shops";
+    db.selectQuery(sql, [], function(err, result){
+        if(err) return next(err);
+
+        return res.render('shops.html', { "data": result.rows  });
+    });
+
 });
 
 
 //======================================================================//
 //============================  CMS API  ===============================//
 //======================================================================//
-
-
-router.get('/get_shop_list.json', function(req, res, next) {
-    if( req.session.name === undefined ){
-        return next(new Error("Unauthenticated access"));
-    }
-    var sql = "SELECT name, address, phone, email, published, last_update from coffee.shops";
-    db.selectQuery(sql, [], function(err, result){
-        if(err) return next(err);
-
-        return res.json({ "data": result.rows  });
-    });
-});
-
 
 router.get('/get_user_list.json', function(req, res, next) {
     if( req.session.name === undefined ){
@@ -128,31 +140,111 @@ router.post('/shop_edit', function(req, res, next) {
     if( req.session.name === undefined ){
         return next(new Error("Unauthenticated access"));
     }
-    console.log(req.body);
 
-    // { name: 'Nigel Hanlon',
-    //   address: '21 Ardleigh Park',
-    //   about: 'A brief introduction or blurp.',
-    //   owner: 'me',
-    //   href: '',
-    //   phone: '+353871394045',
-    //   email: 'nigel.f.hanlon@gmail.com',
-    //   facebook: '',
-    //   twitter: '',
-    //   instagram: '',
-    //   pinterest: '',
-    //   coffee1: '',
-    //   coffee2: '',
-    //   coffee3: '',
-    //   coffee4: '',
-    //   grinder1: '',
-    //   grinder2: '',
-    //   machine1: '',
-    //   machine2: '',
-    //   amenities: [ 'seating', 'wifi', 'child_friendly', 'lunch', 'credit_card' ] }
-    //
-    
-    return res.redirect('/cms/shops');
+    if(req.body.amenities === undefined) {
+        req.body.amenities = [];
+    }
+    var sql = [
+        "INSERT INTO coffee.shops(name, address, about, owner, ",
+        "href, phone, email, xcoord, ycoord, icon_path, opening_hours, facebook, ",
+        "twitter, instagram, pinterest, coffee1, coffee2, coffee3, ",
+        "coffee4, grinder1, grinder2, machine1, machine2, seating, ",
+        "dedicated, wifi, service, loyality, child_friendly, ",
+        "work_friendly, hot_food, lunch, breakfast, kitchen, credit_card)",
+        "VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, ",
+        "$14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26,",
+        "$27, $28, $29, $30, $31, $32, $33, $34, $35) "
+    ].join(" ");
+
+    var data = [
+        req.body.name 		|| '',
+        req.body.address 	|| '',
+        req.body.about 		|| '',
+        req.body.owner 		|| '',
+        req.body.href 		|| '',
+        req.body.phone 		|| '',
+        req.body.email 		|| '',
+        req.body.xcoord 	|| 0,
+        req.body.ycoord  	|| 0,
+        req.body.icon_path  || '/icons/unknown.png',
+        req.body.opening_hours	|| '',
+        req.body.facebook 	|| '',
+        req.body.twitter 	|| '',
+        req.body.instagram 	|| '',
+        req.body.pinterest 	|| '',
+        req.body.coffee1 	|| '',
+        req.body.coffee2 	|| '',
+        req.body.coffee3 	|| '',
+        req.body.coffee4  	|| '',
+        req.body.grinder1 	|| '',
+        req.body.grinder2 	|| '',
+        req.body.machine1 	|| '',
+        req.body.machine2 	|| '',
+        req.body.amenities.indexOf('seating') > -1          || false,
+        req.body.amenities.indexOf('dedicated') > -1        || false,
+        req.body.amenities.indexOf('wifi') > -1             || false,
+        req.body.amenities.indexOf('service') > -1          || false,
+        req.body.amenities.indexOf('loyality') > -1         || false,
+        req.body.amenities.indexOf('child_friendly') > -1   || false,
+        req.body.amenities.indexOf('work_friendly') > -1    || false,
+        req.body.amenities.indexOf('hot_food') > -1         || false,
+        req.body.amenities.indexOf('lunch') > -1            || false,
+        req.body.amenities.indexOf('breakfast') > -1        || false,
+        req.body.amenities.indexOf('kitchen') > -1          || false,
+        req.body.amenities.indexOf('credit_card') > -1      || false
+    ];
+
+    console.log(req.body.shop_id);
+    if(req.body.shop_id && !isNaN(req.body.shop_id)){
+        sql = [
+            "UPDATE coffee.shops SET name = $1, ",
+            "address = $2,",
+            "about = $3,",
+            "owner = $4,",
+            "href = $5,",
+            "phone = $6,",
+            "email = $7,",
+            "xcoord = $8,",
+            "ycoord = $9,",
+            "icon_path = $10,",
+            "opening_hours	= $11,",
+            "facebook = $12,",
+            "twitter = $13,",
+            "instagram = $14,",
+            "pinterest = $15,",
+            "coffee1 = $16,",
+            "coffee2 = $17,",
+            "coffee3 = $18,",
+            "coffee4 = $19,",
+            "grinder1 = $20,",
+            "grinder2 = $21,",
+            "machine1 = $22,",
+            "machine2 = $23,",
+            "seating = $24,",
+            "dedicated = $25,",
+            "wifi = $26,",
+            "service = $27,",
+            "loyality = $28,",
+            "child_friendly = $29,",
+            "work_friendly = $30,",
+            "hot_food = $31,",
+            "lunch = $32,",
+            "breakfast = $33,",
+            "kitchen = $34,",
+            "credit_card = $35",
+            "WHERE shop_id = $36"
+        ].join(" ");
+
+        data.push(req.body.shop_id);
+    }
+
+    db.commitQuery(sql, data, function(err, result){
+        if(err) throw err;
+
+        console.log(err);
+        console.log(result);
+        return res.redirect('/cms/shops');
+    });
 });
 
 module.exports = router;
