@@ -56,20 +56,6 @@ router.get('/admin', function(req, res, next) {
     return res.render('admin.html', {});
 });
 
-router.get('/users', function(req, res, next) {
-    if( req.session.name === undefined ){
-        return res.redirect('/cms/login?t=' + Date.now());
-    }
-    return res.render('users.html', {});
-});
-
-router.get('/userform', function(req, res, next) {
-    if( req.session.name === undefined ){
-        return res.redirect('/cms/login?t=' + Date.now());
-    }
-    return res.render('user-form.html', {});
-});
-
 router.get('/shopform', function(req, res, next) {
     var db = new Database();
 
@@ -93,7 +79,6 @@ router.get('/shopform', function(req, res, next) {
             if(result.rows.length === 0) {
                 return next( new Error("Invalid shop id.") );
             }
-            console.log(result.rows[0]);
             return res.render('shop-form.html', {data:result.rows[0]} );
         });
     }
@@ -126,25 +111,6 @@ router.get('/shops', function(req, res, next) {
 //======================================================================//
 //============================  CMS API  ===============================//
 //======================================================================//
-
-router.get('/get_user_list.json', function(req, res, next) {
-    var db = new Database();
-
-    db.connect(config.settings.db, function(err){
-        if(err) return next(err);
-    });
-
-    if( req.session.name === undefined ){
-        return next(new Error("Unauthenticated access"));
-    }
-
-    var sql = "SELECT name, email, enabled, is_admin, shop_id from coffee.users";
-    db.selectQuery(sql, [], function(err, result){
-        if(err) return next(err);
-
-        return res.json({ "data": result.rows  });
-    });
-});
 
 router.get('/deleteshop', function(req, res, next) {
     var db = new Database();

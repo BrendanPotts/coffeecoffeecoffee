@@ -4,7 +4,6 @@
         <ul class="nav nav-pills nav-stacked">
             <li><a href="/cms/admin">Home</a></li>
             <li class="active"><a href="/cms/shops">Shops</a></li>
-            <li><a href="/cms/users">Users</a></li>
         </ul>
     </div>
     <div class="col-md-10 content">
@@ -18,7 +17,13 @@
             <fieldset>
 
             <!-- Form Name -->
-            <legend>Add/Edit Shop</legend>
+            {{#shop_id}}
+                <legend>Edit Shop</legend>
+            {{/shop_id}}
+            {{^shop_id}}
+                <legend>Add Shop</legend>
+            {{/shop_id}}
+
             <input type="hidden" name="shop_id" value="{{data.shop_id}}">
 
             <!-- Text input-->
@@ -310,5 +315,4 @@
         </div>
     </div>
 </div>
-<script src="/js/cms/shop-admin.js"></script>
 {{> admin-footer}}
