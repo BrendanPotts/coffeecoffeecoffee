@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -10,7 +10,9 @@
     <meta name="keywords" content="" />
     <meta name="author" content="keithomuiri" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- FAVICONS -->
+    
+    <!--- FAVICONS Generated from favicomatic.com - FAVICONS -->
+    
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="icon" sizes="16x16 32x32 64x64" href="/favicons/favicon.ico">
     <link rel="icon" type="image/png" sizes="196x196" href="/favicons/favicon-196.png">
@@ -29,22 +31,34 @@
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="/favicons/favicon-144.png">
     <meta name="msapplication-config" content="/browserconfig.xml">
-    <!-- BOOTSTRAP -->
+    
+
+    <!--- BOOTSTRAP first I stick bootstrap in, which does most of the heavy lifting for responsiveness BOOTSTRAP -->
+
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- CSS -->
+    
+    <!--- CSS Next, my custom style sheets which over write some elements of the bootstrap above CSS-->
+    
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <!-- jQUERY SCRIPTS -->
+    
+    <!--- jQUERY SCRIPTS its a bit of a beast, but it does the trick and I'm not overly concerned about bandwidth jQUERY SCRIPTS -->
+    
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="js/animatescroll.js"></script>
     <script type="text/javascript" src="js/jquery.sticky.js"></script>
     <script type="text/javascript" src="js/viewportchecker.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <!-- FONTS -->
+    
+    <!--- FONTS Custom webfonts, from googlefonts.com easily implemented FONTS-->
+    
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    
+    <!--- FONTAWESOME I would usually stick font awesome link in here, but have read a few articles which suggest it should be done in the css instead FONTAWESOME-->
+    
 </head>
 
 <body>
@@ -57,12 +71,12 @@
             </a>
         </div>
         <div class="col-lg-7 visible-lg">
-            <a href="#" onclick="$('#find').animatescroll();"><i class="fa fa-search fa-1x"></i></a>
+            <a href="#" onclick="$('#find').animatescroll();"><i class="fa fa-search fa-1x" alt="find coffee"></i></a>
             <a href="#" onclick="$('#home').animatescroll();">home</a>
             <a href="#" onclick="$('#synopsis').animatescroll();">synopsis</a>
             <a href="#" onclick="$('#routing').animatescroll();">routing</a>
             <a href="#" onclick="$('#contact').animatescroll();">contact</a>
-            <a href="#" onclick="$('#login').animatescroll();"><i class="fa fa-cogs fa-1x"></i></a>
+            <a href="http://dev.coffeecoffee.me/cms/login" onclick="$('http://dev.coffeecoffee.me/cms/login').animatescroll();"><i class="fa fa-cogs fa-1x"></i></a>
         </div>
         <a href="" id="overlay-menu" class="hidden-lg">
             <i class="fa fa-align-justify fa-2x"></i>
@@ -84,7 +98,7 @@
             </li>
             <li><a href="#" onclick="$('#contact').animatescroll();">contact</a>
                 <hr class="smaller">
-                <li><a href="http://dev/coffeecoffee.me/cms/login.html" onclick="$('#login').animatescroll();">login</a>
+                <li><a href="http://dev/coffeecoffee.me/cms/login" onclick="$('http://dev.coffeecoffee.me/cms/login').animatescroll();">admin</a>
                 <hr class="smaller">
             </li>
         </ul>
