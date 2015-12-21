@@ -1,299 +1,213 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<!doctype html>
-<html lang="en">
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+<!DOCTYPE html>
+<html lang="en" class="no-js">
 
 <head>
-    <meta charset="UTF-8">
-    <title>coffee | coffee | me</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coffee coffee me</title>
+    <meta name="description" content="Dublin Based Speciality Coffee Finder" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="keithomuiri" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <link rel="stylesheet" href="stylesheets/style1.css">
-    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.1/mapbox.css' rel='stylesheet'>
-    <script src="http://openlayers.org/en/v3.0.0/build/ol.js" type="text/javascript"></script>
-    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.1/mapbox.js'></script>
-    <link href='https://fonts.googleapis.com/css?family=Advent+Pro' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" href="images/favicon.ico">
-    
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="/favicons/favicon-196.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="/favicons/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicons/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/favicon-72.png">
+    <link rel="apple-touch-icon" href="/favicons/favicon-57.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/favicons/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <!-- jQUERY SCRIPTS -->
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/animatescroll.js"></script>
+    <script type="text/javascript" src="js/jquery.sticky.js"></script>
+    <script type="text/javascript" src="js/viewportchecker.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 
-<body><img class="logo" src="images/logosimple.png" alt="simple logo">	
-        <label for="show-menu" class="show-menu">coffee | coffee</label>
-        <input type="checkbox" id="show-menu" role="button">
-        <ul id="menu">
-            <li><a href="#">Find</a>
+<body>
+    <!-- NAVIGATION -->
+    <div class="row"></div>
+    <nav id="nav">
+        <div class="col-md-5">
+            <a href="#" onclick="$('#home').animatescroll();" class="home">
+                <img src="images/logosimple.png" alt="coffeedub" title="coffeedub" class="logo" />
+            </a>
+        </div>
+        <div class="col-lg-7 visible-lg">
+            <a href="#" onclick="$('#find').animatescroll();"><i class="fa fa-search fa-1x"></i></a>
+            <a href="#" onclick="$('#home').animatescroll();">home</a>
+            <a href="#" onclick="$('#synopsis').animatescroll();">synopsis</a>
+            <a href="#" onclick="$('#routing').animatescroll();">routing</a>
+            <a href="#" onclick="$('#contact').animatescroll();">contact</a>
+            <a href="#" onclick="$('#login').animatescroll();"><i class="fa fa-cogs fa-1x"></i></a>
+        </div>
+        <a href="" id="overlay-menu" class="hidden-lg">
+            <i class="fa fa-align-justify fa-2x"></i>
+        </a>
+    </nav>
+    <div class="navigation-wrapper">
+        <ul class="navigation">
+            <li><a href="find.html" onclick="$('#find').animatescroll();"><i class="fa fa-search fa-1x"></i></a>
+                <hr class="smaller">
             </li>
-            <li><a href="#">by Shops</a>
-                <ul class="hidden">
-                    <li><a href="#">Nearest shop</a></li>
-                    <li><a href="#">All shops</a></li>
-                    <li><a href="#">Business friendly</a></li>
-                </ul>
+            <li><a href="#" onclick="$('#home').animatescroll();">Home</a>
+                <hr class="smaller">
             </li>
-            <li>
-                <a href="#">by Coffee</a>
-                <ul class="hidden">
-                    <li><a href="#">3fe</a></li>
-                    <li><a href="#">Roasted Brown</a></li>
-                    <li><a href="#">Cloud Picker</a></li>
-                    <li><a href="#">Full Circle</a></li>
-                </ul>
+            <li><a href="#" onclick="$('#synopsis').animatescroll();">synopsis</a>
+                <hr class="smaller">
             </li>
-            <li><a href="#">by Food</a>
-                <ul class="hidden">
-                    <li><a href="#">Breakfast</a></li>
-                    <li><a href="#">Pastry</a></li>
-                    <li><a href="#">Lunch</a></li>
-                    <li><a href="#">Hot Food</a></li>
-                </ul>
+            <li><a href="#" onclick="$('#routing').animatescroll();">routing</a>
+                <hr class="smaller">
             </li>
-            <li><a href="#">About</a>
+            <li><a href="#" onclick="$('#contact').animatescroll();">contact</a>
+                <hr class="smaller">
+                <li><a href="http://dev/coffeecoffee.me/cms/login.html" onclick="$('#login').animatescroll();">login</a>
+                <hr class="smaller">
             </li>
-            <li><a href="#">Contact us</a></li>
         </ul>
-<br><br>    
- <div class="wide1"><div class="aboutus">
-        <p> Fap cray leggings wes anderson, freegan shoreditch bespoke locavore echo park. Pinterest post-ironic sustainable letterpress, leggings echo park gentrify kale chips VHS cosby sweater flexitarian chillwave aesthetic. Master cleanse small batch sustainable, 3 wolf moon butcher readymade locavore quinoa. Hella sartorial mcsweeney's, squid banh mi locavore vice four loko brooklyn next level stumptown. Fap stumptown fingerstache mustache. Forage 3 wolf moon iphone, williamsburg bushwick mcsweeney's yr pour-over photo booth sustainable swag chillwave terry richardson. Lo-fi direct trade yr banh mi butcher, fingerstache odd future flexitarian thundercats mumblecore selvage retro.
-        Twee jean shorts whatever fixie. Carles wolf portland whatever beard mustache authentic lo-fi, cosby sweater squid raw denim leggings gluten-free. Wayfarers ethical tumblr, fingerstache whatever messenger bag hella letterpress polaroid. Forage pitchfork pop-up, four loko letterpress whatever pickled mlkshk polaroid gluten-free occupy mcsweeney's narwhal master cleanse typewriter. American apparel chambray wayfarers, selvage raw denim pork belly fixie Austin hoodie pickled skateboard fap messenger bag four loko cred. Skateboard terry richardson thundercats, high life polaroid american apparel four loko pitchfork. Cred street art art party vegan.</p></div>
     </div>
-    <div class="wide2"><div class="aboutus">
-        <p></p>Twee jean shorts whatever fixie. Carles wolf portland whatever beard mustache authentic lo-fi, cosby sweater squid raw denim leggings gluten-free. Wayfarers ethical tumblr, fingerstache whatever messenger bag hella letterpress polaroid. Forage pitchfork pop-up, four loko letterpress whatever pickled mlkshk polaroid gluten-free occupy mcsweeney's narwhal master cleanse typewriter. American apparel chambray wayfarers, selvage raw denim pork belly fixie Austin hoodie pickled skateboard fap messenger bag four loko cred. Skateboard terry richardson thundercats, high life polaroid american apparel four loko pitchfork. Cred street art art party vegan.</p>
     </div>
-    <div id="map" class="map">
-        <script>
-        L.mapbox.accessToken = 'pk.eyJ1IjoieWFycnVtayIsImEiOiJVNVVkT2JvIn0.xja5Bz1L0dmNYUfNG3mlBw';
-        var map = L.mapbox.map('map', 'yarrumk.jg24a6oj')
-            .setView([53.3528823, -6.2349633], 12);
+<!-- /NAVIGATION -->
+    <!-- ABOUT SLIDE -->
+    <section class="slide" id="about">
+        <h2 class="heading"> coffee | coffee</h2>
+        <p class="intro">Dublin Based Speciality Coffee store locator
+            <p><strong>in brief</strong></p>
+            <hr class="smaller">
+            <p>Final Year Hons Degree Dissertation project in IT & IS, DIT Kevin St.</p>
+            <p>Speciality Coffee listings and route finding and locator for Dublin. Web delivered.</p>
+            </div>
+    </section>
+    <!-- ABOUT SLIDE  END -->
 
-        var myLayer = L.mapbox.featureLayer().addTo(map);
 
-
-
-
-        var geoJson = [{
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [-6.2195671, 53.3509354]
-                },
-                "properties": {
-                    "title": "<a href='http://www.squaremile.co.uk' target='_blank'><img src='http://openapp.ie/images/con-hennessey' width='75' height='75'><br>Squaremile Coffee</a><br>1 Coffee Roaster Court making the popo up box appear even arger than its meant<br>Main Street<br>London<br>",
-                    "icon": {
-                        "iconUrl": "images/sq_Mile_pin.png",
-                        "iconSize": [35, 50], // size of the icon
-                        "iconAnchor": [17, 50], // point of the icon which will correspond to marker's location
-                        "popupAnchor": [0, -5], // point from which the popup should open relative to the iconAnchor
-                        "className": "dot"
-                    }
-                }
-            }, {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [-6.2656338, 53.3507325]
-                },
-                "properties": {
-                    "title": "<a href='http://www.openapp.ie' target='_blank'><img src='https://openapp.ie/images/dave-180x180' width='75' height='75'><br>OpenApp</a><br>10 Marlborough Court<br>Marlborough Street<br>Dublin 1<br>",
-                    "icon": {
-                        "iconUrl": "images/pointer1.png",
-                        "iconSize": [35, 50],
-                        "iconAnchor": [17, 50],
-                        "popupAnchor": [0, -5],
-                        "className": "dot"
-                    }
-                }
-            },
-
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [-6.2931506, 53.3448722]
-                },
-                "properties": {
-                    "title": "<a href='https://healthatlasireland.ie' target='_blank'><img src='http://www2.openapp.ie/wp-content/uploads/2015/03/3987cbe6-ea29-4e01-abb8-fdbe6931d446.jpeg' width='75' height='75'><br>Health Intelligence</a><br><br>Dr.Steevens Hosp<br>Dublin<br>",
-                    "icon": {
-                        "iconUrl": "images/pointer2.png",
-                        "iconSize": [35, 50],
-                        "iconAnchor": [17, 50],
-                        "popupAnchor": [0, -5],
-                        "className": "dot"
-                    }
-                }
-            },
-
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [-6.2420058, 53.3399024]
-                },
-                "properties": {
-                    "title": "<a href='http://www.3fe.ie' target='_blank'><img src='http://cdn2.independent.ie/incoming/article30437135.ece/e4a16/ALTERNATES/h342/3fe.jpg' width='100' height='75'><br>3fe Coffee</a><br>32/34 Lwr Grand Canal Street<br>Dublin 2<br>",
-                    "icon": {
-                        "iconUrl": "images/3femarker.png",
-                        "iconSize": [35, 50],
-                        "iconAnchor": [17, 50],
-                        "popupAnchor": [0, -5],
-                        "className": "dot"
-                    }
-                }
-            },
-
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [-6.254042, 53.3419562]
-                },
-                "properties": {
-                    "title": "<a href='http://www.cupcafe.ie' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0295/0101/cup_nassau_street_dublin_2_large.JPG' width='100' height='75'><br>Cup Cafe</a><br>15 Leinster Street Sth<br>Dublin 2<br>",
-                    "icon": {
-                        "iconUrl": "images/cupdublinmarker.png",
-                        "iconSize": [35, 50],
-                        "iconAnchor": [17, 50],
-                        "popupAnchor": [0, -5],
-                        "className": "dot"
-                    }
-                }
-            },
-
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [-6.268429, 53.3471011]
-                },
-                "properties": {
-                    "title": "<a href='http://www.brotherhubbard.ie' target='_blank'><img src='http://darkroom.sundayworld.com/800/0/7e62fbfebde2cdf9ea5653071a088103:9fd552ad9d6c98f8fd090fab78d6d629/brother-hubbard-a-top-class-cafe' width='100' height='75'><br>Brother Hubbard</a><br>153 Capel Street<br>Dublin 1<br>",
-                    "icon": {
-                        "iconUrl": "images/brotherhubbardmarker.png",
-                        "iconSize": [35, 50],
-                        "iconAnchor": [17, 50],
-                        "popupAnchor": [0, -5],
-                        "className": "dot"
-                    }
-                }
-            },
-
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [-6.2628473, 53.3415844]
-                },
-                "properties": {
-                    "title": "<a href='http://www.clementandpekoe.com' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0297/5313/clement_pekoe_dublin_large.JPG?picture=2975313' width='100' height='75'><br>Clement and Pekoe</a><br>50 South William Street<br>Dublin 2<br>",
-                    "icon": {
-                        "iconUrl": "images/clementandpekoemarker.png",
-                        "iconSize": [35, 50],
-                        "iconAnchor": [17, 50],
-                        "popupAnchor": [0, -5],
-                        "className": "dot"
-                    }
-                }
-            }, {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [-6.285730, 53.353568]
-                },
-                "properties": {
-                    "title": "<a href='http://www.fullcircle.ie' target='_blank'><img src='http://www.verocoffee.ie/wp-content/uploads/2015/03/20150319_111753.jpg' width='100' height='75'><br>Full Circle Coffee</a><br>46 Manor Street,<br>Stoneybatter<br>Dublin 7<br>",
-                    "icon": {
-                        "iconUrl": "images/fullcirclemarker.png",
-                        "iconSize": [35, 50],
-                        "iconAnchor": [17, 50],
-                        "popupAnchor": [0, -5],
-                        "className": "dot"
-                    }
-                }
-            },
-
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [-6.26233, 53.34797]
-                },
-                "properties": {
-                    "title": "<a href='http://www.vicecoffeeinc.com/' target='_blank'><img src='http://www.brian-coffee-spot.com/wp-content/uploads/wow-slider-plugin/345/images/_bar.jpg' width='100' height='75'><br>Vice Coffee Inc.</a><br>54 Abbey Street Middle<br>Dublin 1<br>",
-                    "icon": {
-                        "iconUrl": "images/vicecoffeemarker.png",
-                        "iconSize": [35, 50],
-                        "iconAnchor": [17, 50],
-                        "popupAnchor": [0, -5],
-                        "className": "dot"
-                    }
-                }
-            },
-
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [-6.230122, 53.328967]
-                },
-                "properties": {
-                    "title": "<a href='http://www.basewfp.com/' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0295/2536/base_pizza.JPG?picture=2952536' width='100' height='75'><br>Base Wood Fired Pizza</a><br>180 Merrion road<br>Ballsbridge<br>Dublin 4<br>",
-                    "icon": {
-                        "iconUrl": "images/basewfpmarker.png",
-                        "iconSize": [35, 50],
-                        "iconAnchor": [17, 50],
-                        "popupAnchor": [0, -5],
-                        "className": "dot"
-                    }
-                }
-            },
-
-            {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [-6.282893, 53.310151]
-                },
-                "properties": {
-                    "title": "<a href='http://www.basewfp.com/' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0079/2855/photo__7__large.jpg?picture=792855' width='100' height='75'><br>Base Wood Fired Pizza</a><br>92 Terenure Rd E<br>Terenure<br>Dublin 6<br>",
-                    "icon": {
-                        "iconUrl": "images/basewfpmarker.png",
-                        "iconSize": [35, 50],
-                        "iconAnchor": [17, 50],
-                        "popupAnchor": [0, -5],
-                        "className": "dot"
-                    }
-                }
-            }
-        ];
-
-        // Set a custom icon on each marker based on feature properties.
-        myLayer.on('layeradd', function(e) {
-            var marker = e.layer,
-                feature = marker.feature;
-
-            marker.setIcon(L.icon(feature.properties.icon));
-        });
-
-        // Add features to the map.
-        myLayer.setGeoJSON(geoJson);
-        </script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-        <script type="text/javascript" src="js/jsstuff.js"></script>
+    <!--SYNOPSIS  SLIDE -->
+    <section class="slide" id="synopsis">
+        <h2 class="heading"> Synopsis </h2>
+        <div class="container">
+            <div class="row above">
+                <div class="column col-md-6">
+                    <i class="fa fa-coffee fa-4x"></i>
+                    <h3 class="heading3">Coffee</h3>
+                    <hr class="smaller" />
+                    <p>
+                        Coffee, its all about the coffee afterall. Search by roaster, I don't go as far as region or blend, perhaps if somedoy pays me to do a phase 2, I might :).
+                    </p>
+                </div>
+                <div class="column col-md-6 right">
+                    <i class="fa fa-shopping-basket fa-4x"></i>
+                    <h3 class="heading3">Shops</h3>
+                    <hr class="smaller" />
+                    <p>
+                        Theres no point in me giving you all this information about the coffee on offer if you cant find out where to buy it from. This map is custom compliled tiles showing locations and routing information to all the speciality shops on our list.</p>
+                </div>
+            </div>
+            <div class="row above">
+                <div class="column col-md-6">
+                    <i class="fa fa-map-o fa-4x"></i>
+                    <h3 class="heading3">Map</h3>
+                    <hr class="smaller" />
+                    <p>
+                        I've cooked up a custom set of tiles using tilemill studio, so I can control what appears on my maps. I can also customise the details which I think are more important to the users.
+                    </p>
+                    <div class="dash"></div>
+                </div>
+                <div class="column col-md-6 right">
+                    <i class="fa fa-info-circle fa-4x"></i>
+                    <h3 class="heading3">Details</h3>
+                    <hr class="smaller" />
+                    <p>
+                        No point in my giving directions and listings of shops without details about the shops themselves, here you'll find details about each including:
+                        <br>
+                        <ul>
+                            <li> wifi</li>
+                            <li> power points</li>
+                            <li> table service</li>
+                            <li> seating</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <!-- synopsis SLIDE END -->
+    <!--ROUTING  SLIDE -->
+    <section class="slide" id="routing">
+        <h2 class="heading">Routing</h2>
+        <!-- Social Network -->
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <img class="img-responsive imgcentered" src="images/routing.png" alt="" />
+                <h3 class="heading3"></h3>
+                <hr class="smaller" /><p>I've used PostGres as the databse and implemented the PostGIS addon for geospatial queries, I've also implemented PG-Routing to enable me to give route information from your current location to a shop of your choosing</p>
+            </div>
+        </div>
+    </section>
+    <!-- routing SLIDE END -->
+    <!-- SLIDE CONTACT -->
+    <section class="slide" id="contact">
+        <h2 class="heading">contact</h2>
+        <div class="container">
+            <form action="contact-process.php" id="contact-form" method="post" name="contactus">
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" name="email" id="email" placeholder="Email" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="text" name="name" id="name" placeholder="Name" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <textarea name="comments" id="comments" placeholder="Message" cols="40" rows="4" /></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="submit" value="Send" id="submitbutton" />
+                    </div>
+                </div>
+                <?php include 'phpform/phpfp.php'; ?>
+            </form>
+        </div>
+        <div class="container footer">
+            <div class="row socials">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <div class="col-xs-4"><a href="http://twitter.com/dubcoffeefind" target="_blank" rel="nofollow" class="twitter"><i class="fa fa-twitter fa-2x"></i></a></div>
+                    <div class="col-xs-4"><a href="https://github.com/yarrumk" target="_blank" rel="nofollow" class="github"><i class="fa fa-github fa-2x"></i></a></div>
+                    <div class="col-xs-4"><a href="https://facebook.com/dubcoffeefind" target="_blank" rel="nofollow" class="facebook"><i class="fa fa-facebook fa-2x"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT SLIDE END -->
 </body>
 
 </html>
