@@ -5,6 +5,7 @@ ul {
     margin: 0;
     padding: 0;
     position: absolute;
+    z-index: 20;
 }
 
 
@@ -14,6 +15,7 @@ li {
     display: inline-block;
     float: left;
     margin-right: 1px;
+    z-index: 20;
 }
 
 
@@ -99,6 +101,7 @@ ul li a:hover + .hidden,
     text-align: center;
     padding: 10px 0;
     display: none;
+    z-index: 10;
 }
 
 
