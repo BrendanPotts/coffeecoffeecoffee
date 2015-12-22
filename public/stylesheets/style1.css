@@ -37,7 +37,7 @@ li a {
 /*Hover mouseover / focus for top menu links*/
 
 li:hover a {
-    background: #ff8432;
+    background: #d55f11;
 }
 
 
@@ -45,7 +45,7 @@ li:hover a {
 
 li:hover ul a {
     background: #2f3036;
-    color: #ff944d;
+    color: #d55f11;
     height: 40px;
     line-height: 40px;
 }
@@ -54,7 +54,7 @@ li:hover ul a {
 /*Hover state for dropdown links*/
 
 li:hover ul a:hover {
-    background: #ff8432;
+    background: #d55f11;
     color: #fff;
 }
 
@@ -82,6 +82,11 @@ li ul li a {
     padding: 0 20px;
 }
 
+li i {
+    vertical-align: middle;
+    padding: 15px;
+    line-height: 40px;
+}
 
 /*Display the dropdown on hover*/
 
@@ -193,3 +198,4 @@ input[type=checkbox]:checked ~ #menu {
     height:"10%";
     background-color: green;
 }
+
