@@ -166,7 +166,7 @@ Navigation CSS
 }
 
 #nav img.logo {
-    height: 90px;
+    height: auto;
     width: 100px;
     float: left;
 }
