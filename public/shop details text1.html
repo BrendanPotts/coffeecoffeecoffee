@@ -58,54 +58,55 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     
     
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     <!-- NAVIGATION -->
 
-<center><div class="blackout"></div>
+<!--<center><div class="blackout"></div>
 
 <!--THIS IS WHERE THE NODE LINKAGE SHIZZLE GOES TO USE DATABSE DETAILS INSTEAD OF STATIC-->
 
-<div class="tg-wrap"><table id="tg" class="tg">
-  <tr>
-    <th class="tg" colspan="10">{{shop.name}}</th>
-    <th class="tg" colspan="2" rowspan="3"><a href="link to SQL statement defining WHERE coffee.shop id ==ID"><img src="images/maplink.png" height="80px" ALT="maplink"></a></th>
-  </tr>
-  <tr>
-    <td class="tg" colspan="10">{{shop.address}}</td>
-  </tr>
-  <tr>
-    <td class="tg" colspan="10">{{shop.url}}</td>
-  </tr>
-  <tr>
-    <td class="tg" colspan="3">about us</td>
-    <td class="tg" colspan="9"><img width="600px" height="250px" src="{{shop.internalpic}}" ALT="internal shot"></td>
-  </tr>
-  <tr>    <td class="tg" colspan="3" rowspan="5">{{shop.about}}</td>
-    <td class="tg" colspan="2">{{shop.pastry}}</td>
-    <td class="tg" colspan="2">{{shop.breakfast}}</td>
-    <td class="tg" colspan="2">{{shop.lunch}}</td>
-    <td class="tg" colspan="3">{{shop.hotfood}}</td>
-  </tr>
-  <tr>
-    <td class="tg" colspan="2">{{shop.wifi}}</td>
-    <td class="tg" colspan="2">{{shop.seating}}</td>
-    <td class="tg" colspan="2">{{shop.service}}</td>
-    <td class="tg" colspan="3">{{shop.plugs}}</td>
-  </tr>
-  <tr>
-    <td class="tg">opening hours</td>
-    </tr>
-  <tr>
-    <td class="tg">{{shop.hours}}</td>
-    </tr>
-  <tr>
-    <td class="tg" colspan="3">{{shop.coffee1}}</td>
-    <td class="tg" colspan="3">{{shop.methods}}</td>
-    <td class="tg" colspan="3">{{shop.machine1}}</td>
-    <td class="tg" colspan="3">{{shop.grinder1}}</td>
-  </tr>
-</table></div>
-	</body>
+<div class="container">
+    <div class="jumbotron">
+    
+      <div width="50%"><h1>{{shop.name}}</h1>
+      <p>{{shop.address}}</p> 
+      <p>{{shop.url}}</p>
+      </div>
+    
+      <div><a href="link to SQL statement defining WHERE coffee.shop id ==ID"><img src="images/maplink.png" height="80px" ALT="maplink"></a>
+      </div> 
+    </div>
+    
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>Column 1</h3>
+        <p><img width="100%" height=auto src="{{shop.internalpic}}" ALT="internal shot"></p>
+        <p>{{shop.aboutus}}</p>
+      </div>
+    
+      <div class="col-sm-4">
+        <h3>Shop details</h3>
+        <p><checkbox>{{shop.breakfast}}</p>
+        <p><checkbox>{{shop.lunch}}</p>
+        <p><checkbox>{{shop.hotfood}}</p>
+        <p><checkbox>{{shop.kitchen}}</p>
+      </div>
+      
+      <div class="col-sm-4">
+        <h3>Column 3</h3>        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+    </div>
+</div>
+
+</body>
+
 </html>
