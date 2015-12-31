@@ -79,221 +79,221 @@
     </ul>
     <div id="map" class="map"></div>
     <script>
-    L.mapbox.accessToken = 'pk.eyJ1IjoieWFycnVtayIsImEiOiJVNVVkT2JvIn0.xja5Bz1L0dmNYUfNG3mlBw';
-    var map = L.mapbox.map('map', 'yarrumk.jg24a6oj')
-        .setView([53.3528823, -6.2349633], 12);//this sets the initial view
-    L.control.locate().addTo(map);//this adds the location icon and function to the map
-    map.featureLayer.on('click', function(e) {//this centres the map when a marker is clicked
-        map.panTo(e.layer.getLatLng());
-    });
-
-    var myLayer = L.mapbox.featureLayer().addTo(map);
-    var geoJson = [{
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-6.2195671, 53.3509354]
-            },
-            "properties": {
-                "title": "<a href='http://www.squaremile.co.uk' target='_blank'><img src='http://openapp.ie/images/con-hennessey' width='75' height='75'><br>Squaremile Coffee</a><br>1 Coffee Roaster Court making the pop up box appear even larger than its meant<br>Main Street<br>London<br>",
-                "icon": {
-                    "iconUrl": "images/sq_Mile_pin.png",
-                    "iconSize": [35, 50], // size of the icon
-                    "iconAnchor": [17, 50], // point of the icon which will correspond to marker's location
-                    "popupAnchor": [0, -5], // point from which the popup should open relative to the iconAnchor
-                    "className": "dot"
-                }
-            }
-        }, {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-6.2656338, 53.3507325]
-            },
-            "properties": {
-                "title": "<a href='http://www.openapp.ie' target='_blank'><img src='https://openapp.ie/images/dave-180x180' width='75' height='75'><br>OpenApp</a><br>10 Marlborough Court<br>Marlborough Street<br>Dublin 1<br>",
-                "icon": {
-                    "iconUrl": "images/pointer1.png",
-                    "iconSize": [35, 50],
-                    "iconAnchor": [17, 50],
-                    "popupAnchor": [0, -5],
-                    "className": "dot"
-                }
-            }
-        },
-
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-6.2931506, 53.3448722]
-            },
-            "properties": {
-                "title": "<a href='https://healthatlasireland.ie' target='_blank'><img src='http://www2.openapp.ie/wp-content/uploads/2015/03/3987cbe6-ea29-4e01-abb8-fdbe6931d446.jpeg' width='75' height='75'><br>Health Intelligence</a><br><br>Dr.Steevens Hosp<br>Dublin<br>",
-                "icon": {
-                    "iconUrl": "images/pointer2.png",
-                    "iconSize": [35, 50],
-                    "iconAnchor": [17, 50],
-                    "popupAnchor": [0, -5],
-                    "className": "dot"
-                }
-            }
-        },
-
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-6.2420058, 53.3399024]
-            },
-            "properties": {
-                "title": "<a href='http://www.3fe.ie' target='_blank'><img src='http://cdn2.independent.ie/incoming/article30437135.ece/e4a16/ALTERNATES/h342/3fe.jpg' width='100' height='75'><br>3fe Coffee</a><br>32/34 Lwr Grand Canal Street<br>Dublin 2<br><a href='http://dev.coffeecoffee.me/shop%20details%20text1.html' target='_blank'>...more</a>",
-                "icon": {
-                    "iconUrl": "images/3femarker.png",
-                    "iconSize": [35, 50],
-                    "iconAnchor": [17, 50],
-                    "popupAnchor": [0, -5],
-                    "className": "dot"
-                }
-            }
-        },
-
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-6.254042, 53.3419562]
-            },
-            "properties": {
-                "title": "<a href='http://www.coffeeangel' target='_blank'><img src='http://s3-media4.fl.yelpcdn.com/bphoto/UK8cMwtnYpU0l9U0hMlnVg/348s.jpg' width='100' height='75'><br>Coffeeangel Trinity</a><br>15 Leinster Street Sth<br>Dublin 2<br>",
-                "icon": {
-                    "iconUrl": "images/icons/coffeeangelmarker.png",
-                    "iconSize": [35, 50],
-                    "iconAnchor": [17, 50],
-                    "popupAnchor": [0, -5],
-                    "className": "dot"
-                }
-            }
-        },
-
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-6.268429, 53.3471011]
-            },
-            "properties": {
-                "title": "<a href='http://www.brotherhubbard.ie' target='_blank'><img src='http://darkroom.sundayworld.com/800/0/7e62fbfebde2cdf9ea5653071a088103:9fd552ad9d6c98f8fd090fab78d6d629/brother-hubbard-a-top-class-cafe' width='100' height='75'><br>Brother Hubbard</a><br>153 Capel Street<br>Dublin 1<br>",
-                "icon": {
-                    "iconUrl": "images/brotherhubbardmarker.png",
-                    "iconSize": [35, 50],
-                    "iconAnchor": [17, 50],
-                    "popupAnchor": [0, -5],
-                    "className": "dot"
-                }
-            }
-        },
-
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-6.2628473, 53.3415844]
-            },
-            "properties": {
-                "title": "<a href='http://www.clementandpekoe.com' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0297/5313/clement_pekoe_dublin_large.JPG?picture=2975313' width='100' height='75'><br>Clement and Pekoe</a><br>50 South William Street<br>Dublin 2<br>",
-                "icon": {
-                    "iconUrl": "images/clementandpekoemarker.png",
-                    "iconSize": [35, 50],
-                    "iconAnchor": [17, 50],
-                    "popupAnchor": [0, -5],
-                    "className": "dot"
-                }
-            }
-        }, {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-6.285730, 53.353568]
-            },
-            "properties": {
-                "title": "<a href='http://www.fullcircle.ie' target='_blank'><img src='http://www.verocoffee.ie/wp-content/uploads/2015/03/20150319_111753.jpg' width='100' height='75'><br>Full Circle Coffee</a><br>46 Manor Street,<br>Stoneybatter<br>Dublin 7<br>",
-                "icon": {
-                    "iconUrl": "images/fullcirclemarker.png",
-                    "iconSize": [35, 50],
-                    "iconAnchor": [17, 50],
-                    "popupAnchor": [0, -5],
-                    "className": "dot"
-                }
-            }
-        },
-
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-6.26233, 53.34797]
-            },
-            "properties": {
-                "title": "<a href='http://www.vicecoffeeinc.com/' target='_blank'><img src='http://www.brian-coffee-spot.com/wp-content/uploads/wow-slider-plugin/345/images/_bar.jpg' width='100' height='75'><br>Vice Coffee Inc.</a><br>54 Abbey Street Middle<br>Dublin 1<br>",
-                "icon": {
-                    "iconUrl": "images/vicecoffeemarker.png",
-                    "iconSize": [35, 50],
-                    "iconAnchor": [17, 50],
-                    "popupAnchor": [0, -5],
-                    "className": "dot"
-                }
-            }
-        },
-
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-6.230122, 53.328967]
-            },
-            "properties": {
-                "title": "<a href='http://www.basewfp.com/' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0295/2536/base_pizza.JPG?picture=2952536' width='100' height='75'><br>Base Wood Fired Pizza</a><br>180 Merrion road<br>Ballsbridge<br>Dublin 4<br>",
-                "icon": {
-                    "iconUrl": "images/basewfpmarker.png",
-                    "iconSize": [35, 50],
-                    "iconAnchor": [17, 50],
-                    "popupAnchor": [0, -5],
-                    "className": "dot"
-                }
-            }
-        },
-
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-6.282893, 53.310151]
-            },
-            "properties": {
-                "title": "<a href='http://www.basewfp.com/' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0079/2855/photo__7__large.jpg?picture=792855' width='100' height='75'><br>Base Wood Fired Pizza</a><br>92 Terenure Rd E<br>Terenure<br>Dublin 6<br>",
-                "icon": {
-                    "iconUrl": "images/basewfpmarker.png",
-                    "iconSize": [35, 50],
-                    "iconAnchor": [17, 50],
-                    "popupAnchor": [0, -5],
-                    "className": "dot"
-                }
-            }
-        }
-    ];
-
-    // Set a custom icon on each marker based on feature properties.
-    myLayer.on('layeradd', function(e) {
-        var marker = e.layer,
-            feature = marker.feature;
-
-        marker.setIcon(L.icon(feature.properties.icon));
-    });
-
-
-    // Add features to the map.
-    myLayer.setGeoJSON(geoJson);
+    // L.mapbox.accessToken = 'pk.eyJ1IjoieWFycnVtayIsImEiOiJVNVVkT2JvIn0.xja5Bz1L0dmNYUfNG3mlBw';
+    // var map = L.mapbox.map('map', 'yarrumk.jg24a6oj')
+    //     .setView([53.3528823, -6.2349633], 12);//this sets the initial view
+    // L.control.locate().addTo(map);//this adds the location icon and function to the map
+    // map.featureLayer.on('click', function(e) {//this centres the map when a marker is clicked
+    //     map.panTo(e.layer.getLatLng());
+    // });
+    //
+    // var myLayer = L.mapbox.featureLayer().addTo(map);
+    // var geoJson = [{
+    //         "type": "Feature",
+    //         "geometry": {
+    //             "type": "Point",
+    //             "coordinates": [-6.2195671, 53.3509354]
+    //         },
+    //         "properties": {
+    //             "title": "<a href='http://www.squaremile.co.uk' target='_blank'><img src='http://openapp.ie/images/con-hennessey' width='75' height='75'><br>Squaremile Coffee</a><br>1 Coffee Roaster Court making the pop up box appear even larger than its meant<br>Main Street<br>London<br>",
+    //             "icon": {
+    //                 "iconUrl": "images/sq_Mile_pin.png",
+    //                 "iconSize": [35, 50], // size of the icon
+    //                 "iconAnchor": [17, 50], // point of the icon which will correspond to marker's location
+    //                 "popupAnchor": [0, -5], // point from which the popup should open relative to the iconAnchor
+    //                 "className": "dot"
+    //             }
+    //         }
+    //     }, {
+    //         "type": "Feature",
+    //         "geometry": {
+    //             "type": "Point",
+    //             "coordinates": [-6.2656338, 53.3507325]
+    //         },
+    //         "properties": {
+    //             "title": "<a href='http://www.openapp.ie' target='_blank'><img src='https://openapp.ie/images/dave-180x180' width='75' height='75'><br>OpenApp</a><br>10 Marlborough Court<br>Marlborough Street<br>Dublin 1<br>",
+    //             "icon": {
+    //                 "iconUrl": "images/pointer1.png",
+    //                 "iconSize": [35, 50],
+    //                 "iconAnchor": [17, 50],
+    //                 "popupAnchor": [0, -5],
+    //                 "className": "dot"
+    //             }
+    //         }
+    //     },
+    //
+    //     {
+    //         "type": "Feature",
+    //         "geometry": {
+    //             "type": "Point",
+    //             "coordinates": [-6.2931506, 53.3448722]
+    //         },
+    //         "properties": {
+    //             "title": "<a href='https://healthatlasireland.ie' target='_blank'><img src='http://www2.openapp.ie/wp-content/uploads/2015/03/3987cbe6-ea29-4e01-abb8-fdbe6931d446.jpeg' width='75' height='75'><br>Health Intelligence</a><br><br>Dr.Steevens Hosp<br>Dublin<br>",
+    //             "icon": {
+    //                 "iconUrl": "images/pointer2.png",
+    //                 "iconSize": [35, 50],
+    //                 "iconAnchor": [17, 50],
+    //                 "popupAnchor": [0, -5],
+    //                 "className": "dot"
+    //             }
+    //         }
+    //     },
+    //
+    //     {
+    //         "type": "Feature",
+    //         "geometry": {
+    //             "type": "Point",
+    //             "coordinates": [-6.2420058, 53.3399024]
+    //         },
+    //         "properties": {
+    //             "title": "<a href='http://www.3fe.ie' target='_blank'><img src='http://cdn2.independent.ie/incoming/article30437135.ece/e4a16/ALTERNATES/h342/3fe.jpg' width='100' height='75'><br>3fe Coffee</a><br>32/34 Lwr Grand Canal Street<br>Dublin 2<br><a href='http://dev.coffeecoffee.me/shop%20details%20text1.html' target='_blank'>...more</a>",
+    //             "icon": {
+    //                 "iconUrl": "images/3femarker.png",
+    //                 "iconSize": [35, 50],
+    //                 "iconAnchor": [17, 50],
+    //                 "popupAnchor": [0, -5],
+    //                 "className": "dot"
+    //             }
+    //         }
+    //     },
+    //
+    //     {
+    //         "type": "Feature",
+    //         "geometry": {
+    //             "type": "Point",
+    //             "coordinates": [-6.254042, 53.3419562]
+    //         },
+    //         "properties": {
+    //             "title": "<a href='http://www.coffeeangel' target='_blank'><img src='http://s3-media4.fl.yelpcdn.com/bphoto/UK8cMwtnYpU0l9U0hMlnVg/348s.jpg' width='100' height='75'><br>Coffeeangel Trinity</a><br>15 Leinster Street Sth<br>Dublin 2<br>",
+    //             "icon": {
+    //                 "iconUrl": "images/icons/coffeeangelmarker.png",
+    //                 "iconSize": [35, 50],
+    //                 "iconAnchor": [17, 50],
+    //                 "popupAnchor": [0, -5],
+    //                 "className": "dot"
+    //             }
+    //         }
+    //     },
+    //
+    //     {
+    //         "type": "Feature",
+    //         "geometry": {
+    //             "type": "Point",
+    //             "coordinates": [-6.268429, 53.3471011]
+    //         },
+    //         "properties": {
+    //             "title": "<a href='http://www.brotherhubbard.ie' target='_blank'><img src='http://darkroom.sundayworld.com/800/0/7e62fbfebde2cdf9ea5653071a088103:9fd552ad9d6c98f8fd090fab78d6d629/brother-hubbard-a-top-class-cafe' width='100' height='75'><br>Brother Hubbard</a><br>153 Capel Street<br>Dublin 1<br>",
+    //             "icon": {
+    //                 "iconUrl": "images/brotherhubbardmarker.png",
+    //                 "iconSize": [35, 50],
+    //                 "iconAnchor": [17, 50],
+    //                 "popupAnchor": [0, -5],
+    //                 "className": "dot"
+    //             }
+    //         }
+    //     },
+    //
+    //     {
+    //         "type": "Feature",
+    //         "geometry": {
+    //             "type": "Point",
+    //             "coordinates": [-6.2628473, 53.3415844]
+    //         },
+    //         "properties": {
+    //             "title": "<a href='http://www.clementandpekoe.com' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0297/5313/clement_pekoe_dublin_large.JPG?picture=2975313' width='100' height='75'><br>Clement and Pekoe</a><br>50 South William Street<br>Dublin 2<br>",
+    //             "icon": {
+    //                 "iconUrl": "images/clementandpekoemarker.png",
+    //                 "iconSize": [35, 50],
+    //                 "iconAnchor": [17, 50],
+    //                 "popupAnchor": [0, -5],
+    //                 "className": "dot"
+    //             }
+    //         }
+    //     }, {
+    //         "type": "Feature",
+    //         "geometry": {
+    //             "type": "Point",
+    //             "coordinates": [-6.285730, 53.353568]
+    //         },
+    //         "properties": {
+    //             "title": "<a href='http://www.fullcircle.ie' target='_blank'><img src='http://www.verocoffee.ie/wp-content/uploads/2015/03/20150319_111753.jpg' width='100' height='75'><br>Full Circle Coffee</a><br>46 Manor Street,<br>Stoneybatter<br>Dublin 7<br>",
+    //             "icon": {
+    //                 "iconUrl": "images/fullcirclemarker.png",
+    //                 "iconSize": [35, 50],
+    //                 "iconAnchor": [17, 50],
+    //                 "popupAnchor": [0, -5],
+    //                 "className": "dot"
+    //             }
+    //         }
+    //     },
+    //
+    //     {
+    //         "type": "Feature",
+    //         "geometry": {
+    //             "type": "Point",
+    //             "coordinates": [-6.26233, 53.34797]
+    //         },
+    //         "properties": {
+    //             "title": "<a href='http://www.vicecoffeeinc.com/' target='_blank'><img src='http://www.brian-coffee-spot.com/wp-content/uploads/wow-slider-plugin/345/images/_bar.jpg' width='100' height='75'><br>Vice Coffee Inc.</a><br>54 Abbey Street Middle<br>Dublin 1<br>",
+    //             "icon": {
+    //                 "iconUrl": "images/vicecoffeemarker.png",
+    //                 "iconSize": [35, 50],
+    //                 "iconAnchor": [17, 50],
+    //                 "popupAnchor": [0, -5],
+    //                 "className": "dot"
+    //             }
+    //         }
+    //     },
+    //
+    //     {
+    //         "type": "Feature",
+    //         "geometry": {
+    //             "type": "Point",
+    //             "coordinates": [-6.230122, 53.328967]
+    //         },
+    //         "properties": {
+    //             "title": "<a href='http://www.basewfp.com/' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0295/2536/base_pizza.JPG?picture=2952536' width='100' height='75'><br>Base Wood Fired Pizza</a><br>180 Merrion road<br>Ballsbridge<br>Dublin 4<br>",
+    //             "icon": {
+    //                 "iconUrl": "images/basewfpmarker.png",
+    //                 "iconSize": [35, 50],
+    //                 "iconAnchor": [17, 50],
+    //                 "popupAnchor": [0, -5],
+    //                 "className": "dot"
+    //             }
+    //         }
+    //     },
+    //
+    //     {
+    //         "type": "Feature",
+    //         "geometry": {
+    //             "type": "Point",
+    //             "coordinates": [-6.282893, 53.310151]
+    //         },
+    //         "properties": {
+    //             "title": "<a href='http://www.basewfp.com/' target='_blank'><img src='http://images.ratemyarea.com.s3.amazonaws.com/assets/0079/2855/photo__7__large.jpg?picture=792855' width='100' height='75'><br>Base Wood Fired Pizza</a><br>92 Terenure Rd E<br>Terenure<br>Dublin 6<br>",
+    //             "icon": {
+    //                 "iconUrl": "images/basewfpmarker.png",
+    //                 "iconSize": [35, 50],
+    //                 "iconAnchor": [17, 50],
+    //                 "popupAnchor": [0, -5],
+    //                 "className": "dot"
+    //             }
+    //         }
+    //     }
+    // ];
+    //
+    // // Set a custom icon on each marker based on feature properties.
+    // myLayer.on('layeradd', function(e) {
+    //     var marker = e.layer,
+    //         feature = marker.feature;
+    //
+    //     marker.setIcon(L.icon(feature.properties.icon));
+    // });
+    //
+    //
+    // // Add features to the map.
+    // myLayer.setGeoJSON(geoJson);
     </script>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.js"></script>
