@@ -72,6 +72,7 @@
 
 <!--THIS IS WHERE THE NODE LINKAGE SHIZZLE GOES TO USE DATABSE DETAILS INSTEAD OF STATIC-->
 
+   
 <div class="container">
     <div class="jumbotron">
     
@@ -79,12 +80,11 @@
       <p>{{shop.address}}</p> 
       <p>{{shop.url}}</p>
       </div>
-    
-      <div><a href="link to SQL statement defining WHERE coffee.shop id ==ID"><img src="images/maplink.png" height="80px" ALT="maplink"></a>
-      </div> 
+<div class="detailheader">
+        <div id="maplink"><a href="link to SQL statement defining WHERE coffee.shop id ==ID"><img src="images/maplink.png" height="80px" ALT="maplink"></a></div>
+        <div id="shopimage"><img src="{{shop.external}}" width="100%" ALT="maplink"></div>
     </div>
-    
-    <div class="row">
+       <div class="row">
       <div class="col-sm-4">
         <h3>Column 1</h3>
         <p><img width="100%" height=auto src="{{shop.internalpic}}" ALT="internal shot"></p>
