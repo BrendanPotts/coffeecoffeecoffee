@@ -36,7 +36,7 @@ router.get('/all_shops.geojson', function(req, res, next) {
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
         "facebook, twitter, instagram, pinterest,icon_path,",
-        "ST_AsGeoJSON(ST_Transform(location,3857),2)::json as location,",
+        "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
@@ -76,7 +76,7 @@ router.get('/closest_to_point.geojson', function(req, res, next) {
     var sql = [
         "SELECT DISTINCT(shop_id), name, about, href, owner, address, phone, email,",
         "facebook, twitter, instagram, pinterest,icon_path,",
-        "ST_AsGeoJSON(ST_Transform(location,3857),2) as json_location,",
+        "ST_AsGeoJSON(location,4) as json_location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
@@ -126,7 +126,7 @@ router.get('/closest_to_point_with_wifi.geojson', function(req, res, next) {
     var sql = [
         "SELECT DISTINCT(shop_id), name, about, href, owner, address, phone, email,",
         "facebook, twitter, instagram, pinterest,icon_path,",
-        "ST_AsGeoJSON(ST_Transform(location,3857),2) as json_location,",
+        "ST_AsGeoJSON(location,4) as json_location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
@@ -175,7 +175,7 @@ router.get('/closest_to_point_with_seats.geojson', function(req, res, next) {
     var sql = [
         "SELECT DISTINCT(shop_id), name, about, href, owner, address, phone, email,",
         "facebook, twitter, instagram, pinterest,icon_path,",
-        "ST_AsGeoJSON(ST_Transform(location,3857),2) as json_location,",
+        "ST_AsGeoJSON(location,4) as json_location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
@@ -223,7 +223,7 @@ router.get('/3fe_coffee.geojson', function(req, res, next) {
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
         "facebook, twitter, instagram, pinterest,icon_path,",
-        "ST_AsGeoJSON(ST_Transform(location,3857),2)::json as location,",
+        "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
@@ -264,7 +264,7 @@ router.get('/roasted_brown_coffee.geojson', function(req, res, next) {
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
         "facebook, twitter, instagram, pinterest,icon_path,",
-        "ST_AsGeoJSON(ST_Transform(location,3857),2)::json as location,",
+        "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
@@ -306,7 +306,7 @@ router.get('/cloud_picker_coffee.geojson', function(req, res, next) {
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
         "facebook, twitter, instagram, pinterest,icon_path,",
-        "ST_AsGeoJSON(ST_Transform(location,3857),2)::json as location,",
+        "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
@@ -349,7 +349,7 @@ router.get('/full_circle_coffee.geojson', function(req, res, next) {
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
         "facebook, twitter, instagram, pinterest,icon_path,",
-        "ST_AsGeoJSON(ST_Transform(location,3857),2)::json as location,",
+        "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
@@ -391,7 +391,7 @@ router.get('/breakfast.geojson', function(req, res, next) {
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
         "facebook, twitter, instagram, pinterest,icon_path,",
-        "ST_AsGeoJSON(ST_Transform(location,3857),2)::json as location,",
+        "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
@@ -431,7 +431,7 @@ router.get('/pastry.geojson', function(req, res, next) {
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
         "facebook, twitter, instagram, pinterest,icon_path,",
-        "ST_AsGeoJSON(ST_Transform(location,3857),2)::json as location,",
+        "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
@@ -471,7 +471,7 @@ router.get('/lunch.geojson', function(req, res, next) {
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
         "facebook, twitter, instagram, pinterest,icon_path,",
-        "ST_AsGeoJSON(ST_Transform(location,3857),2)::json as location,",
+        "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
@@ -512,7 +512,7 @@ router.get('/hot_food.geojson', function(req, res, next) {
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
         "facebook, twitter, instagram, pinterest,icon_path,",
-        "ST_AsGeoJSON(ST_Transform(location,3857),2)::json as location,",
+        "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
