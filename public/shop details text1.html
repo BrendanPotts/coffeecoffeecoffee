@@ -73,7 +73,7 @@
 <!--THIS IS WHERE THE NODE LINKAGE SHIZZLE GOES TO USE DATABSE DETAILS INSTEAD OF STATIC-->
 
    
-<script>
+<script>//fallback script because I cant get pgrouting to play ball on live server this uses google routing as a round trip.//
 function myNavFunc(){
     // If iPhone
     if( (navigator.platform.indexOf("iPhone") != -1) 
@@ -85,19 +85,26 @@ function myNavFunc(){
 }
 </script>       
 
+<!--this is a simple example from css tricks...need to get current location rather than hard coded and replace button with compass image
+<form action="http://maps.google.com/maps" method="get" target="_blank">
+  // <input type="hidden" name="saddr" value="get.position" />
+  // <input type="text" name="saddr" />
+  // <input type="hidden" name="daddr" value="350 5th Ave New York, NY 10018 (Empire State Building)" />
+   //<input type="submit" value="Get directions" />
+//</form>
+-->
 
 <div class="container">
     <div class="jumbotron">
     
-      <div id="maplink"><h1>{{shop.name}}</h1>
+      <div id="detailheader"><h1>{{shop.name}}</h1>
       <p>{{shop.address}}</p> 
       <p>{{shop.url}}</p>
       </div>
-        <div id="compass"><img src="{{shop.external}}" width="100%" ALT="maplink"></div>
 <div class="detailheader">
         <div id="maplink"><a style="cursor: pointer;" onclick="myNavFunc()"><img src="images/compass.png" alt="routing">
-        </a>><img src="images/maplink.png" height="80px" ALT="maplink"></a></div>
-        <div id="shopimage"><img src="{{shop.external}}" width="100%" ALT="maplink"></div>
+        </a></div>
+        <div id="shopimage"><img src="{{shop.external}}" width="100%" ALT="shop photo"></div>
     </div>
        <div class="row">
       <div class="col-sm-4">
@@ -108,16 +115,18 @@ function myNavFunc(){
     
       <div class="col-sm-4">
         <h3>Shop details</h3>
-        <p><checkbox>{{shop.breakfast}}</p>
-        <p><checkbox>{{shop.lunch}}</p>
-        <p><checkbox>{{shop.hotfood}}</p>
-        <p><checkbox>{{shop.kitchen}}</p>
+        <p><checkbox>breakfast{{shop.breakfast}}</p>
+        <p><checkbox>lunch{{shop.lunch}}</p>
+        <p><checkbox>hot food{{shop.hotfood}}</p>
+        <p><checkbox>full kitchen{{shop.kitchen}}</p>
       </div>
       
       <div class="col-sm-4">
-        <h3>Column 3</h3>        
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        <h3>Coffee</h3>        
+        <p>Coffee served: {{shop.coffee1}}</p>
+        <p>Grinder : {{shop.grinder1}}</p>
+        <p>Machine: {{shop.machine1}}</p>
+
       </div>
     </div>
 </div>

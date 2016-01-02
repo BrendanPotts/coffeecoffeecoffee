@@ -296,26 +296,26 @@ table th.tg-sort-desc:after {
 }
 
 .detailheader{ 
-  border : 2px solid #000; 
-  overflow:hidden;
+   overflow:hidden;
 }
 
 .detailheader div {
+   background-color: #666;
    min-height: 200px;
+
    padding: 10px;
 }
 #maplink {
-  background-color: gray;
+  background-color: #666;
   float:left; 
   margin-right:20px;
-  width:140px;
-  border-right:2px solid #000;
+  width:230px;
+  
 }
 #shopimage { 
-  background-color: red;
+  background-color: #666;
   overflow:hidden;
   margin:10px;
-  border:2px dashed #ccc;
   min-height:170px;
 }
 
