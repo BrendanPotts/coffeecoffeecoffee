@@ -172,7 +172,7 @@ router.post('/shop_edit', function(req, res, next) {
         "twitter, instagram, pinterest, coffee1, coffee2, coffee3, ",
         "coffee4, grinder1, grinder2, machine1, machine2, seating, ",
         "dedicated, wifi, service, loyality, child_friendly, ",
-        "work_friendly, hot_food, lunch, breakfast, kitchen, credit_card, location)",
+        "work_friendly, hot_food, lunch, breakfast, pastry, credit_card, location)",
         "VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, ",
         "$14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26,",
         "$27, $28, $29, $30, $31, $32, $33, $34, $35, ST_SetSRID(ST_MakePoint($36, $37),4326) ) "
@@ -212,7 +212,7 @@ router.post('/shop_edit', function(req, res, next) {
         req.body.amenities.indexOf('hot_food') > -1         || false,
         req.body.amenities.indexOf('lunch') > -1            || false,
         req.body.amenities.indexOf('breakfast') > -1        || false,
-        req.body.amenities.indexOf('kitchen') > -1          || false,
+        req.body.amenities.indexOf('pastry') > -1          || false,
         req.body.amenities.indexOf('credit_card') > -1      || false,
         req.body.xcoord 	|| 0,
         req.body.ycoord  	|| 0
@@ -253,7 +253,7 @@ router.post('/shop_edit', function(req, res, next) {
             "hot_food = $31,",
             "lunch = $32,",
             "breakfast = $33,",
-            "kitchen = $34,",
+            "pastry = $34,",
             "credit_card = $35, ",
             "location = ST_SetSRID(ST_MakePoint($36, $37),4326)",
             "WHERE shop_id = $38"
