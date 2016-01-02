@@ -5,7 +5,11 @@ $( document ).ready(function() {
 
 var mapLayers = {};
 var map = null;
+var activeLayer = 'all_shops';
 
+// Geolocation X/Y. We use map centre if unavailable.
+var latitude = 53.3528823;
+var longitude = -6.2349633;
 
 function setIcon(layer) {
     // Set a custom icon on each marker based on feature properties.
@@ -37,7 +41,7 @@ function initMap() {
         'closest_to_point': L.mapbox.featureLayer(),
         'closest_to_point_with_wifi': L.mapbox.featureLayer(),
         'closest_to_point_with_seats': L.mapbox.featureLayer(),
-        '3fe_coffee': L.mapbox.featureLayer(),
+        'threefe_coffee': L.mapbox.featureLayer(),
         'roasted_brown_coffee': L.mapbox.featureLayer(),
         'cloud_picker_coffee': L.mapbox.featureLayer(),
         'full_circle_coffee': L.mapbox.featureLayer(),
@@ -53,4 +57,33 @@ function initMap() {
 
     mapLayers.all_shops.loadURL('/fs/all_shops.geojson');
     map.addLayer( mapLayers.all_shops );
+}
+
+
+function changeLayer(layerID) {
+    if( mapLayers[layerID] === undefined ) {
+        throw new Error("Cannot change to unknown layer:" + layerID);
+    }
+
+    // Remove the active layer.
+    map.removeLayer( activeLayer );
+
+    var requiredLayer = mapLayers[layerID];
+    var urlToLoad = '/fs/' + layerID + '.geojson?x=' + longitude + '&y=' + latitude;
+    requiredLayer.loadURL(urlToLoad);
+    map.addLayer( mapLayers[layerID] );
+    activeLayer = layerID;
+}
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(logPosition);
+    } else {
+        alert("Your browser does not support Geolocation so some features may not work.");
+    }
+}
+
+function logPosition(position) {
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
 }
