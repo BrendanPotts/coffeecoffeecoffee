@@ -73,15 +73,30 @@
 <!--THIS IS WHERE THE NODE LINKAGE SHIZZLE GOES TO USE DATABSE DETAILS INSTEAD OF STATIC-->
 
    
+<script>
+function myNavFunc(){
+    // If iPhone
+    if( (navigator.platform.indexOf("iPhone") != -1) 
+        || (navigator.platform.indexOf("iPod") != -1)
+        || (navigator.platform.indexOf("iPad") != -1))
+         window.open("maps://maps.google.com/maps?daddr={{shop.ycoord}},{{shop.xcoord}}&amp;l7=");
+    else
+         window.open("http://maps.google.com/maps?daddr={{shop.ycoord}},{{shop.xcoord}}&amp;l7=");
+}
+</script>       
+
+
 <div class="container">
     <div class="jumbotron">
     
-      <div width="50%"><h1>{{shop.name}}</h1>
+      <div id="maplink"><h1>{{shop.name}}</h1>
       <p>{{shop.address}}</p> 
       <p>{{shop.url}}</p>
       </div>
+        <div id="compass"><img src="{{shop.external}}" width="100%" ALT="maplink"></div>
 <div class="detailheader">
-        <div id="maplink"><a href="link to SQL statement defining WHERE coffee.shop id ==ID"><img src="images/maplink.png" height="80px" ALT="maplink"></a></div>
+        <div id="maplink"><a style="cursor: pointer;" onclick="myNavFunc()"><img src="images/compass.png" alt="routing">
+        </a>><img src="images/maplink.png" height="80px" ALT="maplink"></a></div>
         <div id="shopimage"><img src="{{shop.external}}" width="100%" ALT="maplink"></div>
     </div>
        <div class="row">
