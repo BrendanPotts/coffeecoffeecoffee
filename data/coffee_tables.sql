@@ -17,6 +17,8 @@ CREATE TABLE coffee.shops(
     instagram text DEFAULT '',
     pinterest text DEFAULT '',
     icon_path text DEFAULT '',
+    external_path text DEFAULT '',
+    internal_path text DEFAULT '',
     xcoord double precision DEFAULT '-1',
     ycoord double precision DEFAULT '-1',
     location geometry,
@@ -62,3 +64,5 @@ CREATE TABLE coffee.users (
     is_admin boolean DEFAULT false,
     shop_id int
 );
+
+
