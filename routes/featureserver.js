@@ -211,7 +211,7 @@ router.get('/closest_to_point_with_seats.geojson', function(req, res, next) {
 /*
     Get all Coffee shops from the database WHERE coffee = 3fe
 */
-router.get('/3fe_coffee.geojson', function(req, res, next) {
+router.get('/threefe_coffee.geojson', function(req, res, next) {
     var db = new Database();
 
     db.connect(config.settings.db, function(err){
