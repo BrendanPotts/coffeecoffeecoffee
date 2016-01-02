@@ -40,7 +40,7 @@ router.get('/all_shops.geojson', function(req, res, next) {
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
-        "work_friendly, hot_food, lunch, breakfast, kitchen,",
+        "work_friendly, hot_food, lunch, breakfast, pastry,",
         "credit_card, last_update FROM coffee.shops"
     ].join(" ");
 
@@ -80,7 +80,7 @@ router.get('/closest_to_point.geojson', function(req, res, next) {
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
-        "work_friendly, hot_food, lunch, breakfast, kitchen,",
+        "work_friendly, hot_food, lunch, breakfast, pastry,",
         "credit_card, last_update, ",
         "st_distance(st_setsrid(st_makepoint($1,$2),4326),location) as distance",
         "FROM coffee.shops ORDER BY distance, shop_id LIMIT $3"
@@ -130,7 +130,7 @@ router.get('/closest_to_point_with_wifi.geojson', function(req, res, next) {
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
-        "work_friendly, hot_food, lunch, breakfast, kitchen,",
+        "work_friendly, hot_food, lunch, breakfast, pastry,",
         "credit_card, last_update, ",
         "st_distance(st_setsrid(st_makepoint($1,$2),4326),location) as distance",
         "FROM coffee.shops WHERE wifi ORDER BY distance, shop_id LIMIT $3"
@@ -179,7 +179,7 @@ router.get('/closest_to_point_with_seats.geojson', function(req, res, next) {
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
-        "work_friendly, hot_food, lunch, breakfast, kitchen,",
+        "work_friendly, hot_food, lunch, breakfast, pastry,",
         "credit_card, last_update, ",
         "st_distance(st_setsrid(st_makepoint($1,$2),4326),location) as distance",
         "FROM coffee.shops WHERE seating ORDER BY distance, shop_id LIMIT $3"
@@ -227,7 +227,7 @@ router.get('/threefe_coffee.geojson', function(req, res, next) {
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
-        "work_friendly, hot_food, lunch, breakfast, kitchen,",
+        "work_friendly, hot_food, lunch, breakfast, pastry,",
         "credit_card, last_update FROM coffee.shops",
         "WHERE coffee1 ilike '%3fe%' or coffee2 ilike '%3fe%' or ",
         "coffee3 ilike '%3fe%' or coffee4 ilike '%3fe%'"
@@ -268,7 +268,7 @@ router.get('/roasted_brown_coffee.geojson', function(req, res, next) {
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
-        "work_friendly, hot_food, lunch, breakfast, kitchen,",
+        "work_friendly, hot_food, lunch, breakfast, pastry,",
         "credit_card, last_update FROM coffee.shops",
         "WHERE coffee1 ilike '%roasted brown%' or coffee2 ilike '%roasted brown%' or ",
         "coffee3 ilike '%roasted brown%' or coffee4 ilike '%roasted brown%'"
@@ -310,7 +310,7 @@ router.get('/cloud_picker_coffee.geojson', function(req, res, next) {
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
-        "work_friendly, hot_food, lunch, breakfast, kitchen,",
+        "work_friendly, hot_food, lunch, breakfast, pastry,",
         "credit_card, last_update FROM coffee.shops",
         "WHERE coffee1 ilike '%cloud picker%' or coffee2 ilike '%cloud picker%' or ",
         "coffee3 ilike '%cloud picker%' or coffee4 ilike '%cloud picker%'"
@@ -353,7 +353,7 @@ router.get('/full_circle_coffee.geojson', function(req, res, next) {
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
-        "work_friendly, hot_food, lunch, breakfast, kitchen,",
+        "work_friendly, hot_food, lunch, breakfast, pastry,",
         "credit_card, last_update FROM coffee.shops",
         "WHERE coffee1 ilike '%full circle%' or coffee2 ilike '%full circle%' or ",
         "coffee3 ilike '%full circle%' or coffee4 ilike '%full circle%'"
@@ -395,7 +395,7 @@ router.get('/breakfast.geojson', function(req, res, next) {
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
-        "work_friendly, hot_food, lunch, breakfast, kitchen,",
+        "work_friendly, hot_food, lunch, breakfast, pastry,",
         "credit_card, last_update FROM coffee.shops WHERE breakfast",
     ].join(" ");
 
@@ -435,7 +435,7 @@ router.get('/pastry.geojson', function(req, res, next) {
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
-        "work_friendly, hot_food, lunch, breakfast, kitchen,",
+        "work_friendly, hot_food, lunch, breakfast, pastry,",
         "credit_card, last_update FROM coffee.shops WHERE pastry"
     ].join(" ");
 
@@ -475,7 +475,7 @@ router.get('/lunch.geojson', function(req, res, next) {
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
-        "work_friendly, hot_food, lunch, breakfast, kitchen,",
+        "work_friendly, hot_food, lunch, breakfast, pastry,",
         "credit_card, last_update FROM coffee.shops WHERE lunch"
     ].join(" ");
 
@@ -516,7 +516,7 @@ router.get('/hot_food.geojson', function(req, res, next) {
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
-        "work_friendly, hot_food, lunch, breakfast, kitchen,",
+        "work_friendly, hot_food, lunch, breakfast, pastry,",
         "credit_card, last_update FROM coffee.shops WHERE hot_food"
     ].join(" ");
 

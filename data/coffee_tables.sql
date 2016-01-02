@@ -41,7 +41,7 @@ CREATE TABLE coffee.shops(
     hot_food boolean DEFAULT false,
     lunch boolean DEFAULT false,
     breakfast boolean DEFAULT false,
-    kitchen boolean DEFAULT false,
+    pastry boolean DEFAULT false,
     credit_card boolean DEFAULT false,
     last_update timestamp default now()
 );
