@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop details popup</title>
+    <meta name="description" content="Dublin Based Speciality Coffee Finder" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="keithomuiri" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--- FAVICONS Generated from favicomatic.com - FAVICONS -->
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="/favicons/favicon-196.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="/favicons/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicons/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/favicon-72.png">
+    <link rel="apple-touch-icon" href="/favicons/favicon-57.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/favicons/favicon-144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    
+
+    <!--- BOOTSTRAP first I stick bootstrap in, which does most of the heavy lifting for responsiveness BOOTSTRAP -->
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!--- CSS Next, my custom style sheets which over write some elements of the bootstrap above CSS-->
+    
+    <link rel="stylesheet" type="text/css" href="stylesheets/style2.css" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    
+    <!--- jQUERY SCRIPTS its a bit of a beast, but it does the trick and I'm not overly concerned about bandwidth jQUERY SCRIPTS -->
+    
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/animatescroll.js"></script>
+    <script type="text/javascript" src="js/jquery.sticky.js"></script>
+    <script type="text/javascript" src="js/viewportchecker.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    
+    <!--- FONTS Custom webfonts, from googlefonts.com easily implemented FONTS-->
+    
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    
+    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+
+<!--<center><div class="blackout"></div>
+
+<!--THIS IS WHERE THE NODE LINKAGE SHIZZLE GOES TO USE DATABSE DETAILS INSTEAD OF STATIC-->
+
+   
+<script>//fallback script because I cant get pgrouting to play ball on live server this uses google routing as a round trip.//
+function myNavFunc(){
+    // If iPhone
+    if( (navigator.platform.indexOf("iPhone") != -1) 
+        || (navigator.platform.indexOf("iPod") != -1)
+        || (navigator.platform.indexOf("iPad") != -1))
+         window.open("maps://maps.google.com/maps?daddr={{shop.ycoord}},{{shop.xcoord}}&amp;l7=");
+    else
+         window.open("http://maps.google.com/maps?daddr={{shop.ycoord}},{{shop.xcoord}}&amp;l7=");
+}
+</script>       
+
+<!--this is a simple example from css tricks...need to get current location rather than hard coded and replace button with compass image
+<form action="http://maps.google.com/maps" method="get" target="_blank">
+  // <input type="hidden" name="saddr" value="get.position" />
+  // <input type="text" name="saddr" />
+  // <input type="hidden" name="daddr" value="350 5th Ave New York, NY 10018 (Empire State Building)" />
+   //<input type="submit" value="Get directions" />
+//</form>
+-->
+
+<div class="container">
+    <div class="jumbotron">
+    
+      <div id="detailheader"><h1>{{shop.name}}</h1>
+      <p>{{shop.address}}</p> 
+      <p>{{shop.url}}</p>
+      </div>
+<div class="detailheader">
+        <div id="maplink"><a style="cursor: pointer;" onclick="myNavFunc()"><img src="images/compass.png" alt="routing">
+        </a></div>
+        <div id="shopimage"><img src="{{shop.external}}" width="100%" ALT="shop photo"></div>
+    </div>
+       <div class="row">
+      <div class="col-sm-4">
+        <h3>Column 1</h3>
+        <p><img width="100%" height=auto src="{{shop.internalpic}}" ALT="internal shot"></p>
+        <p>{{shop.aboutus}}</p>
+      </div>
+    
+      <div class="col-sm-4">
+        <h3>Shop details</h3>
+        <p><checkbox>breakfast{{shop.breakfast}}</p>
+        <p><checkbox>lunch{{shop.lunch}}</p>
+        <p><checkbox>hot food{{shop.hotfood}}</p>
+        <p><checkbox>full kitchen{{shop.kitchen}}</p>
+      </div>
+      
+      <div class="col-sm-4">
+        <h3>Coffee</h3>        
+        <p>Coffee served: {{shop.coffee1}}</p>
+        <p>Grinder : {{shop.grinder1}}</p>
+        <p>Machine: {{shop.machine1}}</p>
+
+      </div>
+    </div>
+</div>
+
+</body>
+
+</html>

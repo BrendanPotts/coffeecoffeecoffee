@@ -22,6 +22,11 @@ function setIcon(layer) {
             "popupAnchor": [0, -5],
             "className": "dot"
         }));
+
+        marker.on('click', function(e) {
+            console.log(e);
+            $('#coffeeshop_modal').modal();
+        });
     });
 }
 
