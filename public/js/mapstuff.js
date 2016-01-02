@@ -57,6 +57,8 @@ function initMap() {
 
     mapLayers.all_shops.loadURL('/fs/all_shops.geojson');
     map.addLayer( mapLayers.all_shops );
+
+    getLocation();
 }
 
 
@@ -66,7 +68,7 @@ function changeLayer(layerID) {
     }
 
     // Remove the active layer.
-    map.removeLayer( activeLayer );
+    map.removeLayer( mapLayers[activeLayer] );
 
     var requiredLayer = mapLayers[layerID];
     var urlToLoad = '/fs/' + layerID + '.geojson?x=' + longitude + '&y=' + latitude;
