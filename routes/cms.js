@@ -168,7 +168,7 @@ router.post('/shop_edit', function(req, res, next) {
     }
     var sql = [
         "INSERT INTO coffee.shops(name, address, about, owner, ",
-        "href, phone, email, xcoord, ycoord, icon_path, opening_hours, facebook, ",
+        "href, phone, email, xcoord, ycoord, icon_path, internal_path, external_path, opening_hours, facebook, ",
         "twitter, instagram, pinterest, coffee1, coffee2, coffee3, ",
         "coffee4, grinder1, grinder2, machine1, machine2, seating, ",
         "dedicated, wifi, service, loyality, child_friendly, ",
@@ -189,6 +189,8 @@ router.post('/shop_edit', function(req, res, next) {
         req.body.xcoord 	|| 0,
         req.body.ycoord  	|| 0,
         req.body.icon_path  || '/icons/unknown.png',
+        req.body.internal_path  || '/images/internal/unknown.png',
+        req.body.external_path  || '/images/external/unknown.png',
         req.body.opening_hours	|| '',
         req.body.facebook 	|| '',
         req.body.twitter 	|| '',
@@ -230,6 +232,8 @@ router.post('/shop_edit', function(req, res, next) {
             "xcoord = $8,",
             "ycoord = $9,",
             "icon_path = $10,",
+            "internal_path = $39,",
+            "external_path = $40,",
             "opening_hours	= $11,",
             "facebook = $12,",
             "twitter = $13,",

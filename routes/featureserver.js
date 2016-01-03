@@ -35,7 +35,7 @@ router.get('/all_shops.geojson', function(req, res, next) {
 
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
-        "facebook, twitter, instagram, pinterest,icon_path,",
+        "facebook, twitter, instagram, pinterest, icon_path, internal_path, external_path, ",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
@@ -75,7 +75,7 @@ router.get('/closest_to_point.geojson', function(req, res, next) {
 
     var sql = [
         "SELECT DISTINCT(shop_id), name, about, href, owner, address, phone, email,",
-        "facebook, twitter, instagram, pinterest,icon_path,",
+        "facebook, twitter, instagram, pinterest, icon_path, internal_path, external_path, ",
         "ST_AsGeoJSON(location,4) as json_location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
@@ -125,7 +125,7 @@ router.get('/closest_to_point_with_wifi.geojson', function(req, res, next) {
 
     var sql = [
         "SELECT DISTINCT(shop_id), name, about, href, owner, address, phone, email,",
-        "facebook, twitter, instagram, pinterest,icon_path,",
+        "facebook, twitter, instagram, pinterest,icon_path, internal_path, external_path, ",
         "ST_AsGeoJSON(location,4) as json_location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
@@ -174,7 +174,7 @@ router.get('/closest_to_point_with_seats.geojson', function(req, res, next) {
 
     var sql = [
         "SELECT DISTINCT(shop_id), name, about, href, owner, address, phone, email,",
-        "facebook, twitter, instagram, pinterest,icon_path,",
+        "facebook, twitter, instagram, pinterest,icon_path, internal_path, external_path, ",
         "ST_AsGeoJSON(location,4) as json_location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
@@ -222,7 +222,7 @@ router.get('/threefe_coffee.geojson', function(req, res, next) {
 
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
-        "facebook, twitter, instagram, pinterest,icon_path,",
+        "facebook, twitter, instagram, pinterest,icon_path, internal_path, external_path, ",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
@@ -263,7 +263,7 @@ router.get('/roasted_brown_coffee.geojson', function(req, res, next) {
 
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
-        "facebook, twitter, instagram, pinterest,icon_path,",
+        "facebook, twitter, instagram, pinterest,icon_path, internal_path, external_path, ",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
@@ -305,7 +305,7 @@ router.get('/cloud_picker_coffee.geojson', function(req, res, next) {
 
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
-        "facebook, twitter, instagram, pinterest,icon_path,",
+        "facebook, twitter, instagram, pinterest,icon_path, internal_path, external_path, ",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
@@ -348,7 +348,7 @@ router.get('/full_circle_coffee.geojson', function(req, res, next) {
 
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
-        "facebook, twitter, instagram, pinterest,icon_path,",
+        "facebook, twitter, instagram, pinterest,icon_path, internal_path, external_path, ",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
@@ -390,7 +390,7 @@ router.get('/breakfast.geojson', function(req, res, next) {
 
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
-        "facebook, twitter, instagram, pinterest,icon_path,",
+        "facebook, twitter, instagram, pinterest,icon_path, internal_path, external_path, ",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
@@ -430,7 +430,7 @@ router.get('/pastry.geojson', function(req, res, next) {
 
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
-        "facebook, twitter, instagram, pinterest,icon_path,",
+        "facebook, twitter, instagram, pinterest,icon_path, internal_path, external_path, ",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
@@ -470,7 +470,7 @@ router.get('/lunch.geojson', function(req, res, next) {
 
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
-        "facebook, twitter, instagram, pinterest,icon_path,",
+        "facebook, twitter, instagram, pinterest,icon_path,internal_path, external_path, ",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
@@ -511,7 +511,7 @@ router.get('/hot_food.geojson', function(req, res, next) {
 
     var sql = [
         "SELECT shop_id, name, about, href, owner, address, phone, email,",
-        "facebook, twitter, instagram, pinterest,icon_path,",
+        "facebook, twitter, instagram, pinterest,icon_path,internal_path, external_path, ",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
         "grinder1, grinder2, machine1, machine2, seating,",
