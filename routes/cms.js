@@ -175,7 +175,7 @@ router.post('/shop_edit', function(req, res, next) {
         "work_friendly, hot_food, lunch, breakfast, pastry, credit_card, location)",
         "VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, ",
         "$14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26,",
-        "$27, $28, $29, $30, $31, $32, $33, $34, $35, ST_SetSRID(ST_MakePoint($36, $37),4326) ) "
+        "$27, $28, $29, $30, $31, $32, $33, $34, $39, $40, $35, ST_SetSRID(ST_MakePoint($36, $37),4326) ) "
     ].join(" ");
 
     var data = [
