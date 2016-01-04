@@ -269,4 +269,30 @@ router.post('/shop_edit', function(req, res, next) {
     });
 });
 
+
+//======================================================================//
+//============================  PUBLIC API  ============================//
+//======================================================================//
+
+
+router.get('/get_shop_by_id', function(req, res, next) {
+    var db = new Database();
+
+    db.connect(config.settings.db, function(err){
+        if(err) return next(err);
+    });
+
+    if(req.query.id && !isNaN(req.query.id)){
+        var sql = "SELECT * FROM coffee.shops where shop_id = $1";
+        db.selectQuery(sql, [req.query.id], function(err, result){
+            if(err) return next(err);
+
+            return res.render('shop_details.html', { "data": result.rows[0]  });
+        });
+    }
+    else{
+        return next(new Error("Invalid shop id."));
+    }
+});
+
 module.exports = router;
