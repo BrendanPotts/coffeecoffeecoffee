@@ -15,7 +15,7 @@ function setIcon(layer) {
     // Set a custom icon on each marker based on feature properties.
     layer.on('layeradd', function(e) {
         var marker = e.layer, feature = marker.feature;
-        marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+        marker.bindPopup('coffeedb.shops.name').openPopup();
 
         marker.setIcon(L.icon({
             "iconUrl": feature.properties.icon_path,
