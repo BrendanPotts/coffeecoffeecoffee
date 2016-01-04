@@ -59,7 +59,8 @@ function initMap() {
         'breakfast': L.mapbox.featureLayer(),
         'pastry': L.mapbox.featureLayer(),
         'lunch': L.mapbox.featureLayer(),
-        'hot_food': L.mapbox.featureLayer()
+        'hot_food': L.mapbox.featureLayer(),
+        'business': L.mapbox.featureLayer()
     };
 
     for (var layer in mapLayers) {

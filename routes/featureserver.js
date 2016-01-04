@@ -18,7 +18,7 @@ function Feature() {
     this.properties = {};
 }
 
-var MAX_RESULTS = 20; // Do not return more than 20 shops for distance queries.
+var MAX_RESULTS = 5; // Do not return more than 5 shops for distance queries.
 
 
 /*
@@ -38,6 +38,7 @@ router.get('/all_shops.geojson', function(req, res, next) {
         "facebook, twitter, instagram, pinterest,icon_path,",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
+        "internal_path, external_path,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
         "work_friendly, hot_food, lunch, breakfast, pastry,",
@@ -78,6 +79,7 @@ router.get('/closest_to_point.geojson', function(req, res, next) {
         "facebook, twitter, instagram, pinterest,icon_path,",
         "ST_AsGeoJSON(location,4) as json_location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
+        "internal_path, external_path,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
         "work_friendly, hot_food, lunch, breakfast, pastry,",
@@ -128,6 +130,7 @@ router.get('/closest_to_point_with_wifi.geojson', function(req, res, next) {
         "facebook, twitter, instagram, pinterest,icon_path,",
         "ST_AsGeoJSON(location,4) as json_location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
+        "internal_path, external_path,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
         "work_friendly, hot_food, lunch, breakfast, pastry,",
@@ -177,6 +180,7 @@ router.get('/closest_to_point_with_seats.geojson', function(req, res, next) {
         "facebook, twitter, instagram, pinterest,icon_path,",
         "ST_AsGeoJSON(location,4) as json_location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
+        "internal_path, external_path,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
         "work_friendly, hot_food, lunch, breakfast, pastry,",
@@ -225,6 +229,7 @@ router.get('/threefe_coffee.geojson', function(req, res, next) {
         "facebook, twitter, instagram, pinterest,icon_path,",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
+        "internal_path, external_path,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
         "work_friendly, hot_food, lunch, breakfast, pastry,",
@@ -266,6 +271,7 @@ router.get('/roasted_brown_coffee.geojson', function(req, res, next) {
         "facebook, twitter, instagram, pinterest,icon_path,",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
+        "internal_path, external_path,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
         "work_friendly, hot_food, lunch, breakfast, pastry,",
@@ -308,6 +314,7 @@ router.get('/cloud_picker_coffee.geojson', function(req, res, next) {
         "facebook, twitter, instagram, pinterest,icon_path,",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
+        "internal_path, external_path,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
         "work_friendly, hot_food, lunch, breakfast, pastry,",
@@ -351,6 +358,7 @@ router.get('/full_circle_coffee.geojson', function(req, res, next) {
         "facebook, twitter, instagram, pinterest,icon_path,",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
+        "internal_path, external_path,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
         "work_friendly, hot_food, lunch, breakfast, pastry,",
@@ -393,6 +401,7 @@ router.get('/breakfast.geojson', function(req, res, next) {
         "facebook, twitter, instagram, pinterest,icon_path,",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
+        "internal_path, external_path,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
         "work_friendly, hot_food, lunch, breakfast, pastry,",
@@ -433,6 +442,7 @@ router.get('/pastry.geojson', function(req, res, next) {
         "facebook, twitter, instagram, pinterest,icon_path,",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
+        "internal_path, external_path,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
         "work_friendly, hot_food, lunch, breakfast, pastry,",
@@ -473,6 +483,7 @@ router.get('/lunch.geojson', function(req, res, next) {
         "facebook, twitter, instagram, pinterest,icon_path,",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
+        "internal_path, external_path,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
         "work_friendly, hot_food, lunch, breakfast, pastry,",
@@ -495,6 +506,54 @@ router.get('/lunch.geojson', function(req, res, next) {
     });
 });
 
+/*
+    Get all Coffee shops from the database closest to a given
+    point WHERE seating and wifi and work friendly
+*/
+router.get('/business.geojson', function(req, res, next) {
+    var db = new Database();
+
+    db.connect(config.settings.db, function(err){
+        if(err) {
+            return next(err);
+        }
+    });
+
+    var sql = [
+        "SELECT DISTINCT(shop_id), name, about, href, owner, address, phone, email,",
+        "facebook, twitter, instagram, pinterest,icon_path,",
+        "ST_AsGeoJSON(location,4) as json_location,",
+        "opening_hours, coffee1, coffee2, coffee3, coffee4,",
+        "internal_path, external_path,",
+        "grinder1, grinder2, machine1, machine2, seating,",
+        "dedicated, wifi, service, loyality, child_friendly,",
+        "work_friendly, hot_food, lunch, breakfast, pastry,",
+        "credit_card, last_update, ",
+        "st_distance(st_setsrid(st_makepoint($1,$2),4326),location) as distance",
+        "FROM coffee.shops WHERE seating AND wifi AND work_friendly ORDER BY distance, shop_id LIMIT $3"
+    ].join(" ");
+
+    if(req.query.x !== undefined || req.query.y !== undefined){
+        if(isNaN(req.query.x) || isNaN(req.query.y)) {
+            return next( new Error("Invalid coordinates.") );
+        }
+    }
+
+    db.selectQuery(sql, [req.query.x, req.query.y, MAX_RESULTS], function(err, result){
+        if(err) return next(err);
+
+        var featureCollection = new FeatureCollection();
+        for(var i=0; i<result.rows.length; i++) {
+          var feature = new Feature();
+          feature.geometry = JSON.parse(result.rows[i].json_location);
+          feature.properties = result.rows[i];
+          delete feature.properties.json_location;
+          featureCollection.features.push(feature);
+        }
+
+        return res.json(featureCollection);
+    });
+});
 
 
 /*
@@ -514,6 +573,7 @@ router.get('/hot_food.geojson', function(req, res, next) {
         "facebook, twitter, instagram, pinterest,icon_path,",
         "ST_AsGeoJSON(location,4)::json as location,",
         "opening_hours, coffee1, coffee2, coffee3, coffee4,",
+        "internal_path, external_path,",
         "grinder1, grinder2, machine1, machine2, seating,",
         "dedicated, wifi, service, loyality, child_friendly,",
         "work_friendly, hot_food, lunch, breakfast, pastry,",
