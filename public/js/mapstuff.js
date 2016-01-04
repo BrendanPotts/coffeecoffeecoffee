@@ -15,8 +15,7 @@ function setIcon(layer) {
     // Set a custom icon on each marker based on feature properties.
     layer.on('layeradd', function(e) {
         var marker = e.layer, feature = marker.feature;
-        marker.bindPopup('coffeedb.shops.name').openPopup();
-
+        
         marker.setIcon(L.icon({
             "iconUrl": feature.properties.icon_path,
             "iconSize": [35, 50],
@@ -91,3 +90,6 @@ function logPosition(position) {
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
 }
+
+ onEachFeature: function (feature, layer) {
+         layer.bindPopup(feature.properties.name);
