@@ -15,8 +15,7 @@ function setIcon(layer) {
     // Set a custom icon on each marker based on feature properties.
     layer.on('layeradd', function(e) {
         var marker = e.layer, feature = marker.feature;
-        
-        marker.setIcon(L.icon({
+            marker.setIcon(L.icon({
             "iconUrl": feature.properties.icon_path,
             "iconSize": [35, 50],
             "iconAnchor": [17, 50],
@@ -91,5 +90,5 @@ function logPosition(position) {
     longitude = position.coords.longitude;
 }
 
- onEachFeature: function (feature, layer) {
+function (feature, layer) {
          layer.bindPopup(feature.properties.name);
