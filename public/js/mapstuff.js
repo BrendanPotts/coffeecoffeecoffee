@@ -22,6 +22,17 @@ function setIcon(layer) {
             "popupAnchor": [0, -5],
             "className": "dot"
         }));
+
+        marker.on('click', function(e) {
+            var shop_id = e.target.feature.properties.shop_id;
+
+            $('#coffeeshop_modal').modal();
+            $('#coffee-about').html('<h2>Loading....</h2>');
+
+            jQuery.get( "/cms/get_shop_by_id?id=" + shop_id, function( data ) {
+                $( "#coffee-about" ).html( data );
+            });
+        });
     });
 }
 
@@ -48,8 +59,7 @@ function initMap() {
         'breakfast': L.mapbox.featureLayer(),
         'pastry': L.mapbox.featureLayer(),
         'lunch': L.mapbox.featureLayer(),
-        'hot_food': L.mapbox.featureLayer(),
-        'business': L.mapbox.featureLayer()
+        'hot_food': L.mapbox.featureLayer()
     };
 
     for (var layer in mapLayers) {

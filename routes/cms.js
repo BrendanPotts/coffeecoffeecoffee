@@ -172,37 +172,36 @@ router.post('/shop_edit', function(req, res, next) {
         "twitter, instagram, pinterest, coffee1, coffee2, coffee3, ",
         "coffee4, grinder1, grinder2, machine1, machine2, seating, ",
         "dedicated, wifi, service, loyality, child_friendly, ",
-        "work_friendly, hot_food, lunch, breakfast, pastry, credit_card,  ",
-        "internal_path, external_path, location,)",
+        "work_friendly, hot_food, lunch, breakfast, pastry, credit_card, location)",
         "VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, ",
         "$14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26,",
-        "$27, $28, $29, $30, $31, $32, $33, $34, $35, $36, $37, ST_SetSRID(ST_MakePoint($38, $39),4326) ) "
+        "$27, $28, $29, $30, $31, $32, $33, $34, $35, ST_SetSRID(ST_MakePoint($36, $37),4326) ) "
     ].join(" ");
 
     var data = [
-        req.body.name 		|| '',
-        req.body.address 	|| '',
-        req.body.about 		|| '',
-        req.body.owner 		|| '',
-        req.body.href 		|| '',
-        req.body.phone 		|| '',
-        req.body.email 		|| '',
-        req.body.xcoord 	|| 0,
-        req.body.ycoord  	|| 0,
+        req.body.name       || '',
+        req.body.address    || '',
+        req.body.about      || '',
+        req.body.owner      || '',
+        req.body.href       || '',
+        req.body.phone      || '',
+        req.body.email      || '',
+        req.body.xcoord     || 0,
+        req.body.ycoord     || 0,
         req.body.icon_path  || '/icons/unknown.png',
-        req.body.opening_hours	|| '',
-        req.body.facebook 	|| '',
-        req.body.twitter 	|| '',
-        req.body.instagram 	|| '',
-        req.body.pinterest 	|| '',
-        req.body.coffee1 	|| '',
-        req.body.coffee2 	|| '',
-        req.body.coffee3 	|| '',
-        req.body.coffee4  	|| '',
-        req.body.grinder1 	|| '',
-        req.body.grinder2 	|| '',
-        req.body.machine1 	|| '',
-        req.body.machine2 	|| '',
+        req.body.opening_hours  || '',
+        req.body.facebook   || '',
+        req.body.twitter    || '',
+        req.body.instagram  || '',
+        req.body.pinterest  || '',
+        req.body.coffee1    || '',
+        req.body.coffee2    || '',
+        req.body.coffee3    || '',
+        req.body.coffee4    || '',
+        req.body.grinder1   || '',
+        req.body.grinder2   || '',
+        req.body.machine1   || '',
+        req.body.machine2   || '',
         req.body.amenities.indexOf('seating') > -1          || false,
         req.body.amenities.indexOf('dedicated') > -1        || false,
         req.body.amenities.indexOf('wifi') > -1             || false,
@@ -215,10 +214,8 @@ router.post('/shop_edit', function(req, res, next) {
         req.body.amenities.indexOf('breakfast') > -1        || false,
         req.body.amenities.indexOf('pastry') > -1          || false,
         req.body.amenities.indexOf('credit_card') > -1      || false,
-        req.body.internal_path  || '/icons/unknown.png',
-        req.body.external_path  || '/icons/unknown.png',
-        req.body.xcoord 	|| 0,
-        req.body.ycoord  	|| 0
+        req.body.xcoord     || 0,
+        req.body.ycoord     || 0
     ];
 
     if(req.body.shop_id && !isNaN(req.body.shop_id)){
@@ -233,7 +230,7 @@ router.post('/shop_edit', function(req, res, next) {
             "xcoord = $8,",
             "ycoord = $9,",
             "icon_path = $10,",
-            "opening_hours	= $11,",
+            "opening_hours  = $11,",
             "facebook = $12,",
             "twitter = $13,",
             "instagram = $14,",
@@ -258,10 +255,8 @@ router.post('/shop_edit', function(req, res, next) {
             "breakfast = $33,",
             "pastry = $34,",
             "credit_card = $35, ",
-            "internal_path = $36, ",
-            "external_path = $37, ",
-            "location = ST_SetSRID(ST_MakePoint($38, $39),4326)",
-            "WHERE shop_id = $40"
+            "location = ST_SetSRID(ST_MakePoint($36, $37),4326)",
+            "WHERE shop_id = $38"
         ].join(" ");
 
         data.push(req.body.shop_id);
