@@ -18,7 +18,7 @@ function Feature() {
     this.properties = {};
 }
 
-var MAX_RESULTS = 20; // Do not return more than 20 shops for distance queries.
+var MAX_RESULTS = 5; // Do not return more than 5 shops for distance queries.
 
 
 /*
