@@ -15,6 +15,8 @@ function setIcon(layer) {
     // Set a custom icon on each marker based on feature properties.
     layer.on('layeradd', function(e) {
         var marker = e.layer, feature = marker.feature;
+        marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+
         marker.setIcon(L.icon({
             "iconUrl": feature.properties.icon_path,
             "iconSize": [35, 50],
@@ -24,7 +26,6 @@ function setIcon(layer) {
         }));
     });
 }
-
 function initMap() {
     L.mapbox.accessToken = 'pk.eyJ1IjoieWFycnVtayIsImEiOiJVNVVkT2JvIn0.xja5Bz1L0dmNYUfNG3mlBw';
 

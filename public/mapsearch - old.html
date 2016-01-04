@@ -108,7 +108,24 @@ function myNavFunc(){
         map.panTo(e.layer.getLatLng());
     });
 
+
     var myLayer = L.mapbox.featureLayer().addTo(map);
+    var popup = L.popup()
+        .setLatLng([53.399024, -6.240058])
+        .setContent('name')
+        .openOn(map);
+
+        var popup = L.popup();
+
+    function onMapClick(e) {
+        popup
+            .setLatLng(e.latlng)
+            .setContent("You clicked the map at " + e.latlng.toString())
+            .openOn(map);
+    }
+
+map.on('click', onMapClick);
+
     var geoJson = [{
             "type": "Feature",
             "geometry": {
