@@ -90,7 +90,3 @@ function logPosition(position) {
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
 }
-
-function yourOnEachFeatureFunction(feature, layer) {
-     if (feature.properties.name) {layer.bindPopup(feature.properties.name,{keepInView:true}); } 
-}
