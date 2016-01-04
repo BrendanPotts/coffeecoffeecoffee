@@ -507,6 +507,47 @@ router.get('/lunch.geojson', function(req, res, next) {
 });
 
 
+/*
+    Get all Coffee shops from the database WHERE business friendly
+*/
+router.get('/business.geojson', function(req, res, next) {
+    var db = new Database();
+
+    db.connect(config.settings.db, function(err){
+        if(err) {
+            return next(err);
+        }
+    });
+
+    var sql = [
+        "SELECT shop_id, name, about, href, owner, address, phone, email,",
+        "facebook, twitter, instagram, pinterest,icon_path,",
+        "ST_AsGeoJSON(location,4)::json as location,",
+        "opening_hours, coffee1, coffee2, coffee3, coffee4,",
+        "internal_path, external_path,",
+        "grinder1, grinder2, machine1, machine2, seating,",
+        "dedicated, wifi, service, loyality, child_friendly,",
+        "work_friendly, hot_food, lunch, breakfast, pastry,",
+        "credit_card, last_update FROM coffee.shops WHERE seating AND wifi AND work_friendly"
+    ].join(" ");
+
+    db.selectQuery(sql, [], function(err, result){
+        if(err) return next(err);
+
+        var featureCollection = new FeatureCollection();
+        for(var i=0; i<result.rows.length; i++) {
+          var feature = new Feature();
+          feature.geometry = result.rows[i].location;
+          feature.properties = result.rows[i];
+          delete feature.properties.location;
+          featureCollection.features.push(feature);
+        }
+
+        return res.json(featureCollection);
+    });
+});
+
+
 
 /*
     Get all Coffee shops from the database WHERE hot food = true
