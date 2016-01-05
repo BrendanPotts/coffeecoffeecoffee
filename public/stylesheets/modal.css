@@ -1,5 +1,8 @@
 .shopdetails {
-	max-width: 80%;
+	width: 100%;
+	height:100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
 	position: fixed;
 	z-index: 10000;
 	margin: 200px;
@@ -8,55 +11,36 @@
 	top: 20%;
 }
 
-.modal {
-  text-align: center;
-}
-
 @media screen and (min-width: 768px) { 
-  .modal:before {
-    display: inline-block;
-    vertical-align: middle;
-    content: " ";
-    height: 100%;
-  }
-}
-
-.modal-dialog {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
-}
-
-.jumbotron {
+ 
+.shopinsert {
   padding-top: 25%;
   margin-bottom: 30px;
   color: inherit;
   background-color: #eee;
+  border-radius: 6px;
+  max-width: 80%;
 }
-.jumbotron h1,
-.jumbotron .h1 {
+.shopinsert h1,
+.shopinsert .h1 {
   color: inherit;
    font-size: 50px;
 }
-.jumbotron p {
+.shopinsert p {
   margin-bottom: 15px;
   font-size: 21px;
   font-weight: 200;
 }
-.jumbotron,
-.container-fluid .jumbotron {
-  border-radius: 6px;
+.shopinsert {
 }
-.jumbotron {
-  max-width: 80%;
-}
+
 @media screen and (min-width: 768px) {
-  .jumbotron {
+  .shopinsert {
     padding-top: 10px;
     padding-bottom: 10px;
   }
   
-  .jumbotron h1,
-  .jumbotron .h1 {
-    font-size: 63px;
+  .shopinsert h1,
+  .shopinsert .h1 {
+    font-size: 50px;
   }
