@@ -6,7 +6,6 @@
     left: 0;
     right: 0;
     width: 70%;
-    height: 500px;
     margin: auto;
 	z-index: 10000;
 	background-color: #eee;
@@ -15,7 +14,7 @@
 }
 
 .shopinsert {
-  padding-top: 25px;
+  padding: 25px;
   color: inherit;
   background-color: #eee;
   margin: 10px;
