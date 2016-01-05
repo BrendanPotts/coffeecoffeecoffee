@@ -1,7 +1,8 @@
-.container {
+.shopdetails {
 	max-width: 80%;
 	position: absolute;
 	z-index: 10000;
+	margin: 200px;
 
 }
 
