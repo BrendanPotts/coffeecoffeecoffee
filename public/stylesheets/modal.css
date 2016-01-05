@@ -12,6 +12,15 @@
 	border: 3px solid #2f3036;
 	padding: 25px;
 }
+.detailheaderleft{
+color: #fff;
+	float: left;
+}
+
+.detailheaderright{
+float: right;
+	
+}
 
 .modal_column, .modal_column p{
 font-size: 12px;
