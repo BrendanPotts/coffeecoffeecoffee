@@ -11,8 +11,8 @@
           
 
           <form action="http://maps.google.com/maps" method="get" target="_blank">
-   <input type="hidden" name="saddr" value="{{data.xcoord}},{{data.ycoord}}" />
-   <input type="hidden" name="daddr" value="{{data.position}}" />
+   <input type="hidden" name="saddr" value="{{data.ST_AsGeoJSON(location,4)::json as location}}" />
+   <input type="hidden" name="daddr" value="{{data.ycoord}},{{data.xcoord}}" />
    <input type="submit" value="Get directions" />
 </form>
 
