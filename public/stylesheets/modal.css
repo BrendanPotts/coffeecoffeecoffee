@@ -1,15 +1,14 @@
 
 
 .jumbotron {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 25%;
   margin-bottom: 30px;
   color: inherit;
   background-color: #eee;
 }
 .jumbotron h1,
 .jumbotron .h1 {
-  color: inherit;
+  color: blue;
 }
 .jumbotron p {
   margin-bottom: 15px;
@@ -24,17 +23,17 @@
   border-radius: 6px;
 }
 .jumbotron .container {
-  max-width: 100%;
+  max-width: 80%;
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
   .jumbotron h1,
   .jumbotron .h1 {
