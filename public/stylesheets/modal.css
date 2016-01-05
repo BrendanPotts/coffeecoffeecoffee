@@ -1,4 +1,6 @@
 .shopdetails {
+font-size: 12px;
+color: #fff;
 	display: inline-block;
     position: fixed;
     top: 0;
@@ -19,33 +21,36 @@ color: #fff;
 
 .detailheaderright{
 float: right;
+font-size: 12px;
+color: #fff;
 	
 }
 .alignleft {
 	float: left;
+
+font-size: 12px;
+color: #fff;
 }
 .alignright {
-	float: right;
+font-size: 12px;
+color: #fff;
+float: right;
 }
 
-/* test */
-
-.alignleft {
-	float: left;
-}
-.alignright {
-	float: right;
-}
 .floatclear {
     clear: both;
 }
 .textbox {
     background-color: #90BDD4;
+    font-size: 12px;
+color: #fff;
+
 }
 .bacon {
+font-size: 12px;
+color: #fff;
     background-color: #699B38;
 }
-/*                */
 
 .modal_column, .modal_column p{
 font-size: 12px;
