@@ -1,41 +1,39 @@
 <div class="shopdetails">
-  
-
     <div class="shopinsert">
+        <div id="detailheader">
+            <h1>{{data.name}}</h1>
+            <p>{{data.address}}</p>
+            <p>{{<data class="hr"></data>ef}}</p>
+        </div>
+        
+        <div id="maplink">
+          <a style="cursor: pointer;" onclick="myNavFunc()"><img src="images/compass.png" alt="routing"></a>
+        </div>
+        
+        <div id="shopimage"><img src="'{{data.external_path}}'" width="30%" ALT="shop photo">
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-4">
+                <p><img width="30%" height=auto src="{{data.internal_path}}" ALT="internal shot"></p>
+                <p>{{data.about}}</p>
+          </div>
 
-      <div id="detailheader"><h1>{{data.name}}</h1>
-      <p>{{data.address}}</p>
-      <p>{{data.href}}</p>
-      </div>
-      <div class="detailheader">
-        <div id="maplink"><a style="cursor: pointer;" onclick="myNavFunc()"><img src="images/compass.png" alt="routing">
-        </a></div>
-        <div id="shopimage"><img src="'{{data.external_path}}'" width="30%" ALT="shop photo"></div>
-      </div>
-       <div class="row">
-      <div class="col-sm-4">
-        <h3>Column 1</h3>
-        <p><img width="30%" height=auto src="{{data.internal_path}}" ALT="internal shot"></p>
-        <p>{{data.about}}</p>
-      </div>
-
-      <div class="col-sm-4">
-        <h3>Shop details</h3>
-        <p><checkbox>breakfast: {{data.breakfast}}</checkbox></p>
-        <p><checkbox>lunch: {{data.lunch}}</checkbox></p>
-        <p><checkbox>hot food: {{data.hot_food}}</checkbox></p>
-        <p><checkbox>full kitchen: {{data.pastry}}</checkbox></p>
-      </div>
-
-      <div class="col-sm-4">
-        <h3>Coffee</h3>
-        <p>Coffee served: {{data.coffee1}}</p>
-        <p>Grinder : {{data.grinder1}}</p>
-        <p>Machine: {{data.machine1}}</p>
-
-      </div>
+          <div class="col-sm-4">
+            <h3>Shop details</h3>
+            <p><checkbox>breakfast: {{data.breakfast}}</checkbox></p>
+            <p><checkbox>lunch: {{data.lunch}}</checkbox></p>
+            <p><checkbox>hot food: {{data.hot_food}}</checkbox></p>
+            <p><checkbox>full kitchen: {{data.pastry}}</checkbox></p>
+          </div>
+          
+          <div class="col-sm-4">
+            <h3>Coffee</h3>
+            <p>Coffee served: {{data.coffee1}}</p>
+            <p>Grinder : {{data.grinder1}}</p>
+            <p>Machine: {{data.machine1}}</p>
+          </div>
+        </div>
+    
     </div>
-</div>
-</div>
-</div>
 </div>
