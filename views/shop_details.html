@@ -11,12 +11,10 @@
           
 
           <form action="http://maps.google.com/maps" method="get" target="_blank">
-   <input type="hidden" name="saddr" value="{{data.ST_AsGeoJSON(location,4)::json as location}}" />
+   <input type="hidden" name="saddr" value="{{data.position}}" />
    <input type="hidden" name="daddr" value="{{data.ycoord}},{{data.xcoord}}" />
-   <input type="submit" value="Get directions" />
+   <input type="image" src="images/compass.png" width="100px" alt="routing"/>
 </form>
-
-<img src="images/compass.png" width="100px" alt="routing"></a>
         </div>
         <div class="modal_column">
                 <img src="{{data.external_path}}" width="200px" ALT="shop photo">
