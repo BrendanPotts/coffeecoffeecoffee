@@ -14,7 +14,8 @@
 }
 
 .modal_column, .modal_column p{
-font-size: 6px;
+font-size: 12px;
+color: #fff;
 }
 .shopinsert {
   padding: 25px;
@@ -26,7 +27,7 @@ font-size: 6px;
 }
 .shopinsert h1,
 .shopinsert .h1 {
-  color: inherit;
+  color: #fff;
    font-size: 50px;
 }
 .shopinsert p {
@@ -52,9 +53,10 @@ font-size: 6px;
   position: fixed;
   top: 10px;
   right: 10px;
-  color: #d55f11;
+  color: #fff;
   z-index: 10000;
-  background-color: #2f3036;
+  background-color: #d55f11;
   border-color: #fff;
+  border-width: 5px;
   border-radius: 50%;
 }
