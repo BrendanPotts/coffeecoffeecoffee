@@ -4,7 +4,7 @@
             <h1>{{data.name}}</h1>
             <p>{{data.address}}<br>
             {{data.phone}}<br>
-            {{data.href}}</p>
+            <a href="{{data.href}}" target="new">{{data.href}}</p>
         </div>
         
         <div id="detailheaderright">
@@ -16,7 +16,7 @@
    <input type="submit" value="Get directions" />
 </form>
 
-<a style="cursor: pointer;" onclick="myNavFunc()"><img src="images/compass.png" width="100px" alt="routing"></a>
+<img src="images/compass.png" width="100px" alt="routing"></a>
         </div>
         <div class="modal_column">
                 <img src="{{data.external_path}}" width="200px" ALT="shop photo">
