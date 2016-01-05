@@ -52,6 +52,7 @@
   top: 10px;
   right: 10px;
   color: #fff;
+  z-index: 10000;
   background-color: #2f3036;
   border-color: #000;
   border-radius: 50%;
