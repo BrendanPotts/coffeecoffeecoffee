@@ -7,12 +7,12 @@ color: #fff;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 70%;
+    width: 60%;
     background-color: #2f3036;
  	z-index: 10000;
 	box-shadow: 0px 0px 20px #888888;
 	border: 3px solid #2f3036;
-	padding: 25px;
+	padding: 50%;
 }
 .detailheaderleft{
 color: #fff;
