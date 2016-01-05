@@ -1,16 +1,19 @@
 .shopdetails {
-	width: 75%;
-	height:500px;
-	overflow-x: hidden;
-	overflow-y: hidden;
-	position: fixed;
+	display: inline-block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 500px;
+    margin: auto;
 	z-index: 10000;
 	padding: 25px;
-	background-color: red;
+	background-color: #eee;
 	box-shadow: 5px;
-	top: 20%;
-    border: 3px solid #73AD21;
-}}
+	border: 3px solid #73AD21;
+}
 
 @media screen and (min-width: 768px) { 
  
@@ -32,14 +35,4 @@
   font-size: 21px;
   font-weight: 200;
 }
-
-@media screen and (min-width: 768px) {
-  .shopinsert {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  
-  .shopinsert h1,
-  .shopinsert .h1 {
-    font-size: 50px;
-  }
+}
