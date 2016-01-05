@@ -27,6 +27,26 @@ float: right;
 .alignright {
 	float: right;
 }
+
+/* test */
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+.floatclear {
+    clear: both;
+}
+.textbox {
+    background-color: #90BDD4;
+}
+.bacon {
+    background-color: #699B38;
+}
+/*                */
+
 .modal_column, .modal_column p{
 font-size: 12px;
 color: #fff;
