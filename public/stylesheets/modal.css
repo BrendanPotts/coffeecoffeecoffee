@@ -40,12 +40,7 @@ float: right;
 .floatclear {
     clear: both;
 }
-.textbox {
-    background-color: #90BDD4;
-    font-size: 12px;
-color: #fff;
 
-}
 .dbdetails, .dbdetails .alignleft, .dbdetails .alignright{
 
 font-size: 14px;
