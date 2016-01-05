@@ -20,7 +20,7 @@
   padding-top: 25px;
   margin-bottom: 30px;
   color: inherit;
-  background-color: #red;
+  background-color: red;
   margin: 10px;
   border-radius: 6px;
   max-width: 80%;
@@ -32,7 +32,27 @@
 }
 .shopinsert p {
   margin-bottom: 15px;
-  font-size: 21px;
+  font-size: 12px;
   font-weight: 200;
 }
 }
+
+.modal-body {
+  padding: 15px;
+}
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+
+
+.modalclose {
+  position: relative;
+  color: #fff;
+  background-color: #2f3036;
+  border-color: #000;
