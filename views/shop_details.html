@@ -15,27 +15,23 @@
                 <p font size="12px">{{data.about}}</p>
         </div>
 <hr><!-- test-->
-<div class="textbox">
-    This is a non-floated block. (Should have a blue background.)
-  </div>
   <div class="textbox">
-    <p class="alignleft">Floated on the left (blue).</p>
-    <p class="alignright">Floated text on the right (blue).</p>
+          <p class="alignleft">Floated on the left (blue).</p>
+          <p class="alignright">Floated text on the right (blue).</p>
   </div>
-  <div class="floatclear"></div>
-  
-  <div class="bacon"><div class="alignleft"><h3>Shop details</h3>
-                     <checkbox>breakfast: {{data.breakfast}}</checkbox>
-                     <checkbox>lunch: {{data.lunch}}</checkbox>
-                     <checkbox>hot food: {{data.hot_food}}</checkbox>
-                     <checkbox>full kitchen: {{data.pastry}}</checkbox>
-                     </div>
-  
-
-        <div class="alignright"><h3>Coffee</h3><br>
-                     Roaster: {{data.coffee1}}<br>
-                     Grinder: {{data.grinder1}}<br>
-                     Machine: {{data.machine1}}<br>
-        </div>
-
+  <div class="dbdetails">
+      <div class="alignleft">
+          <h3>Shop details</h3>
+          <checkbox>breakfast: {{data.breakfast}}</checkbox>
+          <checkbox>lunch: {{data.lunch}}</checkbox>
+          <checkbox>hot food: {{data.hot_food}}</checkbox>
+          <checkbox>full kitchen: {{data.pastry}}</checkbox>
+      </div>
+      <div class="alignright">
+          <h3>Coffee</h3><br>
+          Roaster: {{data.coffee1}}<br>
+          Grinder: {{data.grinder1}}<br>
+          Machine: {{data.machine1}}<br>
+      </div>
+  </div>
 </div>
