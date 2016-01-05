@@ -1,9 +1,11 @@
 .shopdetails {
 	max-width: 80%;
-	position: absolute;
+	position: fixed;
 	z-index: 10000;
 	margin: 200px;
-
+	background-color: red;
+	box-shadow: 5px;
+	top: 20%;
 }
 
 .modal {
