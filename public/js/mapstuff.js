@@ -39,7 +39,7 @@ function setIcon(layer) {
 function initMap() {
     L.mapbox.accessToken = 'pk.eyJ1IjoieWFycnVtayIsImEiOiJVNVVkT2JvIn0.xja5Bz1L0dmNYUfNG3mlBw';
 
-    map = L.mapbox.map('map', 'yarrumk.jg24a6oj').setView([53.3528823, -6.2349633], 12);
+    map = L.mapbox.map('map', 'yarrumk.jg24a6oj').setView([53.3528823, -6.2349633], 13);
 
     L.control.locate().addTo(map);
 
