@@ -72,7 +72,7 @@ color: #fff;
   font-size: 6px;
   }
 
-.modal-body {
+.modal-dialog, .modal-body {
   padding: 15px;
   display: block;
   position: fixed;
@@ -107,3 +107,5 @@ color: #fff;
   width: 50px !important;
   height: 50px !important;
 }
+
+
