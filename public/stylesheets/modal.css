@@ -97,10 +97,10 @@ color: #fff;
 
 .modalclose {
   position: fixed;
-  top: 10px;
+  top: 10%;
   right: 30%;
   color: #fff;
-  z-index: 10000;
+  z-index: 11001;
   background-color: #d55f11;
   border-color: #fff;
   border-width: 5px;
