@@ -96,4 +96,6 @@ color: #fff;
   border-color: #fff;
   border-width: 5px;
   border-radius: 50%;
+  width: 50px !important;
+  height: 50px !important;
 }
