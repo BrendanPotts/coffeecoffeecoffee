@@ -1,21 +1,23 @@
 <div class="shopdetails">
    
-        <div id="detailheadeleft">
+        <div id="detailheadleft">
             <h1>{{data.name}}</h1>
             <p>{{data.address}}<br>
             {{data.phone}}<br>
             <a href="{{data.href}}" target="new">{{data.href}}</p>
+        </div>    
+        
+        <div id="detailheadright">
+          <a href="https://www.google.com/maps?saddr=My+Location&daddr={{data.ycoord}},{{data.xcoord}}" target="new"><  img src="images/compass.png" width="100px" alt="routing"/></a>
         </div>
-        
-        
-<a href="https://www.google.com/maps?saddr=My+Location&daddr={{data.ycoord}},{{data.xcoord}}" target="new"><img src="images/compass.png" width="100px" alt="routing"/></a>
+
         <div class="modal_column">
                 <img src="{{data.external_path}}" width="200px" ALT="shop photo">
                 <img width="200px" height=auto src="{{data.internal_path}}" ALT="internal shot">
                 <p font size="12px">{{data.about}}</p>
         </div>
 <hr><!-- test-->
-    <div class="dbdetails">
+        <div class="dbdetails">
            
             <div class="alignleft">
                 <h3>Shop details</h3>
