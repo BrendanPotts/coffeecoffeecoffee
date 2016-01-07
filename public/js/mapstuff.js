@@ -52,6 +52,7 @@ function initMap() {
         'closest_to_point': L.mapbox.featureLayer(),
         'closest_to_point_with_wifi': L.mapbox.featureLayer(),
         'closest_to_point_with_seats': L.mapbox.featureLayer(),
+        'business': L.mapbox.featureLayer(),
         'threefe_coffee': L.mapbox.featureLayer(),
         'roasted_brown_coffee': L.mapbox.featureLayer(),
         'cloud_picker_coffee': L.mapbox.featureLayer(),
