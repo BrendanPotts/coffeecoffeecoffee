@@ -441,5 +441,9 @@ h3.heading3 {
     color: #3B5998;
 }
 
+#contact .socials a.instagram:hover {
+    color: #517fa4;
+}
+
 
 /* **************Media queries************* */
