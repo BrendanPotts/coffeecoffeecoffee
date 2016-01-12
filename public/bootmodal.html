@@ -13,9 +13,18 @@
 
 <div class="container">
   <div class="jumbotron">
-    <h1>{{data.name}}</h1>
-  </div>
-  
+        <div class="col-sm-12">
+            <h1>{{data.name}}</h1>
+            <p>{{data.address}}
+            <br> {{data.phone}}
+            <br>
+            <a href="{{data.href}}" target="new">{{data.href}}</p></a>
+        </div>
+   <div id="detailheadright">
+          <a href="https://www.google.com/maps?saddr=My+Location&daddr={{data.ycoord}},{{data.xcoord}}" target="new">  <img src="images/compass.png" width="100px" alt="Click here to route to this location"/></a>
+    </div>
+
+    
   <div class="row">
     <div class="col-sm-12"><center>
   <img src="/images/internal/holding.png"</div>
