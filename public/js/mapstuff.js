@@ -17,8 +17,8 @@ function setIcon(layer) {
         var marker = e.layer, feature = marker.feature;
         marker.setIcon(L.icon({
             "iconUrl": feature.properties.icon_path,
-            "iconSize": [35, 50],
-            "iconAnchor": [17, 50],
+            "iconSize": [70, 100],
+            "iconAnchor": [35, 100],
             "popupAnchor": [0, -5],
             "className": "dot"
         }));
