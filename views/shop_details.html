@@ -1,57 +1,62 @@
-<div class="shopdetails">
-    <div id="detailheadleft">
-        <h1>{{data.name}}</h1>
-        <p>{{data.address}}
-            <br> {{data.phone}}
+<div class="container">
+  <div class="jumbotron">
+        <div class="col-sm-8">
+            <h1>{{data.name}}</h1>
+            <p>{{data.address}}
+            <br>{{data.phone}}
             <br>
-            <a href="{{data.href}}" target="new">{{data.href}}</p>
-        </div>    
-        
-        <div id="detailheadright">
-          <a href="https://www.google.com/maps?saddr=My+Location&daddr={{data.ycoord}},{{data.xcoord}}" target="new">  <img src="images/compass.png" width="100px" alt="Click here to route to this location"/></a>
-    </div>
-    <div class="modal_column">
-        <img src="{{data.external_path}}" width="100%" ALT="shop photo">
-        <img src="{{data.internal_path}}" width="100%" ALT="internal shot">
-        <p font size="12px">{{data.about}}</p>
-    </div>
-    <hr>
-    <!-- test-->
-    <div class="dbdetails">
-    <div class="row">
-        <div class="alignleft">
+            <a href="{{data.href}}" target="new">{{data.href}}</p></a>
+        </div>
+        <div id="col-sm-4">
+            <a href="https://www.google.com/maps?saddr=My+Location&daddr={{data.ycoord}},{{data.xcoord}}" target="new">  <img src="images/compass.png" width="100px" alt="Click here to route to this location"/></a>
+        </div>
+
+
+  <div class="row">
+    <div class="col-sm-12"><center>
+  <img src="/images/internal/holding.png"</div>
+  </div>
+
+<div class="row">
+    <div class="col-sm-12"><img src="/images/internal/holding.png"</div>
+  </div>
+  </div>
+
+<div class="row">
+    <div class="col-sm-12">
+      About Us<br><p>Cream est, blue mountain, organic, mug in, so arabica, viennese, to go brewed latte sugar coffee redeye, percolator barista cup cappuccino mazagran medium. Decaffeinated, café au lait, frappuccino and mocha extra doppio, café au lait half and half sugar spoon irish coffee, siphon robusta affogato caffeine, instant, et irish frappuccino carajillo latte skinny. Affogato doppio, sweet seasonal, ristretto barista et, flavour crema grinder latte, decaffeinated chicory organic mocha sugar coffee single origin turkish cappuccino. Irish, instant, ristretto percolator skinny, half and half white breve aromatic, aftertaste single shot whipped medium milk. Qui cup</p><br><a href="{{data.about}}" target="_blank" rel="nofollow" class="twitter"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4"><center>
             <h3>Shop details</h3> Breakfast: {{data.breakfast}}
             <br> Lunch: {{data.lunch}}
             <br> Hot food: {{data.hot_food}}
             <br> Pastry: {{data.pastry}}
             <br>
-        </div>
-        <div class="alignleft">
+    </div>
+    
+    <div class="col-sm-4"><center>
             <h3>Coffee</h3> Roaster: {{data.coffee1}}
             <br> Grinder: {{data.grinder1}}
             <br> Machine: {{data.machine1}}
             <br>
-        </div>
-        <div class="alignright">
-            <h3>Opening Hours: </h3>
-            <p>{{data.opening_hours}}</p>
-        </div>
-        </div>
     </div>
-        <hr>
-        <div class="detailsfooter">
-            <div class="row socials">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <div class="col-xs-4 floatleft"><a href="{{data.twitter}}" target="_blank" rel="nofollow" class="twitter"><i class="fa fa-twitter fa-2x"></i></a>
-                    </div>
-                    
-                    <div class="col-xs-4 floatcentre"><a href="{{data.facebook}}" target="_blank" rel="nofollow" class="facebook"><i class="fa fa-facebook fa-2x"></i></a>
-                    </div>
-                    
-                    <div class="col-xs-4 floatright"><a href="{{data.instagram}}" target="_blank" rel="nofollow" class="instagram"><i class="fa fa-instagram fa-2x"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
     
+    <div class="col-sm-4"><center>
+      <h3>Opening Hours: </h3>
+      <p>{{data.opening_hours}}</p>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-sm-4"><center>
+      <a href="{{data.twitter}}" target="_blank" rel="nofollow" class="twitter"><i class="fa fa-twitter fa-2x"></i></a></div>
+    <div class="col-sm-4"><center>
+      <a href="{{data.facebook}}" target="_blank" rel="nofollow" class="facebook"><i class="fa fa-facebook fa-2x"></i></a></div>
+    <div class="col-sm-4"><center>
+    <a href="{{data.instagram}}" target="_blank" rel="nofollow" class="instagram"><i class="fa fa-instagram fa-2x"></i></a>
+    </div>
+  </div>
 </div>
