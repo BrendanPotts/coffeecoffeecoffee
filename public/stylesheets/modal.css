@@ -106,7 +106,7 @@
 .modalclose {
     position: fixed;
     top: 10%;
-    right: 20%;
+    right: 15%;
     color: #fff;
     z-index: 11005;
     background-color: #d55f11;
