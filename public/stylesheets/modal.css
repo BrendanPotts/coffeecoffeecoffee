@@ -118,6 +118,8 @@
 }
 .jumbotron {
     padding:15px;
+    border: 5px;
+    border-color: white;
 
 }
 p {
