@@ -11,18 +11,20 @@
             <h2>{{data.name}}</h2>
     </div>
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <p>{{data.address}}
             <br>{{data.phone}}
             <br>
+            </p></div>
+            <div>
             <a class="linky" href="{{data.href}}" target="new">{{data.href}}</p></a>
-        </div>
+            </div>
     
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             <a href="{{data.about}}" target="_blank" rel="nofollow" class="twitter"></a>
         </div>
             
-        <div id="col-sm-3">
+        <div id="col-sm-4">
             <a href="https://www.google.com/maps?saddr=My+Location&daddr={{data.ycoord}},{{data.xcoord}}" target="new"><img src="images/compass.png" width="100px" alt="Click here to route to this location"/></a>
         </div>  
     </div>
