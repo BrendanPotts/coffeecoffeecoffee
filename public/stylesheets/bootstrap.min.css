@@ -5138,7 +5138,8 @@ textarea.input-group-sm>.input-group-btn>.btn {
 .container>.navbar-collapse,
 .container>.navbar-header {
     margin-right: -15px;
-    margin-left: -15px
+    margin-left: -15px;
+    padding:15px;
 }
 
 @media (min-width:768px) {
@@ -5147,7 +5148,8 @@ textarea.input-group-sm>.input-group-btn>.btn {
     .container>.navbar-collapse,
     .container>.navbar-header {
         margin-right: 0;
-        margin-left: 0
+        margin-left: 0;
+        padding:15px;
     }
 }
 
@@ -6000,7 +6002,7 @@ a.badge:hover {
 
 .jumbotron p {
     margin-bottom: 15px;
-    font-size: 21px;
+    font-size: 12px;
     font-weight: 200
 }
 
