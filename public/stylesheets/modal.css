@@ -125,6 +125,8 @@
     padding:15px;
     border-width: 5px;
     border-color: #fff;
+    background:#2f3036;
+    color:white;
 }
 
 p {
