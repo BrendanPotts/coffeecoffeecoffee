@@ -116,3 +116,10 @@
     width: 50px !important;
     height: 50px !important;
 }
+.jumbotron {
+    padding:15px;
+
+}
+p {
+    font-size: 12px;
+}
