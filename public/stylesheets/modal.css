@@ -120,7 +120,9 @@
     border-width: 5px;
     border-color: #fff;
 }
-
+.row {
+    width:100%;
+}
 .container {
     padding:15px;
     border-width: 5px;
@@ -130,7 +132,7 @@
 }
 
 p {
-    font-size: 10px;
+    font-size: 12px;
 }
  .linky a:link {
     color:#d55f11;
