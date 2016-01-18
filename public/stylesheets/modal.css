@@ -120,8 +120,14 @@
     padding:15px;
     border-width: 5px;
     border-color: #fff;
-
 }
+
+.container {
+    padding:15px;
+    border-width: 5px;
+    border-color: #fff;
+}
+
 p {
-    font-size: 12px;
+    font-size: 10px;
 }
