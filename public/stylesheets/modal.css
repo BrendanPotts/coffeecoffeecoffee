@@ -130,12 +130,12 @@
 p {
     font-size: 10px;
 }
- a:link {
-    color:#cf3630;
+ .linky a:link {
+    color:#d55f11;
 }
- a:visited {
-    color:#cf3630;
+.linky a:visited {
+    color:#d55f11;
 }
- a:hover {
-    color:#cf3630;
+ .linky a:hover {
+    color:#d55f11;
 }
