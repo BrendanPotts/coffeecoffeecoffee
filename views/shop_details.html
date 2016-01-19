@@ -9,20 +9,25 @@
     <div class="row">
         <div class="col-sm-12">
             <h2>{{data.name}}</h2>
+        </div>
     </div>
+
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-3">
             <p>{{data.address}}
             <br>{{data.phone}}
             </p>
-        <div class="col-sm-4">
+        </div>
+        
+        <div class="col-sm-3">
             <p><a class="linky" href="{{data.href}}" target="new">{{data.href}}</p></a>
-        <div class="col-sm-4">
+        </div>
+        
+        <div class="col-sm-3">
             <blockquote><p>{{data.about}}</p></blockquote>
         </div>
-        </div>
-        </div>
-        <div id="col-sm-4">
+        
+        <div id="col-sm-3">
             <a href="https://www.google.com/maps?saddr=My+Location&daddr={{data.ycoord}},{{data.xcoord}}" target="new"><img src="images/compass.png" width="100px" alt="Click here to route to this location"/></a>
         </div>  
     </div>
@@ -33,7 +38,7 @@
     </div>
     -->
     <div class="row">
-        <div class="col-xs-4"><center>
+        <div class="col-xs-3"><center>
             <h3>Shop details</h3>
             <p> Breakfast: {{data.breakfast}}
             <br> Lunch: {{data.lunch}}
@@ -42,14 +47,14 @@
             </p>
         </div>
         
-        <div class="col-xs-4"><center>
+        <div class="col-xs-3"><center>
             <h3>Coffee</h3>
             <p> Roaster: {{data.coffee1}}
             <br> Grinder: {{data.grinder1}}
             <br> Machine: {{data.machine1}}
             </p>
         </div>
-        <div class="col-xs-4"><center>
+        <div class="col-xs-3"><center>
             <h3>Opening Hours: </h3>
             <p>{{data.opening_hours}}</p>
         </div>
