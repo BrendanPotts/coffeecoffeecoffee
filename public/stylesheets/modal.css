@@ -119,6 +119,8 @@
 .jumbotron {
     border-width: 5px;
     border-color: #fff;
+    background-color:red;
+    border-radius: 15px;
 }
 .row {
     width:100%;
@@ -127,9 +129,10 @@
     padding:15px;
     border-width: 5px;
     border-color: #fff;
-    background:#2f3036;
+    background-color: yellow;
     color:white;
 }
+/*#2f3036; */
 
 p {
     font-size: 12px;
