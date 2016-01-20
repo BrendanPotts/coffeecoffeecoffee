@@ -53,7 +53,7 @@ html {
     z-index: 502;
 }
 /******************************************************************************************************************/
-
+/*
 .container li:hover {
     opacity: 0.5;
     cursor: pointer;
@@ -224,7 +224,7 @@ ul li a:hover + .hidden,
 
 /*Style 'show menu' label button and hide it by default*/
 
-.show-menua{
+.show-menu{
     font-family: 'Advent Pro', Helvetica, Arial, sans-serif;
     text-decoration: none;
     color: #fff;
@@ -269,7 +269,7 @@ input[type=checkbox]:checked ~ #menu {
         width: 100%;
     }
     /*Display 'show menu' link*/
-    .show-menua {
+    .show-menu {
         display: block;
     }
 }
