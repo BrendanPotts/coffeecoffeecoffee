@@ -150,12 +150,26 @@ border-radius: 25px;
 p {
     font-size: 12px;
 }
-a:link {
-    color:#d55f11;
+
+.socials a.twitter,
+.socials a.github,
+.socials a.instagram,
+.socials a.facebook {
+    color: #d55f11;
 }
-a:visited {
-    color:#d55f11;
+
+.socials a.twitter:hover {
+    color: #55acee;
 }
-a:hover {
-    color:#d55f11;
+
+.socials a.github:hover {
+    color: #000;
+}
+
+.socials a.facebook:hover {
+    color: #3B5998;
+}
+
+.socials a.instagram:hover {
+    color: #517fa4;
 }
