@@ -118,6 +118,9 @@
 }
 .jumbotron {
 background-color: #6b6b6b;
+border-width: 5px;
+border-color: #fff;
+border-radius: 25px;
 }
 .row {
     width:100%;
