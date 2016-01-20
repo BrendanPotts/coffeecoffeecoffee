@@ -21,6 +21,9 @@ build/Release
 
 # Dependency directory
 node_modules
+data
+documentation
+
 
 # Users Environment Variables
 .lock-wscript
