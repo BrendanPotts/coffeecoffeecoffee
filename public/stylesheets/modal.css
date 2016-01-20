@@ -150,12 +150,12 @@ border-radius: 25px;
 p {
     font-size: 12px;
 }
- .linky a:link {
+a:link {
     color:#d55f11;
 }
-.linky a:visited {
+a:visited {
     color:#d55f11;
 }
- .linky a:hover {
+a:hover {
     color:#d55f11;
 }
