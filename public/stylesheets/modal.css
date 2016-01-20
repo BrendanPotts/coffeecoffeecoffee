@@ -128,10 +128,8 @@
     border-color: #fff;
     background-color: #6b6b6b;
     color:white;
-    border-radius: 15px;
-
+    border-radius: 0px;
 }
-
 
 p {
     font-size: 12px;
