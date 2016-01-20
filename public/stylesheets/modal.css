@@ -106,6 +106,7 @@
 .modalclose {
     position: fixed;
     text-align: center;
+    
     top: 8%;
     right: 17%;
     color: #fff;
