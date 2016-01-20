@@ -106,7 +106,6 @@
 .modalclose {
     position: fixed;
     text-align: center;
-    
     top: 8%;
     right: 17%;
     color: #fff;
@@ -123,27 +122,35 @@
     position: relative;
     padding: 15px;
     border-width: 5px;
-border-color: #fff;
-border-radius: 25px;
+    border-color: #fff;
+    border-radius: 25px;
 }
 
 .jumbotron {
-background-color: #6b6b6b;
-border-width: 5px;
-border-color: #fff;
-border-radius: 25px;
+    background-color: #6b6b6b;
+    border-width: 5px;
+    border-color: #fff;
+    border-radius: 25px;
 }
+
 .row {
-    width:100%;
+    width: 100%;
 }
-.col-xs-3 { width: 33%; }
-.col-xs-12 { width: 100%; }
+
+.col-xs-3 {
+    width: 33%;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
 .container {
-    padding:15px;
+    padding: 15px;
     border-width: 5px;
     border-color: #fff;
     background-color: #6b6b6b;
-    color:white;
+    color: white;
     border-radius: 0px;
 }
 
@@ -151,10 +158,10 @@ p {
     font-size: 12px;
 }
 
-.socials a.twitter,
-.socials a.github,
-.socials a.instagram,
-.socials a.facebook {
+.socials .twitter,
+.socials .github,
+.socials .instagram,
+.socials .facebook {
     color: #d55f11;
 }
 

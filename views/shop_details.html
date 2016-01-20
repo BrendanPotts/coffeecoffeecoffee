@@ -2,48 +2,40 @@
     <div class="row">
         <div class="col-xs-12">
             <img src="{{data.external_path}}" width="40%"><img src="{{data.internal_path}}" width="40%"></div>
-        </div>
-    
+    </div>
     <div class="row">
         <div class="col-xs-12">
             <h2>{{data.name}}</h2>
         </div>
     </div>
-
     <div class="row">
         <div class="col-xs-4">
             <p>{{data.address}}
-            <br>{{data.phone}}
+                <br>{{data.phone}}
             </p>
-        <p><a class="linky" href="{{data.href}}" target="new">{{data.href}}</p></a>
+            <p><a class="linky" href="{{data.href}}" target="new">{{data.href}}</p></a>
         </div>
-        
-        
-                     
         <div class="col-xs-4">
-           <p>{{data.about}}</p>
+            <p>{{data.about}}</p>
         </div>
-        
         <div id="col-xs-4">
-            <a href="https://www.google.com/maps?saddr=My+Location&daddr={{data.ycoord}},{{data.xcoord}}" target="new"><img src="images/compass.png" width="100px" alt="Click here to route to this location"/></a>
-        </div>  
+            <a href="https://www.google.com/maps?saddr=My+Location&daddr={{data.ycoord}},{{data.xcoord}}" target="new"><img src="images/compass.png" width="100px" alt="Click here to route to this location" /></a>
+        </div>
     </div>
-      
-     <div class="row">
+    <div class="row">
         <div class="col-xs-4">
             <h3>Shop details</h3>
             <p> Breakfast: {{data.breakfast}}
-            <br> Lunch: {{data.lunch}}
-            <br> Hot food: {{data.hot_food}}
-            <br> Pastry: {{data.pastry}}
+                <br> Lunch: {{data.lunch}}
+                <br> Hot food: {{data.hot_food}}
+                <br> Pastry: {{data.pastry}}
             </p>
         </div>
-        
         <div class="col-xs-4">
             <h3>Coffee</h3>
             <p> Roaster: {{data.coffee1}}
-            <br> Grinder: {{data.grinder1}}
-            <br> Machine: {{data.machine1}}
+                <br> Grinder: {{data.grinder1}}
+                <br> Machine: {{data.machine1}}
             </p>
         </div>
         <div class="col-xs-4">
@@ -51,14 +43,11 @@
             <p>{{data.opening_hours}}</p>
         </div>
     </div>
-
-  
     <div class="row">
         <div class="col-xs-12">
             <a class="socials twitter" href="{{data.twitter}}" target="_blank" rel="nofollow" class="twitter"><i class="fa fa-twitter fa-2x"></i></a>
             <a class="socials facebook" href="{{data.facebook}}" target="_blank" rel="nofollow" class="facebook"><i class="fa fa-facebook fa-2x"></i></a>
-            <a class="socials instagram"  href="{{data.instagram}}" target="_blank" rel="nofollow" class="instagram"><i class="fa fa-instagram fa-2x"></i></a>
+            <a class="socials instagram" href="{{data.instagram}}" target="_blank" rel="nofollow" class="instagram"><i class="fa fa-instagram fa-2x"></i></a>
         </div>
     </div>
-    
 </div>
