@@ -224,7 +224,7 @@ ul li a:hover + .hidden,
 
 /*Style 'show menu' label button and hide it by default*/
 
-.show-menu {
+.show-menua{
     font-family: 'Advent Pro', Helvetica, Arial, sans-serif;
     text-decoration: none;
     color: #fff;
@@ -269,7 +269,7 @@ input[type=checkbox]:checked ~ #menu {
         width: 100%;
     }
     /*Display 'show menu' link*/
-    .show-menu {
+    .show-menua {
         display: block;
     }
 }
