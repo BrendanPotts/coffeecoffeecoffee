@@ -122,6 +122,8 @@
 .row {
     width:100%;
 }
+.col-xs-3 { width: 33%; }
+.col-xs-12 { width: 100%; }
 .container {
     padding:15px;
     border-width: 5px;
