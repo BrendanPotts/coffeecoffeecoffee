@@ -162,9 +162,14 @@ p {
     color: #fff;
 }
 
-.twitter, .github, .instagram, .facebook {
+.twitter a:link, .github a:link, .instagram a:link, .facebook a:link {
     color: #d55f11;
 }
+
+.twitter a:visited, .github a:visited, .instagram a:visited, .facebook a:visited {
+    color: #d55f11;
+}
+
 
 .twitter a:hover {
     color: #55acee;
