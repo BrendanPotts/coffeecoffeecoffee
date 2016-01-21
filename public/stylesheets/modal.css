@@ -165,7 +165,9 @@ p {
 .twitter a:link, .github a:link, .instagram a:link, .facebook a:link {
     color: #d55f11;
 }
-
+a{
+    color:#fff;
+}
 .twitter a:visited, .github a:visited, .instagram a:visited, .facebook a:visited {
     color: #d55f11;
 }
