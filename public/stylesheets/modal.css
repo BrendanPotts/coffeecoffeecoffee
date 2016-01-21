@@ -108,14 +108,6 @@
     height: 50px !important;
 }
 
-.modal-body {
-    position: relative;
-    padding: 15px;
-    border-width: 5px;
-    border-color: #fff;
-    border-radius: 25px;
-}
-
 .jumbotron {
     background-color: #6b6b6b;
     border-width: 5px;
