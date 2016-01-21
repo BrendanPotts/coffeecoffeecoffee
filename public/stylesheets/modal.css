@@ -157,6 +157,10 @@
 p {
     font-size: 12px;
 }
+.col-xs-6 {
+
+    color: #fff;
+}
 
 .socials .twitter,
 .socials .github,
