@@ -93,11 +93,10 @@
 
 .modalclose {
 
-    display: block;
-    position: fixed;
+    position: absolute;
+    top: -25px;
+    right: -25px;
     text-align: center;
-    top: 8%;
-    right: 10%;
     color: #fff;
     z-index: 11005;
     background-color: #d55f11;
