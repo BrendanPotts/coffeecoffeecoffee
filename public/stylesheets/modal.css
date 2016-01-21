@@ -162,25 +162,22 @@ p {
     color: #fff;
 }
 
-.socials .twitter,
-.socials .github,
-.socials .instagram,
-.socials .facebook {
+.twitter, .github, .instagram, .facebook {
     color: #d55f11;
 }
 
-.socials a.twitter:hover {
+.twitter a:hover {
     color: #55acee;
 }
 
-.socials a.github:hover {
+.github a:hover {
     color: #000;
 }
 
-.socials a.facebook:hover {
+.facebook a:hover {
     color: #3B5998;
 }
 
-.socials a.instagram:hover {
+.instagram a:hover {
     color: #517fa4;
 }
