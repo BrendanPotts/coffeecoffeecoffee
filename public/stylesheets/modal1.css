@@ -159,12 +159,13 @@ html {
 
 
 .jumbotron {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-    color: inherit;
-    background-color: #eee
+    background-color: #6b6b6b;
+    border-width: 5px;
+    border-color: #fff;
+    border-radius: 25px;
 }
+
+
 
 .jumbotron .h1,
 .jumbotron h1 {
@@ -305,12 +306,6 @@ html {
 }
 
 
-.jumbotron {
-    background-color: #6b6b6b;
-    border-width: 5px;
-    border-color: #fff;
-    border-radius: 25px;
-}
 
 .row {
     width: 100%;
