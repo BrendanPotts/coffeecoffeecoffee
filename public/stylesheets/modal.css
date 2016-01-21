@@ -96,7 +96,6 @@
     display: block;
     position: fixed;
     text-align: center;
-    line-height: 0.8;
     top: 8%;
     right: 10%;
     color: #fff;
@@ -128,22 +127,6 @@
     width: 100%;
 }
 
-.col-xs-3 {
-    width: 33%;
-}
-
-.col-xs-12 {
-    width: 100%;
-}
-
-.container {
-    padding: 15px;
-    border-width: 5px;
-    border-color: #fff;
-    background-color: #6b6b6b;
-    color: white;
-    border-radius: 0px;
-}
 
 p {
     font-size: 12px;
