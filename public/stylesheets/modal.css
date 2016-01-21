@@ -157,7 +157,7 @@
 p {
     font-size: 12px;
 }
-.col-xs-6 {
+.col-xs-6, .col-xs-3, .col-xs-2, .col-xs-12 {
 
     color: #fff;
 }
