@@ -158,14 +158,6 @@ html {
 }
 
 
-.jumbotron {
-    background-color: #6b6b6b;
-    border-width: 5px;
-    border-color: #fff;
-    border-radius: 25px;
-}
-
-
 
 .jumbotron .h1,
 .jumbotron h1 {
@@ -314,7 +306,12 @@ p {
     -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
     box-shadow: 0 3px 9px rgba(0, 0, 0, .5)
 }
-
+.jumbotron {
+    background-color: #6b6b6b;
+    border-width: 5px;
+    border-color: #fff;
+    border-radius: 25px;
+}
 
 .modal-body {
     position: relative;
