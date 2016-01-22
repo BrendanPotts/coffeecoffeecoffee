@@ -196,7 +196,17 @@ html {
         padding-top: 48px;
         padding-bottom: 48px
     }
+    .container .jumbotron,
+    .container-fluid .jumbotron {
+        padding-right: 60px;
+        padding-left: 60px
+    }
+    .jumbotron .h1,
+    .jumbotron h1 {
+        font-size: 63px
+    }
 }
+
 .col-xs-1,
 .col-xs-10,
 .col-xs-11,
@@ -241,6 +251,17 @@ html {
     width: 58.33333333%
 }
 
+.row:after,
+.row:before {
+    display: table;
+    content: " "
+}
+
+.row:after {
+    clear: both
+}
+
+
 .col-xs-6 {
     width: 50%
 }
@@ -264,6 +285,8 @@ html {
 .col-xs-1 {
     width: 8.33333333%
 }
+
+
 
 .row {
     width: 100%;
