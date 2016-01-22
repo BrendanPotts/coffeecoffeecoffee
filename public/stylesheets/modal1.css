@@ -528,3 +528,231 @@ a {
 .instagram a:hover {
     color: #517fa4;
 }
+
+
+
+/* *****************************************************************************/
+/*                                                                             */
+/*                                  style.css                                  */
+/*                                                                             */
+/* *****************************************************************************/
+
+body,
+html {
+    font: 22px Helvetica, Sans-Serif;
+    background-color: #2f3036;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+/*MAPS*******/
+
+.map {
+    height: 85%;
+    width: 100%;
+    z-index: 0;
+    top: 15%;
+}
+
+
+/**********************/
+
+#header {
+    font-family: 'Advent Pro', sans-serif;
+    color: white;
+    position: fixed;
+    font-size: 1.2em;
+    text-align: center;
+    width: 100%;
+    height: 15%;
+    z-index: 400;
+    background-color: rgba(100, 100, 100, 1);
+}
+
+.logo {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    width: 15%;
+    height: auto;
+    max-width: 150px;
+    z-index: 100;
+}
+
+.location {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 20%;
+    height: auto;
+    max-width: 150px;
+    z-index: 502;
+}
+ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 20;
+}
+
+
+/*makes menu a horizontal list with spaces*/
+
+li {
+    display: inline-block;
+    float: left;
+    margin-right: 1px;
+    z-index: 20;
+}
+
+
+/*Style for menu buttons*/
+
+li a {
+    display: block;
+    min-width: 140px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: 'Advent Pro', Helvetica, Arial, sans-serif;
+    color: #fff;
+    background: #2f3036;
+    text-decoration: none;
+}
+
+
+/*Hover mouseover / focus for top menu links*/
+
+li:hover a {
+    background: #d55f11;
+}
+
+
+/*colour for sub menu*/
+
+li:hover ul a {
+    background: #2f3036;
+    color: #d55f11;
+    height: 40px;
+    line-height: 40px;
+}
+
+
+/*Hover state for dropdown links*/
+
+li:hover ul a:hover {
+    background: #d55f11;
+    color: #fff;
+}
+
+
+/*Hide dropdown links until they are needed*/
+
+li ul {
+    display: none;
+}
+
+
+/*Make dropdown links vertical*/
+
+li ul li {
+    display: block;
+    float: none;
+}
+
+
+/*Prevent text wrapping*/
+
+li ul li a {
+    width: auto;
+    min-width: 100px;
+    padding: 0 20px;
+}
+
+li i {
+    vertical-align: middle;
+    padding: 15px;
+    line-height: 40px;
+}
+
+/*Display the dropdown on hover*/
+
+ul li a:hover + .hidden,
+.hidden:hover {
+    display: block;
+}
+
+
+/*Style 'show menu' label button and hide it by default*/
+
+.showme-menu{
+    font-family: 'Advent Pro', Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background:  #2f3036;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+    z-index: 10;
+}
+
+
+/*Hide checkbox*/
+
+input[type=checkbox] {
+    display: none;
+    -webkit-appearance: none;
+}
+
+
+/*Show menu when invisible checkbox is checked*/
+
+input[type=checkbox]:checked ~ #menu {
+    display: block;
+}
+
+
+/*Responsive Styles*/
+
+@media screen and (max-width: 760px) {
+    /*Make dropdown links appear inline*/
+    ul {
+        position: static;
+        display: none;
+    }
+    /*Create vertical spacing*/
+    li {
+        margin-bottom: 1px;
+    }
+    /*Make all menu links full width*/
+    ul li,
+    li a {
+        width: 100%;
+    }
+    /*Display 'show menu' link*/
+    .showme-menu {
+        display: block;
+    }
+}
+
+
+#main {
+    font: 10px Helvetica, San-Serif #330000;
+    text-decoration: none;
+}
+
+/*MAPS*******/
+
+.map {
+    height: 85%;
+    width: 100%;
+    z-index: 1;
+    top: 15%;
+}
+
+
+/**********************/
