@@ -293,6 +293,10 @@ p {
 }
 
 
+.modal-body {
+    position: relative;
+    padding: 15px
+}
 .twitter a:link,
 .github a:link,
 .instagram a:link,
