@@ -363,3 +363,168 @@ a {
 .instagram a:hover {
     color: #517fa4;
 }
+
+
+.shopdetails {
+    font-size: 12px;
+    color: #fff;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 70%;
+    background-color: #2f3036;
+    z-index: 12000;
+    border: 3px solid #fff;
+    padding: 25px;
+}
+
+.detailheaderleft {
+    color: #fff;
+    float: left;
+}
+
+.detailheaderright {
+    font-size: 12px;
+    color: #fff;
+    float: right;
+}
+
+.alignleft {
+    float: left;
+    font-size: 12px;
+    color: #fff;
+    margin-right: 50px;
+    padding-right: 100px;
+}
+
+.alignright {
+    font-size: 12px;
+    color: #fff;
+    float: right;
+}
+
+.floatclear {
+    clear: both;
+}
+
+.dbdetails,
+.dbdetails .alignleft,
+.dbdetails .alignright {
+    font-size: 14px;
+    color: #fff;
+}
+
+.dbdetails h3 {
+    color: #fff;
+}
+
+.modal_column,
+.modal_column p {
+    font-size: 12px;
+    color: #fff;
+}
+
+.shopinsert {
+    padding: 25px;
+    color: inherit;
+    background-color: #2f3036;
+    margin: 0px;
+    border-radius: 6px;
+    max-width: 80%;
+}
+
+.shopinsert h1,
+.shopinsert .h1 {
+    color: #fff;
+    font-size: 50px;
+}
+
+.shopinsert p {
+    margin-bottom: 15px;
+    font-size: 6px;
+}
+
+.modal-dialog,
+.modal-body {
+    padding: 0px;
+    display: block;
+    position: fixed;
+    left: 10%;
+    right: 10%;
+    width: 80%;
+    z-index: 11000;
+}
+
+.modalclose {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    text-align: center;
+    color: #fff;
+    z-index: 11005;
+    background-color: #d55f11;
+    border-color: #fff;
+    border-width: 5px;
+    border-radius: 50%;
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.jumbotron {
+    background-color: #6b6b6b;
+    border-width: 5px;
+    border-color: #fff;
+    border-radius: 25px;
+}
+
+.row {
+    width: 100%;
+}
+
+p {
+    font-size: 12px;
+}
+
+.col-xs-6,
+.col-xs-3,
+.col-xs-2,
+.col-xs-12 {
+    color: #fff;
+}
+
+.twitter a:link,
+.github a:link,
+.instagram a:link,
+.facebook a:link {
+    color: #d55f11;
+}
+
+a {
+    color: #fff;
+}
+
+.twitter a:visited,
+.github a:visited,
+.instagram a:visited,
+.facebook a:visited {
+    color: #d55f11;
+}
+
+.twitter a:hover {
+    color: #55acee;
+}
+
+.github a:hover {
+    color: #000;
+}
+
+.facebook a:hover {
+    color: #3B5998;
+}
+
+.instagram a:hover {
+    color: #517fa4;
+}
