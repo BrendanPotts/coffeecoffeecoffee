@@ -196,17 +196,7 @@ html {
         padding-top: 48px;
         padding-bottom: 48px
     }
-    .container .jumbotron,
-    .container-fluid .jumbotron {
-        padding-right: 60px;
-        padding-left: 60px
-    }
-    .jumbotron .h1,
-    .jumbotron h1 {
-        font-size: 63px
-    }
 }
-
 .col-xs-1,
 .col-xs-10,
 .col-xs-11,
@@ -222,24 +212,10 @@ html {
     position: relative;
     min-height: 1px;
     padding-right: 15px;
-    padding-left: 15px
-}
-
-
-.col-xs-1,
-.col-xs-10,
-.col-xs-11,
-.col-xs-12,
-.col-xs-2,
-.col-xs-3,
-.col-xs-4,
-.col-xs-5,
-.col-xs-6,
-.col-xs-7,
-.col-xs-8,
-.col-xs-9 {
+    padding-left: 15px;
     float: left
 }
+
 
 .col-xs-12 {
     width: 100%
@@ -265,17 +241,6 @@ html {
     width: 58.33333333%
 }
 
-.row:after,
-.row:before {
-    display: table;
-    content: " "
-}
-
-.row:after {
-    clear: both
-}
-
-
 .col-xs-6 {
     width: 50%
 }
@@ -299,8 +264,6 @@ html {
 .col-xs-1 {
     width: 8.33333333%
 }
-
-
 
 .row {
     width: 100%;
@@ -330,10 +293,6 @@ p {
 }
 
 
-.modal-body {
-    position: relative;
-    padding: 15px
-}
 .twitter a:link,
 .github a:link,
 .instagram a:link,
