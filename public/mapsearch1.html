@@ -33,7 +33,8 @@
     <script src='https://api.mapbox.com/mapbox.js/v2.2.3/mapbox.js'></script>
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js'></script>
     <!-- WEBSPAGE STYLE SHEETS -->
-    <!--<link rel="stylesheet" href="stylesheets/bootstrap.min.css" type="text/css" media="screen">-->
+    
+<!--    <link rel="stylesheet" href="stylesheets/bootstrap.min.css" type="text/css" media="screen"> -->
     <link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen">
     <link rel="stylesheet" href="stylesheets/modal1.css" type="text/css" media="screen">
     <!-- WEB FONTS -->
@@ -48,6 +49,9 @@
         <a href="http://coffeecoffee.me">
             <img class="logo" src="images/logosimple.png" alt="simple logo">
         </a>
+    </div>
+    <label for="showme-menu" class="showme-menu"><i class="fa fa-bars fa-1x"></i> coffee | coffee</label>
+    <input type="checkbox" id="showme-menu" role="buttona">
     <ul id="menu">
         <li><a href="javascript:void(0);" onclick="changeLayer('all_shops');"><i class="fa fa-refresh fa-1x"></i></a>
         </li>
@@ -87,12 +91,12 @@
 
 <!-- modal -->
     <div class="modal fade" id="coffeeshop_modal" tabindex="-1" role="dialog" style="display:none;">
+                          
             <div class="modal-body"  id="coffee-about">
-                <button type="button" class="modalclose" data-dismiss="modal">
-                <i class="fa fa-close fa-2x"></i>
-                </button>
+            <button type="button" class="modalclose" data-dismiss="modal"><i class="fa fa-close fa-2x"></i></button>
             </div>
-    </div>
+               
+             </div>
 <!-- /.modal-content -->
 
 
