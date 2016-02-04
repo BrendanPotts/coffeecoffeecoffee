@@ -211,7 +211,7 @@ input[type=checkbox]:checked ~ #menu {
 .search-box input[type="text"] {
   border: none;
   background: none;
-  z-index: 1;
+  z-index: 12000;
   width: 20px;
   transition: all .25s ease-in .25s;
   padding: 3px 5px;
@@ -235,7 +235,7 @@ input[type=checkbox]:checked ~ #menu {
   transition: all .25s ease-in;
 }
 .search-box input[type="text"] + span {
-  z-index: -1;
+  z-index: 11999;
   position: absolute;
   border: 2px solid white;
   top: 0;
