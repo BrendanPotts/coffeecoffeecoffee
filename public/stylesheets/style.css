@@ -206,6 +206,56 @@ input[type=checkbox]:checked ~ #menu {
     text-decoration: none;
 }
 
+
+
+.search-box input[type="text"] {
+  border: none;
+  background: none;
+  z-index: 1;
+  width: 20px;
+  transition: all .25s ease-in .25s;
+  padding: 3px 5px;
+  color: transparent;
+  font-size: .75rem;
+  line-height: 20px;
+}
+.search-box input[type="text"]:focus {
+  width: 200px;
+  outline: none;
+  color: black;
+  background: white;
+}
+.search-box input[type="text"]:focus + span {
+  width: 200px;
+  border-radius: 4px;
+}
+.search-box input[type="text"]:focus + span::before {
+  width: 2px;
+  opacity: 0;
+  transition: all .25s ease-in;
+}
+.search-box input[type="text"] + span {
+  z-index: -1;
+  position: absolute;
+  border: 2px solid white;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  transition: all .25s ease-in .25s;
+  border-radius: 20px;
+}
+.search-box input[type="text"] + span::before {
+  transition: all .25s ease-in .5s;
+  transform-origin: left top;
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  border-radius: 2px;
+  background: white;
+  transform: rotate(45deg) translate(24px, 0);
+}
+
 /*MAPS*******/
 
 .map {
