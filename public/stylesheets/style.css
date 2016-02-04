@@ -256,6 +256,13 @@ input[type=checkbox]:checked ~ #menu {
   transform: rotate(45deg) translate(24px, 0);
 }
 
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+}
 /*MAPS*******/
 
 .map {
